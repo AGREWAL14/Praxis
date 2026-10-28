@@ -1,0 +1,250 @@
+{
+  "n_test": 49159,
+  "n_classes": 19,
+  "labels": [
+    "Benign",
+    "DDoS-ICMP",
+    "DDoS-SYN",
+    "DDoS-TCP",
+    "DDoS-UDP",
+    "DoS-ICMP",
+    "DoS-SYN",
+    "DoS-TCP",
+    "DoS-UDP",
+    "MQTT-DDoS-Connect_Flood",
+    "MQTT-DDoS-Publish_Flood",
+    "MQTT-DoS-Connect_Flood",
+    "MQTT-DoS-Publish_Flood",
+    "MQTT-Malformed_Data",
+    "Recon-OS_Scan",
+    "Recon-Ping_Sweep",
+    "Recon-Port_Scan",
+    "Recon-VulScan",
+    "Spoofing"
+  ],
+  "accuracy": 0.8196667955003153,
+  "macro_precision": 0.7813153285410053,
+  "macro_recall": 0.7093155116084173,
+  "macro_f1": 0.7137920951614515,
+  "weighted_precision": 0.808717742523703,
+  "weighted_recall": 0.8196667955003153,
+  "weighted_f1": 0.806385410695326,
+  "per_class_precision": {
+    "Benign": 0.9630146545708305,
+    "DDoS-ICMP": 0.6939461883408071,
+    "DDoS-SYN": 0.870434183321847,
+    "DDoS-TCP": 0.779575962865387,
+    "DDoS-UDP": 0.9972317212180427,
+    "DoS-ICMP": 0.4790174002047083,
+    "DoS-SYN": 0.8465221064488876,
+    "DoS-TCP": 0.5833333333333334,
+    "DoS-UDP": 0.9767276603304317,
+    "MQTT-DDoS-Connect_Flood": 0.9992242048099301,
+    "MQTT-DDoS-Publish_Flood": 0.8181818181818182,
+    "MQTT-DoS-Connect_Flood": 0.9494949494949495,
+    "MQTT-DoS-Publish_Flood": 0.6065259117082533,
+    "MQTT-Malformed_Data": 0.8888888888888888,
+    "Recon-OS_Scan": 0.8,
+    "Recon-Ping_Sweep": 0.0,
+    "Recon-Port_Scan": 0.9026548672566371,
+    "Recon-VulScan": 0.875,
+    "Spoofing": 0.8152173913043478
+  },
+  "per_class_recall": {
+    "Benign": 0.999275887038378,
+    "DDoS-ICMP": 0.8700485560950677,
+    "DDoS-SYN": 0.9160139251523064,
+    "DDoS-TCP": 0.8509997261024377,
+    "DDoS-UDP": 0.9790567545963229,
+    "DoS-ICMP": 0.23780487804878048,
+    "DoS-SYN": 0.7625570776255708,
+    "DoS-TCP": 0.4628275441803778,
+    "DoS-UDP": 0.9994546446100709,
+    "MQTT-DDoS-Connect_Flood": 1.0,
+    "MQTT-DDoS-Publish_Flood": 0.04186046511627907,
+    "MQTT-DoS-Connect_Flood": 1.0,
+    "MQTT-DoS-Publish_Flood": 1.0,
+    "MQTT-Malformed_Data": 0.8,
+    "Recon-OS_Scan": 0.4878048780487805,
+    "Recon-Ping_Sweep": 0.0,
+    "Recon-Port_Scan": 0.9592476489028213,
+    "Recon-VulScan": 0.3888888888888889,
+    "Spoofing": 0.7211538461538461
+  },
+  "per_class_f1": {
+    "Benign": 0.9808102345415778,
+    "DDoS-ICMP": 0.7720830026080054,
+    "DDoS-SYN": 0.8926425895823026,
+    "DDoS-TCP": 0.8137235644601585,
+    "DDoS-UDP": 0.9880606647305582,
+    "DoS-ICMP": 0.31782682512733446,
+    "DoS-SYN": 0.802348858935006,
+    "DoS-TCP": 0.5161399932042134,
+    "DoS-UDP": 0.9879604672057503,
+    "MQTT-DDoS-Connect_Flood": 0.9996119518820333,
+    "MQTT-DDoS-Publish_Flood": 0.07964601769911504,
+    "MQTT-DoS-Connect_Flood": 0.9740932642487047,
+    "MQTT-DoS-Publish_Flood": 0.7550776583034647,
+    "MQTT-Malformed_Data": 0.8421052631578947,
+    "Recon-OS_Scan": 0.6060606060606061,
+    "Recon-Ping_Sweep": 0.0,
+    "Recon-Port_Scan": 0.9300911854103343,
+    "Recon-VulScan": 0.5384615384615384,
+    "Spoofing": 0.7653061224489796
+  },
+  "support": {
+    "Benign": 1381,
+    "DDoS-ICMP": 7826,
+    "DDoS-SYN": 6894,
+    "DDoS-TCP": 7302,
+    "DDoS-UDP": 6255,
+    "DoS-ICMP": 3936,
+    "DoS-SYN": 3942,
+    "DoS-TCP": 3282,
+    "DoS-UDP": 5501,
+    "MQTT-DDoS-Connect_Flood": 1288,
+    "MQTT-DDoS-Publish_Flood": 215,
+    "MQTT-DoS-Connect_Flood": 94,
+    "MQTT-DoS-Publish_Flood": 316,
+    "MQTT-Malformed_Data": 40,
+    "Recon-OS_Scan": 123,
+    "Recon-Ping_Sweep": 4,
+    "Recon-Port_Scan": 638,
+    "Recon-VulScan": 18,
+    "Spoofing": 104
+  },
+  "chance_rate": 0.05263157894736842,
+  "majority_class_rate": 0.1591977054049106,
+  "train_seconds": 2427.74,
+  "inference_seconds": 7.038,
+  "inference_rows_per_second": 6985.1,
+  "n_train": 249061,
+  "n_parameters": 214227,
+  "label_encoding": "y_true.npy and y_pred.npy hold int8 positions into the labels list above",
+  "history": {
+    "accuracy": [
+      0.850020706653595,
+      0.9056456089019775,
+      0.923067033290863,
+      0.9253435730934143,
+      0.9370234608650208,
+      0.9435359239578247,
+      0.9457120895385742,
+      0.9478882551193237,
+      0.9495304226875305,
+      0.9507108926773071
+    ],
+    "loss": [
+      0.3560367524623871,
+      0.2266549915075302,
+      0.18665145337581635,
+      0.1776513159275055,
+      0.1487363874912262,
+      0.13662047684192657,
+      0.13072161376476288,
+      0.1263485550880432,
+      0.12332519888877869,
+      0.11944010108709335
+    ]
+  },
+  "caveats": {
+    "threshold_sequences": 50,
+    "counted_on": [
+      "val",
+      "test"
+    ],
+    "flagged": [
+      {
+        "label": "Recon-Ping_Sweep",
+        "sequences": {
+          "train": 24,
+          "val": 2,
+          "test": 4
+        },
+        "reading": "Too few sequences in the partitions it is scored on for an F1 to take more than a few values. Reported and not interpreted, and outside the set of classes the comparison below is scored on."
+      },
+      {
+        "label": "Recon-VulScan",
+        "sequences": {
+          "train": 86,
+          "val": 18,
+          "test": 18
+        },
+        "reading": "Thin in every partition. Kept in the compared set, and its per-class figure carries this caveat wherever it is quoted."
+      },
+      {
+        "label": "MQTT-Malformed_Data",
+        "sequences": {
+          "train": 191,
+          "val": 38,
+          "test": 40
+        },
+        "reading": "Thin in every partition, and the closest of the compared classes to the 0.50 line. Kept in the compared set for the same reason as the one above: dropping a borderline class after seeing its value would be choosing the result."
+      }
+    ],
+    "unflagged_and_thin": [],
+    "reading": "F1 on a handful of sequences takes only a handful of values, so the per-class figures for these classes are reported and not interpreted as measurements of how well the class is detected.",
+    "counts_from": "NB04_manifest.json, the sequence counts of the whole corpus at window 50 and stride 25. The full pass checks the arrays it loaded against them."
+  },
+  "comparison": {
+    "against": "published_cnn_19class",
+    "detected_at": 0.5,
+    "macro_f1": {
+      "published": 0.710988933153217,
+      "this_run": 0.7137920951614515,
+      "difference": 0.0028031620082344944
+    },
+    "weighted_f1": {
+      "published": 0.983978882036822,
+      "this_run": 0.806385410695326,
+      "difference": -0.17759347134149606
+    },
+    "per_class_f1": {
+      "Recon-VulScan": {
+        "published": 0.0,
+        "this_run": 0.5384615384615384,
+        "difference": 0.5384615384615384,
+        "detected_published": false,
+        "detected_this_run": true
+      },
+      "Recon-OS_Scan": {
+        "published": 0.03430619559651818,
+        "this_run": 0.6060606060606061,
+        "difference": 0.5717544104640879,
+        "detected_published": false,
+        "detected_this_run": true
+      },
+      "MQTT-DDoS-Publish_Flood": {
+        "published": 0.18579234972677597,
+        "this_run": 0.07964601769911504,
+        "difference": -0.10614633202766093,
+        "detected_published": false,
+        "detected_this_run": false
+      },
+      "Spoofing": {
+        "published": 0.34382566585956414,
+        "this_run": 0.7653061224489796,
+        "difference": 0.4214804565894154,
+        "detected_published": false,
+        "detected_this_run": true
+      },
+      "MQTT-Malformed_Data": {
+        "published": 0.48833189282627487,
+        "this_run": 0.8421052631578947,
+        "difference": 0.3537733703316198,
+        "detected_published": false,
+        "detected_this_run": true
+      }
+    },
+    "n_classes_compared": 5,
+    "n_detected_published": 0,
+    "n_detected_this_run": 4,
+    "newly_detected": [
+      "MQTT-Malformed_Data",
+      "Recon-OS_Scan",
+      "Recon-VulScan",
+      "Spoofing"
+    ],
+    "test_partitions_differ": "1,614,182 test rows there, 49,159 test sequences here, on different splits. The two scores are the two runs' own scores and not a paired comparison on the same items."
+  }
+}

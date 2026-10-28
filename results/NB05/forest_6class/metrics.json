@@ -1,0 +1,235 @@
+{
+  "n_test": 1229711,
+  "n_classes": 6,
+  "labels": [
+    "Benign",
+    "DDoS",
+    "DoS",
+    "MQTT",
+    "Recon",
+    "Spoofing"
+  ],
+  "accuracy": 0.997984892385284,
+  "macro_precision": 0.9783110099922889,
+  "macro_recall": 0.9593513699728096,
+  "macro_f1": 0.9680839641389913,
+  "weighted_precision": 0.9980139469459133,
+  "weighted_recall": 0.997984892385284,
+  "weighted_f1": 0.9979733403646982,
+  "per_class_precision": {
+    "Benign": 0.9564795564795565,
+    "DDoS": 0.9992975433805831,
+    "DoS": 0.9998870746076444,
+    "MQTT": 0.9997317817941734,
+    "Recon": 0.9909985346451748,
+    "Spoofing": 0.9234715690466011
+  },
+  "per_class_recall": {
+    "Benign": 0.9986686347717867,
+    "DDoS": 0.9998826196466427,
+    "DoS": 0.998754427900815,
+    "MQTT": 0.9888775510204082,
+    "Recon": 0.9606331168831169,
+    "Spoofing": 0.8092918696140877
+  },
+  "per_class_f1": {
+    "Benign": 0.9771189080508594,
+    "DDoS": 0.999589995899959,
+    "DoS": 0.9993204303140909,
+    "MQTT": 0.9942750441170436,
+    "Recon": 0.9755795981452859,
+    "Spoofing": 0.8626198083067093
+  },
+  "support": {
+    "Benign": 34551,
+    "DDoS": 707103,
+    "DoS": 416676,
+    "MQTT": 49000,
+    "Recon": 19712,
+    "Spoofing": 2669
+  },
+  "chance_rate": 0.16666666666666666,
+  "majority_class_rate": 0.5750155930946377,
+  "train_seconds": 24.68,
+  "inference_seconds": 7.122,
+  "inference_rows_per_second": 172653.4,
+  "n_train": 999998,
+  "cross_validation": {
+    "n_splits": 5,
+    "seconds": 98.201,
+    "folds": [
+      {
+        "fold": 1,
+        "n_fit": 799998,
+        "n_score": 200000,
+        "macro_f1": 0.9542419315770986,
+        "weighted_f1": 0.997988478003802,
+        "accuracy": 0.998025
+      },
+      {
+        "fold": 2,
+        "n_fit": 799998,
+        "n_score": 200000,
+        "macro_f1": 0.9564496715990426,
+        "weighted_f1": 0.9981940888870156,
+        "accuracy": 0.998225
+      },
+      {
+        "fold": 3,
+        "n_fit": 799998,
+        "n_score": 200000,
+        "macro_f1": 0.9573408200110493,
+        "weighted_f1": 0.9981676816551841,
+        "accuracy": 0.99819
+      },
+      {
+        "fold": 4,
+        "n_fit": 799999,
+        "n_score": 199999,
+        "macro_f1": 0.9559039424177467,
+        "weighted_f1": 0.9981481988414924,
+        "accuracy": 0.9981799908999545
+      },
+      {
+        "fold": 5,
+        "n_fit": 799999,
+        "n_score": 199999,
+        "macro_f1": 0.9553591991782947,
+        "weighted_f1": 0.9980914787520654,
+        "accuracy": 0.998119990599953
+      }
+    ],
+    "macro_f1_mean": 0.9558591129566464,
+    "macro_f1_sd": 0.0011631223480249853,
+    "weighted_f1_mean": 0.9981179852279117
+  },
+  "fitted_params": {
+    "bootstrap": "True",
+    "ccp_alpha": "0.0",
+    "class_weight": "None",
+    "criterion": "gini",
+    "max_depth": "None",
+    "max_features": "sqrt",
+    "max_leaf_nodes": "None",
+    "max_samples": "None",
+    "min_impurity_decrease": "0.0",
+    "min_samples_leaf": "20",
+    "min_samples_split": "2",
+    "min_weight_fraction_leaf": "0.0",
+    "monotonic_cst": "None",
+    "n_estimators": "100",
+    "n_jobs": "-1",
+    "oob_score": "False",
+    "random_state": "42",
+    "verbose": "0",
+    "warm_start": "False"
+  },
+  "top_features": [
+    {
+      "feature": "IAT",
+      "importance": 0.595768335931144
+    },
+    {
+      "feature": "rst_count",
+      "importance": 0.03724773333348153
+    },
+    {
+      "feature": "Rate",
+      "importance": 0.03180467439341125
+    },
+    {
+      "feature": "Srate",
+      "importance": 0.029861494352661225
+    },
+    {
+      "feature": "psh_flag_number",
+      "importance": 0.028401115802308582
+    },
+    {
+      "feature": "Magnitue",
+      "importance": 0.025684559972054957
+    },
+    {
+      "feature": "Header_Length",
+      "importance": 0.0232109953516393
+    },
+    {
+      "feature": "Variance",
+      "importance": 0.021820879715466406
+    },
+    {
+      "feature": "Tot size",
+      "importance": 0.021224622495293416
+    },
+    {
+      "feature": "AVG",
+      "importance": 0.018920298191358032
+    },
+    {
+      "feature": "fin_count",
+      "importance": 0.015407469692490872
+    },
+    {
+      "feature": "Number",
+      "importance": 0.01388414594345721
+    },
+    {
+      "feature": "Min",
+      "importance": 0.013679028470943329
+    },
+    {
+      "feature": "Max",
+      "importance": 0.013662921722240968
+    },
+    {
+      "feature": "Weight",
+      "importance": 0.013379770039932275
+    }
+  ],
+  "feature_importances": {
+    "IAT": 0.595768335931144,
+    "rst_count": 0.03724773333348153,
+    "Rate": 0.03180467439341125,
+    "Srate": 0.029861494352661225,
+    "psh_flag_number": 0.028401115802308582,
+    "Magnitue": 0.025684559972054957,
+    "Header_Length": 0.0232109953516393,
+    "Variance": 0.021820879715466406,
+    "Tot size": 0.021224622495293416,
+    "AVG": 0.018920298191358032,
+    "fin_count": 0.015407469692490872,
+    "Number": 0.01388414594345721,
+    "Min": 0.013679028470943329,
+    "Max": 0.013662921722240968,
+    "Weight": 0.013379770039932275,
+    "Tot sum": 0.013158547209292248,
+    "ack_count": 0.011931088398813183,
+    "syn_count": 0.009930900158254641,
+    "fin_flag_number": 0.009457004067583302,
+    "ack_flag_number": 0.008618930491500717,
+    "TCP": 0.006762725834340479,
+    "Covariance": 0.005927213224690623,
+    "syn_flag_number": 0.00419024923937905,
+    "Std": 0.004016462091573134,
+    "Protocol Type": 0.003882429669757265,
+    "UDP": 0.0037832665070768753,
+    "Duration": 0.0037428080845550273,
+    "rst_flag_number": 0.0034528928529915064,
+    "Radius": 0.0031988593576344326,
+    "HTTPS": 0.0019860563926920698,
+    "ICMP": 0.0015673766366364362,
+    "ARP": 0.00013872014200186808,
+    "LLC": 0.00010029740424351866,
+    "IPv": 9.488595718975984e-05,
+    "HTTP": 6.255964240170275e-05,
+    "DNS": 3.838216681236256e-05,
+    "Telnet": 1.6146303904129418e-07,
+    "SMTP": 1.3003025943166477e-07,
+    "SSH": 7.569398022758628e-09,
+    "ece_flag_number": 0.0,
+    "cwr_flag_number": 0.0,
+    "IRC": 0.0,
+    "DHCP": 0.0,
+    "IGMP": 0.0
+  }
+}

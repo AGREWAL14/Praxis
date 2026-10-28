@@ -1,0 +1,183 @@
+{
+  "n_test": 24000,
+  "n_classes": 10,
+  "labels": [
+    "TCP_IP-DDoS-ICMP1_test",
+    "TCP_IP-DDoS-ICMP1_train",
+    "TCP_IP-DDoS-ICMP2_test",
+    "TCP_IP-DDoS-ICMP2_train",
+    "TCP_IP-DDoS-ICMP3_train",
+    "TCP_IP-DDoS-ICMP4_train",
+    "TCP_IP-DDoS-ICMP5_train",
+    "TCP_IP-DDoS-ICMP6_train",
+    "TCP_IP-DDoS-ICMP7_train",
+    "TCP_IP-DDoS-ICMP8_train"
+  ],
+  "accuracy": 0.8702083333333334,
+  "macro_precision": 0.8765171531049116,
+  "macro_recall": 0.8702083333333333,
+  "macro_f1": 0.8691255142263327,
+  "weighted_precision": 0.8765171531049116,
+  "weighted_recall": 0.8702083333333334,
+  "weighted_f1": 0.8691255142263326,
+  "per_class_precision": {
+    "TCP_IP-DDoS-ICMP1_test": 0.926674593737614,
+    "TCP_IP-DDoS-ICMP1_train": 0.9381698268755152,
+    "TCP_IP-DDoS-ICMP2_test": 0.9802083333333333,
+    "TCP_IP-DDoS-ICMP2_train": 0.7882867721305957,
+    "TCP_IP-DDoS-ICMP3_train": 0.9144672531769306,
+    "TCP_IP-DDoS-ICMP4_train": 0.7109773043075498,
+    "TCP_IP-DDoS-ICMP5_train": 0.772848948374761,
+    "TCP_IP-DDoS-ICMP6_train": 0.9312587087784486,
+    "TCP_IP-DDoS-ICMP7_train": 0.8115595075239398,
+    "TCP_IP-DDoS-ICMP8_train": 0.9907202828104287
+  },
+  "per_class_recall": {
+    "TCP_IP-DDoS-ICMP1_test": 0.9741666666666666,
+    "TCP_IP-DDoS-ICMP1_train": 0.9483333333333334,
+    "TCP_IP-DDoS-ICMP2_test": 0.7841666666666667,
+    "TCP_IP-DDoS-ICMP2_train": 0.9758333333333333,
+    "TCP_IP-DDoS-ICMP3_train": 0.7795833333333333,
+    "TCP_IP-DDoS-ICMP4_train": 0.6395833333333333,
+    "TCP_IP-DDoS-ICMP5_train": 0.8420833333333333,
+    "TCP_IP-DDoS-ICMP6_train": 0.8354166666666667,
+    "TCP_IP-DDoS-ICMP7_train": 0.98875,
+    "TCP_IP-DDoS-ICMP8_train": 0.9341666666666667
+  },
+  "per_class_f1": {
+    "TCP_IP-DDoS-ICMP1_test": 0.9498273410522039,
+    "TCP_IP-DDoS-ICMP1_train": 0.9432242022378782,
+    "TCP_IP-DDoS-ICMP2_test": 0.8712962962962963,
+    "TCP_IP-DDoS-ICMP2_train": 0.8720908583131632,
+    "TCP_IP-DDoS-ICMP3_train": 0.841655420602789,
+    "TCP_IP-DDoS-ICMP4_train": 0.6733932880017548,
+    "TCP_IP-DDoS-ICMP5_train": 0.8059820538384845,
+    "TCP_IP-DDoS-ICMP6_train": 0.8807379749615638,
+    "TCP_IP-DDoS-ICMP7_train": 0.891435011269722,
+    "TCP_IP-DDoS-ICMP8_train": 0.9616126956894703
+  },
+  "support": {
+    "TCP_IP-DDoS-ICMP1_test": 2400,
+    "TCP_IP-DDoS-ICMP1_train": 2400,
+    "TCP_IP-DDoS-ICMP2_test": 2400,
+    "TCP_IP-DDoS-ICMP2_train": 2400,
+    "TCP_IP-DDoS-ICMP3_train": 2400,
+    "TCP_IP-DDoS-ICMP4_train": 2400,
+    "TCP_IP-DDoS-ICMP5_train": 2400,
+    "TCP_IP-DDoS-ICMP6_train": 2400,
+    "TCP_IP-DDoS-ICMP7_train": 2400,
+    "TCP_IP-DDoS-ICMP8_train": 2400
+  },
+  "chance_rate": 0.1,
+  "majority_class_rate": 0.1,
+  "train_seconds": 0.274,
+  "inference_seconds": 0.053,
+  "inference_rows_per_second": 456171.8,
+  "top_features": [
+    {
+      "feature": "IAT",
+      "importance": 0.49002274991181266
+    },
+    {
+      "feature": "Rate",
+      "importance": 0.10588140035442951
+    },
+    {
+      "feature": "Srate",
+      "importance": 0.0992381895683679
+    },
+    {
+      "feature": "UDP",
+      "importance": 0.09150603730644453
+    },
+    {
+      "feature": "Header_Length",
+      "importance": 0.032090823163769835
+    },
+    {
+      "feature": "AVG",
+      "importance": 0.02552881986335608
+    },
+    {
+      "feature": "Max",
+      "importance": 0.019932965155834665
+    },
+    {
+      "feature": "Tot sum",
+      "importance": 0.018818125482930385
+    },
+    {
+      "feature": "ack_flag_number",
+      "importance": 0.01778458417551617
+    },
+    {
+      "feature": "ICMP",
+      "importance": 0.017034551520637577
+    },
+    {
+      "feature": "Std",
+      "importance": 0.01516947897053921
+    },
+    {
+      "feature": "Variance",
+      "importance": 0.014757041330994035
+    },
+    {
+      "feature": "Protocol Type",
+      "importance": 0.01363852152697092
+    },
+    {
+      "feature": "TCP",
+      "importance": 0.012602358740348962
+    },
+    {
+      "feature": "rst_count",
+      "importance": 0.006624273687347826
+    }
+  ],
+  "feature_importances": {
+    "IAT": 0.49002274991181266,
+    "Rate": 0.10588140035442951,
+    "Srate": 0.0992381895683679,
+    "UDP": 0.09150603730644453,
+    "Header_Length": 0.032090823163769835,
+    "AVG": 0.02552881986335608,
+    "Max": 0.019932965155834665,
+    "Tot sum": 0.018818125482930385,
+    "ack_flag_number": 0.01778458417551617,
+    "ICMP": 0.017034551520637577,
+    "Std": 0.01516947897053921,
+    "Variance": 0.014757041330994035,
+    "Protocol Type": 0.01363852152697092,
+    "TCP": 0.012602358740348962,
+    "rst_count": 0.006624273687347826,
+    "Tot size": 0.005164200841004893,
+    "HTTPS": 0.002964208462718576,
+    "Covariance": 0.0027456180812181663,
+    "ARP": 0.002452167085589552,
+    "Radius": 0.0024105481065070326,
+    "psh_flag_number": 0.0018470967231571675,
+    "Magnitue": 0.001416602296025693,
+    "IPv": 0.00015796295918889006,
+    "Min": 0.0001370775861545951,
+    "LLC": 7.459709913513424e-05,
+    "fin_flag_number": 0.0,
+    "syn_flag_number": 0.0,
+    "rst_flag_number": 0.0,
+    "ece_flag_number": 0.0,
+    "cwr_flag_number": 0.0,
+    "ack_count": 0.0,
+    "syn_count": 0.0,
+    "fin_count": 0.0,
+    "HTTP": 0.0,
+    "DNS": 0.0,
+    "Telnet": 0.0,
+    "SMTP": 0.0,
+    "SSH": 0.0,
+    "IRC": 0.0,
+    "DHCP": 0.0,
+    "IGMP": 0.0,
+    "Number": 0.0,
+    "Weight": 0.0
+  }
+}

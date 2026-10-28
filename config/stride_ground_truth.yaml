@@ -1,0 +1,101 @@
+# AG_PRAXIS — per-class STRIDE ground truth for H3
+#
+# The reference standard H3 is scored against. Eighteen attack classes, one STRIDE
+# category each. Benign is excluded: it is not an attack, so it has no attack
+# semantics to be consistent with, and H3 is stated over attack classes.
+#
+# Source: Dadkhah et al. (2024), Internet of Things 28:101351, the CICIoMT2024
+# benchmark paper, which PROJECT_RECORD.md Section 11 fixes as the reference standard.
+# Where an assignment follows from the class name and the protocol rather than from a
+# statement in the paper, the basis says so. That distinction is the point of the
+# field: it separates what the paper documents from what the taxonomy implies.
+#
+# Committed before any model trains.
+
+source: Dadkhah et al. (2024), Internet of Things 28:101351
+written_on: '2026-08-11'
+
+denominator:
+  n_classes_total: 19
+  n_attack_classes: 18
+  benign_excluded: >-
+    Benign is not an attack class. H3 reads "at least 70% of attack classes", so the
+    denominator is 18 and the pass mark is 13 of 18, not 14 of 19.
+
+majority_class_baseline:
+  largest_category: Denial of Service
+  n_in_largest: 12
+  of_classes: 18
+  fraction: 0.667
+  statement: >-
+    Twelve of the eighteen attack classes are Denial of Service, so a degenerate rule
+    emitting "Denial of Service" for every class scores 0.667 against H3's threshold of
+    0.70. The margin between the hypothesis and a rule that reads nothing is one class.
+    This figure is reported alongside H3 wherever H3 appears.
+
+classes:
+  DDoS-ICMP:
+    stride: Denial of Service
+    basis: Volumetric ICMP flood. Follows from the class name and protocol.
+  DDoS-SYN:
+    stride: Denial of Service
+    basis: TCP SYN flood, exhausting the connection table. Follows from the class name and protocol.
+  DDoS-TCP:
+    stride: Denial of Service
+    basis: Volumetric TCP flood. Follows from the class name and protocol.
+  DDoS-UDP:
+    stride: Denial of Service
+    basis: Volumetric UDP flood. Follows from the class name and protocol.
+  DoS-ICMP:
+    stride: Denial of Service
+    basis: Single-source ICMP flood. Follows from the class name and protocol.
+  DoS-SYN:
+    stride: Denial of Service
+    basis: Single-source TCP SYN flood. Follows from the class name and protocol.
+  DoS-TCP:
+    stride: Denial of Service
+    basis: Single-source TCP flood. Follows from the class name and protocol.
+  DoS-UDP:
+    stride: Denial of Service
+    basis: Single-source UDP flood. Follows from the class name and protocol.
+  MQTT-DDoS-Connect_Flood:
+    stride: Denial of Service
+    basis: Flood of MQTT CONNECT packets exhausting broker session capacity. Follows from the class name and protocol.
+  MQTT-DDoS-Publish_Flood:
+    stride: Denial of Service
+    basis: Flood of MQTT PUBLISH messages exhausting broker throughput. Follows from the class name and protocol.
+  MQTT-DoS-Connect_Flood:
+    stride: Denial of Service
+    basis: Single-source MQTT CONNECT flood. Follows from the class name and protocol.
+  MQTT-DoS-Publish_Flood:
+    stride: Denial of Service
+    basis: Single-source MQTT PUBLISH flood. Follows from the class name and protocol.
+  Recon-OS_Scan:
+    stride: Information Disclosure
+    basis: >-
+      Active operating-system fingerprinting. The paper describes the reconnaissance
+      group as gathering information about the target; the category follows from that
+      and from the class name.
+  Recon-Ping_Sweep:
+    stride: Information Disclosure
+    basis: Host discovery by ICMP echo. Follows from the class name and protocol.
+  Recon-Port_Scan:
+    stride: Information Disclosure
+    basis: Enumeration of open ports. Follows from the class name and protocol.
+  Recon-VulScan:
+    stride: Information Disclosure
+    basis: Probing for known-vulnerable software versions. Follows from the class name.
+  Spoofing:
+    stride: Spoofing
+    basis: >-
+      ARP spoofing, released in the corpus as ARP_Spoofing. Falsely claiming another
+      host's identity on the local segment, which is the STRIDE definition of spoofing.
+      Follows from the class name and protocol.
+  MQTT-Malformed_Data:
+    stride: Tampering
+    basis: >-
+      Malformed MQTT payloads, which modify message content rather than deny service or
+      impersonate. Follows from the class name.
+
+categories_used: [Denial of Service, Information Disclosure, Spoofing, Tampering]
+not_assigned: []

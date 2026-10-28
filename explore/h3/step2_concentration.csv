@@ -1,0 +1,19 @@
+class,top1_share,top3_share,agrees,assigned,truth,dos
+DDoS-TCP,0.4366,0.6805,True,Denial of Service,Denial of Service,True
+Recon-Port_Scan,0.3089,0.5546,False,Denial of Service,Information Disclosure,False
+DoS-SYN,0.3035,0.5315,True,Denial of Service,Denial of Service,True
+Recon-OS_Scan,0.2938,0.5824,False,Denial of Service,Information Disclosure,False
+DDoS-ICMP,0.2828,0.5828,False,Information Disclosure,Denial of Service,True
+MQTT-DDoS-Connect_Flood,0.2746,0.5638,True,Denial of Service,Denial of Service,True
+Recon-Ping_Sweep,0.2741,0.6085,True,Information Disclosure,Information Disclosure,False
+DoS-ICMP,0.2661,0.5549999999999999,False,Information Disclosure,Denial of Service,True
+MQTT-DoS-Publish_Flood,0.2449,0.5119,False,Information Disclosure,Denial of Service,True
+Recon-VulScan,0.2376,0.5011,False,Denial of Service,Information Disclosure,False
+MQTT-DoS-Connect_Flood,0.2221,0.5422,False,Information Disclosure,Denial of Service,True
+DoS-TCP,0.2124,0.5127,True,Denial of Service,Denial of Service,True
+MQTT-Malformed_Data,0.2094,0.5229,False,Information Disclosure,Tampering,False
+DDoS-SYN,0.18,0.4618,True,Denial of Service,Denial of Service,True
+DoS-UDP,0.1754,0.43220000000000003,True,Denial of Service,Denial of Service,True
+DDoS-UDP,0.1738,0.4478,True,Denial of Service,Denial of Service,True
+Spoofing,0.1663,0.3997,False,Denial of Service,Spoofing,False
+MQTT-DDoS-Publish_Flood,0.131,0.3846,True,Denial of Service,Denial of Service,True

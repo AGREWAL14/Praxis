@@ -1,0 +1,20 @@
+class,group,records to reach F1 0.80,best F1,F1 at fifty records,reaches the level then falls,thin
+Benign,,5,0.9808,0.9808,,
+MQTT-DDoS-Connect_Flood,,5,0.9996,0.9996,,
+MQTT-DDoS-Publish_Flood,,> 50,0.0889,0.0796,,
+MQTT-DoS-Connect_Flood,,5,1.0,0.9741,,
+MQTT-DoS-Publish_Flood,,> 50,0.7551,0.7551,,
+Recon-Ping_Sweep,,25,0.8571,0.0,yes,yes
+MQTT-Malformed_Data,low-rate,25,0.9067,0.8421,,yes
+Recon-OS_Scan,low-rate,> 50,0.6105,0.6061,,
+Recon-Port_Scan,low-rate,5,0.9301,0.9301,,
+Recon-VulScan,low-rate,> 50,0.5385,0.5385,,yes
+Spoofing,low-rate,> 50,0.7941,0.7653,,
+DDoS-ICMP,volumetric,> 50,0.7998,0.7721,,
+DDoS-SYN,volumetric,5,0.9449,0.8926,,
+DDoS-TCP,volumetric,5,0.8172,0.8137,,
+DDoS-UDP,volumetric,5,0.9881,0.9881,,
+DoS-ICMP,volumetric,> 50,0.3178,0.3178,,
+DoS-SYN,volumetric,5,0.9073,0.8023,,
+DoS-TCP,volumetric,> 50,0.5161,0.5161,,
+DoS-UDP,volumetric,5,0.988,0.988,,

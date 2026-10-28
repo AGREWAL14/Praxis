@@ -1,0 +1,113 @@
+{
+  "run_id": "published_cnn_2class",
+  "parent": "published_cnn_19class",
+  "model": "mohammadi_cnn",
+  "task": "2-class",
+  "split": "shipped",
+  "input": "one record, reshaped to (features, 1)",
+  "n_features": 44,
+  "preprocessing": "StandardScaler fitted on the training side of the split, and nothing else",
+  "optimizer": "adam",
+  "loss": "categorical_crossentropy",
+  "batch_size": 32,
+  "epochs": 10,
+  "class_weight": null,
+  "early_stopping": false,
+  "seed": 42,
+  "observed": {
+    "mode": "full",
+    "n_classes": 2,
+    "classes": [
+      "Attack",
+      "Benign"
+    ],
+    "features": [
+      "Header_Length",
+      "Protocol Type",
+      "Duration",
+      "Rate",
+      "Srate",
+      "fin_flag_number",
+      "syn_flag_number",
+      "rst_flag_number",
+      "psh_flag_number",
+      "ack_flag_number",
+      "ece_flag_number",
+      "cwr_flag_number",
+      "ack_count",
+      "syn_count",
+      "fin_count",
+      "rst_count",
+      "HTTP",
+      "HTTPS",
+      "DNS",
+      "Telnet",
+      "SMTP",
+      "SSH",
+      "IRC",
+      "TCP",
+      "UDP",
+      "DHCP",
+      "ARP",
+      "ICMP",
+      "IGMP",
+      "IPv",
+      "LLC",
+      "Tot sum",
+      "Min",
+      "Max",
+      "AVG",
+      "Std",
+      "Tot size",
+      "IAT",
+      "Number",
+      "Magnitue",
+      "Radius",
+      "Covariance",
+      "Variance",
+      "Weight"
+    ],
+    "scaler_fitted_by": "baselines/mohammadi/data.py, on the rows this notebook read",
+    "model": {
+      "source": "Mohammadi et al. (2024), arXiv:2410.23306",
+      "architecture": [
+        "Reshape input to (samples, features, 1)",
+        "Conv1D, 32 filters, kernel 3, ReLU",
+        "MaxPooling1D, pool 2",
+        "Conv1D, 64 filters, kernel 3, ReLU",
+        "MaxPooling1D, pool 2",
+        "Flatten",
+        "Dense 128, ReLU",
+        "Dense n_classes, softmax"
+      ],
+      "input_shape": [
+        44,
+        1
+      ],
+      "n_classes": 2,
+      "compile": {
+        "optimizer": "adam",
+        "loss": "categorical_crossentropy",
+        "metrics": [
+          "accuracy"
+        ]
+      },
+      "fit": {
+        "batch_size": 32,
+        "epochs": 10,
+        "shuffle": true,
+        "class_weight": null,
+        "validation_split": 0.0,
+        "early_stopping": false
+      }
+    },
+    "notebook": "AG_PRAXIS_NB05_baseline_models.ipynb",
+    "git_sha": "15b46f4",
+    "run_date": "2026-08-04",
+    "changed_from_parent": [
+      "task"
+    ],
+    "n_train": 7160831,
+    "n_test": 1614182
+  }
+}

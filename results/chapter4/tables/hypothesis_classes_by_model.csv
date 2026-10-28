@@ -1,0 +1,6 @@
+class,published,single-record convolution,single-record forest,sequence,test sequences,thin,reaches the floor under the sequence model
+Recon-VulScan,0.0,0.0144,0.2536,0.5385,18,yes,yes
+Recon-OS_Scan,0.0343,0.0519,0.7241,0.6061,123,,yes
+MQTT-DDoS-Publish_Flood,0.1858,0.0875,0.1186,0.0796,215,,no
+Spoofing,0.3438,0.4167,0.8605,0.7653,104,,yes
+MQTT-Malformed_Data,0.4883,0.4021,0.6752,0.8421,40,yes,yes

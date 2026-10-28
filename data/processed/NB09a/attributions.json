@@ -1,0 +1,159 @@
+{
+  "generated_by": "AG_PRAXIS_NB09a_shap_attributions.ipynb",
+  "generated_on": "2026-08-13",
+  "git_sha": "281326e",
+  "git_dirty": false,
+  "seed": 42,
+  "is_fast_pass": false,
+  "environment": {
+    "tensorflow": "2.20.0",
+    "keras": "3.13.2",
+    "shap": "0.52.0",
+    "scipy": "1.16.3",
+    "backend": "tensorflow",
+    "accelerator": "cpu",
+    "run_date": "2026-08-13"
+  },
+  "registered_under": "PREREGISTRATION.md Amendment 18",
+  "features": [
+    "Header_Length",
+    "Protocol Type",
+    "fin_flag_number",
+    "syn_flag_number",
+    "rst_flag_number",
+    "psh_flag_number",
+    "ack_flag_number",
+    "ece_flag_number",
+    "cwr_flag_number",
+    "ack_count",
+    "syn_count",
+    "fin_count",
+    "rst_count",
+    "HTTP",
+    "HTTPS",
+    "DNS",
+    "Telnet",
+    "SMTP",
+    "SSH",
+    "IRC",
+    "TCP",
+    "UDP",
+    "DHCP",
+    "ARP",
+    "ICMP",
+    "IGMP",
+    "IPv",
+    "LLC",
+    "Tot sum",
+    "Min",
+    "Max",
+    "AVG",
+    "Std",
+    "Tot size",
+    "Number",
+    "Magnitue",
+    "Radius",
+    "Covariance",
+    "Variance",
+    "Weight"
+  ],
+  "dropped": [
+    "Duration",
+    "Rate",
+    "Srate",
+    "IAT"
+  ],
+  "classes": [
+    "Benign",
+    "DDoS-ICMP",
+    "DDoS-SYN",
+    "DDoS-TCP",
+    "DDoS-UDP",
+    "DoS-ICMP",
+    "DoS-SYN",
+    "DoS-TCP",
+    "DoS-UDP",
+    "MQTT-DDoS-Connect_Flood",
+    "MQTT-DDoS-Publish_Flood",
+    "MQTT-DoS-Connect_Flood",
+    "MQTT-DoS-Publish_Flood",
+    "MQTT-Malformed_Data",
+    "Recon-OS_Scan",
+    "Recon-Ping_Sweep",
+    "Recon-Port_Scan",
+    "Recon-VulScan",
+    "Spoofing"
+  ],
+  "aggregation": "mean absolute attribution across the 50 records of a window, then the mean over that class's windows, per feature per class; signed attribution discarded",
+  "explainers": {
+    "sequence": "shap.GradientExplainer, approximate",
+    "forest": "shap.TreeExplainer, exact"
+  },
+  "nsamples": 50,
+  "files": {
+    "per_seed": [
+      "attributions_seed_42.npz",
+      "attributions_seed_43.npz",
+      "attributions_seed_44.npz",
+      "attributions_seed_45.npz",
+      "attributions_seed_46.npz"
+    ],
+    "forest": "attributions_forest.npz",
+    "why_per_seed": "each seed's table is written as its explainer pass finishes, so a dropped session keeps the seeds that completed"
+  },
+  "resume": {
+    "enabled": true,
+    "rule": "a seed whose run directory or attribution file already exists is skipped and the skip is printed"
+  },
+  "background": {
+    "n": 200,
+    "drawn_once": true,
+    "why": "held fixed across the five seeds so tau isolates training stochasticity rather than background resampling"
+  },
+  "explained": {
+    "sequence_per_class": 50,
+    "sequence_windows": 862,
+    "forest_per_class": 200,
+    "forest_records": 3739
+  },
+  "units": "the sequence models are scored on 49,159 windows and the forest on 1,229,711 records; the same split, not the same partition",
+  "sequence_runs": {
+    "42": {
+      "run": "seq_timing_excluded_seed_42",
+      "macro_f1": 0.6746928783790039,
+      "n_parameters": 206035
+    },
+    "43": {
+      "run": "seq_timing_excluded_seed_43",
+      "macro_f1": 0.6714458453092494,
+      "n_parameters": 206035
+    },
+    "44": {
+      "run": "seq_timing_excluded_seed_44",
+      "macro_f1": 0.6946551054006759,
+      "n_parameters": 206035
+    },
+    "45": {
+      "run": "seq_timing_excluded_seed_45",
+      "macro_f1": 0.6805107019653867,
+      "n_parameters": 206035
+    },
+    "46": {
+      "run": "seq_timing_excluded_seed_46",
+      "macro_f1": 0.7292116267241289,
+      "n_parameters": 206035
+    }
+  },
+  "forest_run": {
+    "run": "forest_timing_excluded",
+    "macro_f1": 0.5910269333839104,
+    "train_rows_cap": 1000000,
+    "n_train": 999998,
+    "role": "exactness check; H3 is not scored on it"
+  },
+  "thin_classes": {
+    "MQTT-Malformed_Data": 40,
+    "Recon-Ping_Sweep": 4,
+    "Recon-VulScan": 18
+  }
+}

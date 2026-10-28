@@ -1,0 +1,3 @@
+model,with all forty-four features,with the four timing features removed,fall,test unit
+"Random forest, single records",0.8418,0.591,0.2508,records
+"Convolutional encoder with a recurrent layer, fifty-record windows",0.7138,0.6901,0.0237,windows

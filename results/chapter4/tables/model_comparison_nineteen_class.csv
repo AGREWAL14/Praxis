@@ -1,0 +1,5 @@
+model,test unit,test items,accuracy,weighted F1,macro F1,weighted minus macro
+"Published convolutional model, single records, shipped split",records,1614182,0.9863,0.984,0.711,0.273
+"Published convolutional model, single records, capture-disjoint split",records,1229711,0.9852,0.9831,0.7356,0.2474
+"Random forest, single records, capture-disjoint split",records,1229711,0.9923,0.9906,0.8418,0.1488
+"Convolutional encoder with a recurrent layer, 50-record windows, capture-disjoint split",windows,49159,0.8197,0.8064,0.7138,0.0926

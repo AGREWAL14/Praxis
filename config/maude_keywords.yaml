@@ -1,0 +1,107 @@
+# AG_PRAXIS — MAUDE denominator and numerator, fixed before searching
+#
+# PREREGISTRATION.md Amendment 2 requires the denominator to be defined before the
+# search: "records matching the device categories represented in CICIoMT2024". That
+# enumeration was never written down. Amendment 3 specifies "keyword and category
+# search" and lists no keywords. This file is both, committed before any model trains
+# and before any query is issued, so neither is chosen after seeing counts.
+#
+# Amendment 18 fixes the window and the API.
+
+written_on: '2026-08-11'
+committed_before: any model trained, any query issued
+
+api:
+  source: openFDA device adverse event endpoint
+  endpoint: https://api.fda.gov/device/event.json
+  rate_limit: 240 requests per minute and 1,000 per day per IP without a key
+  field_searched: device.generic_name
+  window_opens: '2019-01-01'
+  window_closes: the retrieval date, recorded in the run config
+  window_basis: >-
+    Section 524B's statutory predicate dates from 2022, so a window opening a few years
+    earlier gives before and after without reaching into an era of materially different
+    reporting practice.
+
+# ---------------------------------------------------------------------------
+# THE DENOMINATOR
+# ---------------------------------------------------------------------------
+
+denominator:
+  rule: >-
+    Device-event records whose device.generic_name matches any term below, within the
+    window. Counted per term and de-duplicated by report key before summing.
+  generic_names:
+    - pulse oximeter
+    - electrocardiograph
+    - heart rate monitor
+    - electromyograph
+    - galvanic skin response device
+    - sleep monitor
+    - infant monitor
+    - personal emergency response system
+
+  derived_from: >-
+    PROJECT_RECORD.md Section 4, device inventory by protocol, which lists the testbed
+    devices from Dadkhah et al.'s diagram.
+
+  what_this_denominator_is_not:
+    consumer_devices_excluded: >-
+      Several CICIoMT2024 devices are consumer cameras and hubs with no FDA presence and
+      no generic name: Blink mini, Ecobee Camera, M1T laxihub, Owltron. They cannot
+      contribute to a denominator of medical device reports and are not represented here.
+    modelled_data_gap: >-
+      The devices that are medical are almost all Bluetooth, and Section 4 records
+      Bluetooth as released in pcap form with no extracted features, contributing no rows
+      to the modelled data. The 72 CSVs are Wi-Fi and MQTT only, and the MQTT devices are
+      simulated. So this denominator describes the corpus, not what the models saw. Any
+      statement built on it is about the device categories the benchmark represents and
+      not about the traffic the detectors were trained on.
+
+# ---------------------------------------------------------------------------
+# THE NUMERATOR
+# ---------------------------------------------------------------------------
+
+numerator:
+  rule: >-
+    Records in the denominator whose narrative or problem text contains any term below.
+    Matching is case-insensitive and on whole words, and the matched term is recorded
+    with each hit so a count can be read back to what produced it.
+  keywords:
+    - hack
+    - hacked
+    - hacking
+    - cyber
+    - cyberattack
+    - cybersecurity
+    - malware
+    - ransomware
+    - unauthorized access
+    - unauthorised access
+    - intrusion
+    - denial of service
+    - breach
+    - exploit
+    - tampering
+
+  known_weaknesses:
+    keyword_search_is_not_causation: >-
+      A keyword appearing in a narrative does not establish that a cyberattack caused the
+      event. "Exploit" and "tampering" in particular occur in non-security senses, and
+      "breach" occurs in the sense of a breached seal or container. Counts are reported as
+      device-category adverse events mentioning these terms, never as cyber-caused harm.
+    absence_is_not_evidence_of_safety: >-
+      A low count is consistent with cyber events being rare and equally consistent with
+      MAUDE having no category in which to record them, which is the reading Section 2
+      already advances. The measurement cannot separate the two and does not claim to.
+    vocabulary_misses: >-
+      A term that returns no records is reported as a finding about this enumeration and
+      about FDA's own vocabulary. It is not grounds for revising this file after the
+      fact: tuning terms until they return records would select the denominator on the
+      counts it produces, which is what Amendment 2 requires be settled beforehand. The
+      notebook prints a record count per term so a zero is visible rather than absorbed.
+    no_threshold: >-
+      Amendment 7 records that the one percent threshold did not survive into v1.0. The
+      share is reported without a pass mark.
+
+reported_as: device-category adverse events, never as cyber-caused harm

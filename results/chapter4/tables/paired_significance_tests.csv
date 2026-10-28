@@ -1,0 +1,12 @@
+family,first,second,accuracy of the first,accuracy of the second,items the two disagree on,statistic,p,p after correction,significant at 0.05,favours
+budget against budget,k5,k10,0.8037,0.8188,2490,222.9,2.11e-50,1.05e-49,True,k10
+budget against budget,k5,k25,0.8037,0.8265,4127,303.95,4.54e-68,2.73e-67,True,k25
+budget against budget,k5,k50,0.8037,0.8197,7153,86.37,1.49e-20,5.97e-20,True,k50
+budget against budget,k10,k25,0.8188,0.8265,3125,44.76,2.23e-11,6.68e-11,True,k25
+budget against budget,k10,k50,0.8188,0.8197,6033,0.27,0.607,0.607,False,k50
+budget against budget,k25,k50,0.8265,0.8197,4750,23.35,1.35e-06,2.71e-06,True,k25
+parent against intervention,sequence_cnn_lstm_19class,class_weighted_loss,0.8197,0.7056,12553,2505.35,0,0,True,sequence_cnn_lstm_19class
+parent against intervention,sequence_cnn_lstm_19class,focal_loss,0.8197,0.8213,4104,1.6,0.206,0.206,False,focal_loss
+parent against intervention,sequence_cnn_lstm_19class,logit_adjustment,0.8197,0.815,4529,11.68,0.000632,0.00189,True,sequence_cnn_lstm_19class
+parent against intervention,sequence_cnn_lstm_19class,threshold_tuning,0.8197,0.8168,5249,3.63,0.0568,0.114,False,sequence_cnn_lstm_19class
+parent against intervention,sequence_cnn_lstm_19class,window_resampling,0.8197,0.8393,3193,289.84,5.4e-65,2.16e-64,True,window_resampling

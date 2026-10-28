@@ -1,0 +1,1095 @@
+{
+  "canonical_label_order": [
+    "Benign",
+    "DDoS-ICMP",
+    "DDoS-SYN",
+    "DDoS-TCP",
+    "DDoS-UDP",
+    "DoS-ICMP",
+    "DoS-SYN",
+    "DoS-TCP",
+    "DoS-UDP",
+    "MQTT-DDoS-Connect_Flood",
+    "MQTT-DDoS-Publish_Flood",
+    "MQTT-DoS-Connect_Flood",
+    "MQTT-DoS-Publish_Flood",
+    "MQTT-Malformed_Data",
+    "Recon-OS_Scan",
+    "Recon-Ping_Sweep",
+    "Recon-Port_Scan",
+    "Recon-VulScan",
+    "Spoofing"
+  ],
+  "canonical_order_from": "data/processed/NB06/metrics.json",
+  "focus_class": "DoS-ICMP",
+  "partner_class": "DDoS-ICMP",
+  "tolerance": 1e-09,
+  "runs": {
+    "published_cnn_19class": {
+      "unit": "records",
+      "n_test": 1614182,
+      "own_label_order": [
+        "Benign",
+        "DDoS-ICMP",
+        "DDoS-SYN",
+        "DDoS-TCP",
+        "DDoS-UDP",
+        "DoS-ICMP",
+        "DoS-SYN",
+        "DoS-TCP",
+        "DoS-UDP",
+        "MQTT-DDoS-Connect_Flood",
+        "MQTT-DDoS-Publish_Flood",
+        "MQTT-DoS-Connect_Flood",
+        "MQTT-DoS-Publish_Flood",
+        "MQTT-Malformed_Data",
+        "Recon-OS_Scan",
+        "Recon-Ping_Sweep",
+        "Recon-Port_Scan",
+        "Recon-VulScan",
+        "Spoofing"
+      ],
+      "label_order_differs_from_canonical": false,
+      "focus_row_by_predicted_class": [
+        {
+          "class": "DoS-ICMP",
+          "count": 97670,
+          "percent_of_total": 99.22586150845254
+        },
+        {
+          "class": "DDoS-ICMP",
+          "count": 457,
+          "percent_of_total": 0.46427990897269183
+        },
+        {
+          "class": "DoS-UDP",
+          "count": 230,
+          "percent_of_total": 0.23366384915474642
+        },
+        {
+          "class": "DoS-SYN",
+          "count": 36,
+          "percent_of_total": 0.03657347204161249
+        },
+        {
+          "class": "Benign",
+          "count": 31,
+          "percent_of_total": 0.031493823146944086
+        },
+        {
+          "class": "MQTT-DoS-Publish_Flood",
+          "count": 5,
+          "percent_of_total": 0.0050796488946684
+        },
+        {
+          "class": "DoS-TCP",
+          "count": 3,
+          "percent_of_total": 0.00304778933680104
+        }
+      ],
+      "focus_row_errors_only": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 457,
+          "percent_of_total": 0.46427990897269183
+        },
+        {
+          "class": "DoS-UDP",
+          "count": 230,
+          "percent_of_total": 0.23366384915474642
+        },
+        {
+          "class": "DoS-SYN",
+          "count": 36,
+          "percent_of_total": 0.03657347204161249
+        },
+        {
+          "class": "Benign",
+          "count": 31,
+          "percent_of_total": 0.031493823146944086
+        },
+        {
+          "class": "MQTT-DoS-Publish_Flood",
+          "count": 5,
+          "percent_of_total": 0.0050796488946684
+        },
+        {
+          "class": "DoS-TCP",
+          "count": 3,
+          "percent_of_total": 0.00304778933680104
+        }
+      ],
+      "focus_column_by_true_class": [
+        {
+          "class": "DoS-ICMP",
+          "count": 97670,
+          "percent_of_total": 99.98055052257675
+        },
+        {
+          "class": "DDoS-ICMP",
+          "count": 17,
+          "percent_of_total": 0.017402164010277513
+        },
+        {
+          "class": "DDoS-SYN",
+          "count": 1,
+          "percent_of_total": 0.0010236567064869125
+        },
+        {
+          "class": "Recon-OS_Scan",
+          "count": 1,
+          "percent_of_total": 0.0010236567064869125
+        }
+      ],
+      "partner_row_by_predicted_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 349555,
+          "percent_of_total": 99.95882172954455
+        },
+        {
+          "class": "DDoS-UDP",
+          "count": 74,
+          "percent_of_total": 0.02116105565071676
+        },
+        {
+          "class": "DoS-UDP",
+          "count": 31,
+          "percent_of_total": 0.008864766556381345
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 17,
+          "percent_of_total": 0.004861323595434931
+        },
+        {
+          "class": "DDoS-TCP",
+          "count": 11,
+          "percent_of_total": 0.0031455623264578965
+        },
+        {
+          "class": "Benign",
+          "count": 7,
+          "percent_of_total": 0.002001721480473207
+        },
+        {
+          "class": "DDoS-SYN",
+          "count": 2,
+          "percent_of_total": 0.0005719204229923449
+        },
+        {
+          "class": "DoS-SYN",
+          "count": 2,
+          "percent_of_total": 0.0005719204229923449
+        }
+      ],
+      "partner_column_by_true_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 349555,
+          "percent_of_total": 99.8691477173705
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 457,
+          "percent_of_total": 0.13056657895563878
+        },
+        {
+          "class": "DDoS-TCP",
+          "count": 1,
+          "percent_of_total": 0.0002857036738635422
+        }
+      ],
+      "per_class": {
+        "DoS-ICMP": {
+          "recomputed": {
+            "tp": 97670,
+            "fp": 19,
+            "fn": 762,
+            "support": 98432,
+            "precision": 0.9998055052257675,
+            "recall": 0.9922586150845254,
+            "f1": 0.9960177645433176
+          },
+          "against_metrics_json": {
+            "precision": {
+              "recomputed": 0.9998055052257675,
+              "stored": 0.9998055052257675,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "recall": {
+              "recomputed": 0.9922586150845254,
+              "stored": 0.9922586150845254,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "f1": {
+              "recomputed": 0.9960177645433176,
+              "stored": 0.9960177645433177,
+              "difference": -1.1102230246251565e-16,
+              "agrees": true
+            },
+            "support": {
+              "recomputed": 98432,
+              "stored": 98432,
+              "difference": 0.0,
+              "agrees": true
+            }
+          }
+        },
+        "DDoS-ICMP": {
+          "recomputed": {
+            "tp": 349555,
+            "fp": 458,
+            "fn": 144,
+            "support": 349699,
+            "precision": 0.998691477173705,
+            "recall": 0.9995882172954456,
+            "f1": 0.9991396460257935
+          },
+          "against_metrics_json": {
+            "precision": {
+              "recomputed": 0.998691477173705,
+              "stored": 0.998691477173705,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "recall": {
+              "recomputed": 0.9995882172954456,
+              "stored": 0.9995882172954456,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "f1": {
+              "recomputed": 0.9991396460257935,
+              "stored": 0.9991396460257934,
+              "difference": 1.1102230246251565e-16,
+              "agrees": true
+            },
+            "support": {
+              "recomputed": 349699,
+              "stored": 349699,
+              "difference": 0.0,
+              "agrees": true
+            }
+          }
+        }
+      },
+      "focus_vs_partner_2x2": {
+        "DoS-ICMP": {
+          "n_true": 98432,
+          "predicted_DoS-ICMP": 97670,
+          "predicted_DDoS-ICMP": 457,
+          "predicted_elsewhere": 305
+        },
+        "DDoS-ICMP": {
+          "n_true": 349699,
+          "predicted_DoS-ICMP": 17,
+          "predicted_DDoS-ICMP": 349555,
+          "predicted_elsewhere": 127
+        }
+      },
+      "disagreements_with_metrics_json": [],
+      "confusion_row_counts": {
+        "DoS-ICMP": {
+          "Benign": 31,
+          "DDoS-ICMP": 457,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 0,
+          "DDoS-UDP": 0,
+          "DoS-ICMP": 97670,
+          "DoS-SYN": 36,
+          "DoS-TCP": 3,
+          "DoS-UDP": 230,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 5,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        },
+        "DDoS-ICMP": {
+          "Benign": 7,
+          "DDoS-ICMP": 349555,
+          "DDoS-SYN": 2,
+          "DDoS-TCP": 11,
+          "DDoS-UDP": 74,
+          "DoS-ICMP": 17,
+          "DoS-SYN": 2,
+          "DoS-TCP": 0,
+          "DoS-UDP": 31,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        }
+      },
+      "confusion_column_counts": {
+        "DoS-ICMP": {
+          "Benign": 0,
+          "DDoS-ICMP": 17,
+          "DDoS-SYN": 1,
+          "DDoS-TCP": 0,
+          "DDoS-UDP": 0,
+          "DoS-ICMP": 97670,
+          "DoS-SYN": 0,
+          "DoS-TCP": 0,
+          "DoS-UDP": 0,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 1,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        },
+        "DDoS-ICMP": {
+          "Benign": 0,
+          "DDoS-ICMP": 349555,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 1,
+          "DDoS-UDP": 0,
+          "DoS-ICMP": 457,
+          "DoS-SYN": 0,
+          "DoS-TCP": 0,
+          "DoS-UDP": 0,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        }
+      }
+    },
+    "ours_cnn_19class": {
+      "unit": "records",
+      "n_test": 1229711,
+      "own_label_order": [
+        "Benign",
+        "DDoS-ICMP",
+        "DDoS-SYN",
+        "DDoS-TCP",
+        "DDoS-UDP",
+        "DoS-ICMP",
+        "DoS-SYN",
+        "DoS-TCP",
+        "DoS-UDP",
+        "MQTT-DDoS-Connect_Flood",
+        "MQTT-DDoS-Publish_Flood",
+        "MQTT-DoS-Connect_Flood",
+        "MQTT-DoS-Publish_Flood",
+        "MQTT-Malformed_Data",
+        "Recon-OS_Scan",
+        "Recon-Ping_Sweep",
+        "Recon-Port_Scan",
+        "Recon-VulScan",
+        "Spoofing"
+      ],
+      "label_order_differs_from_canonical": false,
+      "focus_row_by_predicted_class": [
+        {
+          "class": "DoS-ICMP",
+          "count": 97733,
+          "percent_of_total": 99.28986508452536
+        },
+        {
+          "class": "DDoS-ICMP",
+          "count": 455,
+          "percent_of_total": 0.46224804941482445
+        },
+        {
+          "class": "DoS-UDP",
+          "count": 218,
+          "percent_of_total": 0.22147269180754225
+        },
+        {
+          "class": "DoS-TCP",
+          "count": 14,
+          "percent_of_total": 0.014223016905071521
+        },
+        {
+          "class": "MQTT-DoS-Publish_Flood",
+          "count": 6,
+          "percent_of_total": 0.00609557867360208
+        },
+        {
+          "class": "DDoS-TCP",
+          "count": 3,
+          "percent_of_total": 0.00304778933680104
+        },
+        {
+          "class": "DoS-SYN",
+          "count": 2,
+          "percent_of_total": 0.0020318595578673604
+        },
+        {
+          "class": "Benign",
+          "count": 1,
+          "percent_of_total": 0.0010159297789336802
+        }
+      ],
+      "focus_row_errors_only": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 455,
+          "percent_of_total": 0.46224804941482445
+        },
+        {
+          "class": "DoS-UDP",
+          "count": 218,
+          "percent_of_total": 0.22147269180754225
+        },
+        {
+          "class": "DoS-TCP",
+          "count": 14,
+          "percent_of_total": 0.014223016905071521
+        },
+        {
+          "class": "MQTT-DoS-Publish_Flood",
+          "count": 6,
+          "percent_of_total": 0.00609557867360208
+        },
+        {
+          "class": "DDoS-TCP",
+          "count": 3,
+          "percent_of_total": 0.00304778933680104
+        },
+        {
+          "class": "DoS-SYN",
+          "count": 2,
+          "percent_of_total": 0.0020318595578673604
+        },
+        {
+          "class": "Benign",
+          "count": 1,
+          "percent_of_total": 0.0010159297789336802
+        }
+      ],
+      "focus_column_by_true_class": [
+        {
+          "class": "DoS-ICMP",
+          "count": 97733,
+          "percent_of_total": 99.71941066035426
+        },
+        {
+          "class": "DDoS-ICMP",
+          "count": 111,
+          "percent_of_total": 0.11325606072973635
+        },
+        {
+          "class": "Benign",
+          "count": 95,
+          "percent_of_total": 0.09693086278671129
+        },
+        {
+          "class": "DoS-TCP",
+          "count": 18,
+          "percent_of_total": 0.018365847685903193
+        },
+        {
+          "class": "Recon-Port_Scan",
+          "count": 16,
+          "percent_of_total": 0.01632519794302506
+        },
+        {
+          "class": "Spoofing",
+          "count": 16,
+          "percent_of_total": 0.01632519794302506
+        },
+        {
+          "class": "Recon-Ping_Sweep",
+          "count": 9,
+          "percent_of_total": 0.009182923842951596
+        },
+        {
+          "class": "DDoS-SYN",
+          "count": 3,
+          "percent_of_total": 0.0030609746143171984
+        },
+        {
+          "class": "DoS-UDP",
+          "count": 3,
+          "percent_of_total": 0.0030609746143171984
+        },
+        {
+          "class": "DDoS-UDP",
+          "count": 2,
+          "percent_of_total": 0.0020406497428781326
+        },
+        {
+          "class": "DoS-SYN",
+          "count": 1,
+          "percent_of_total": 0.0010203248714390663
+        },
+        {
+          "class": "MQTT-DDoS-Publish_Flood",
+          "count": 1,
+          "percent_of_total": 0.0010203248714390663
+        }
+      ],
+      "partner_row_by_predicted_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 195579,
+          "percent_of_total": 99.94225619851603
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 111,
+          "percent_of_total": 0.056721787298407704
+        },
+        {
+          "class": "DDoS-TCP",
+          "count": 1,
+          "percent_of_total": 0.0005110070927784477
+        },
+        {
+          "class": "DDoS-UDP",
+          "count": 1,
+          "percent_of_total": 0.0005110070927784477
+        }
+      ],
+      "partner_column_by_true_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 195579,
+          "percent_of_total": 99.7373708527543
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 455,
+          "percent_of_total": 0.2320315766928106
+        },
+        {
+          "class": "DDoS-TCP",
+          "count": 14,
+          "percent_of_total": 0.007139433129009556
+        },
+        {
+          "class": "DDoS-SYN",
+          "count": 11,
+          "percent_of_total": 0.005609554601364652
+        },
+        {
+          "class": "Benign",
+          "count": 10,
+          "percent_of_total": 0.005099595092149683
+        },
+        {
+          "class": "Spoofing",
+          "count": 10,
+          "percent_of_total": 0.005099595092149683
+        },
+        {
+          "class": "Recon-Port_Scan",
+          "count": 9,
+          "percent_of_total": 0.004589635582934715
+        },
+        {
+          "class": "DDoS-UDP",
+          "count": 3,
+          "percent_of_total": 0.001529878527644905
+        },
+        {
+          "class": "DoS-UDP",
+          "count": 2,
+          "percent_of_total": 0.0010199190184299366
+        },
+        {
+          "class": "Recon-OS_Scan",
+          "count": 1,
+          "percent_of_total": 0.0005099595092149683
+        }
+      ],
+      "per_class": {
+        "DoS-ICMP": {
+          "recomputed": {
+            "tp": 97733,
+            "fp": 275,
+            "fn": 699,
+            "support": 98432,
+            "precision": 0.9971941066035426,
+            "recall": 0.9928986508452535,
+            "f1": 0.9950417430258602
+          },
+          "against_metrics_json": {
+            "precision": {
+              "recomputed": 0.9971941066035426,
+              "stored": 0.9971941066035426,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "recall": {
+              "recomputed": 0.9928986508452535,
+              "stored": 0.9928986508452535,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "f1": {
+              "recomputed": 0.9950417430258602,
+              "stored": 0.9950417430258603,
+              "difference": -1.1102230246251565e-16,
+              "agrees": true
+            },
+            "support": {
+              "recomputed": 98432,
+              "stored": 98432,
+              "difference": 0.0,
+              "agrees": true
+            }
+          }
+        },
+        "DDoS-ICMP": {
+          "recomputed": {
+            "tp": 195579,
+            "fp": 515,
+            "fn": 113,
+            "support": 195692,
+            "precision": 0.9973737085275429,
+            "recall": 0.9994225619851603,
+            "f1": 0.9983970841224546
+          },
+          "against_metrics_json": {
+            "precision": {
+              "recomputed": 0.9973737085275429,
+              "stored": 0.9973737085275429,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "recall": {
+              "recomputed": 0.9994225619851603,
+              "stored": 0.9994225619851603,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "f1": {
+              "recomputed": 0.9983970841224546,
+              "stored": 0.9983970841224546,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "support": {
+              "recomputed": 195692,
+              "stored": 195692,
+              "difference": 0.0,
+              "agrees": true
+            }
+          }
+        }
+      },
+      "focus_vs_partner_2x2": {
+        "DoS-ICMP": {
+          "n_true": 98432,
+          "predicted_DoS-ICMP": 97733,
+          "predicted_DDoS-ICMP": 455,
+          "predicted_elsewhere": 244
+        },
+        "DDoS-ICMP": {
+          "n_true": 195692,
+          "predicted_DoS-ICMP": 111,
+          "predicted_DDoS-ICMP": 195579,
+          "predicted_elsewhere": 2
+        }
+      },
+      "disagreements_with_metrics_json": [],
+      "confusion_row_counts": {
+        "DoS-ICMP": {
+          "Benign": 1,
+          "DDoS-ICMP": 455,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 3,
+          "DDoS-UDP": 0,
+          "DoS-ICMP": 97733,
+          "DoS-SYN": 2,
+          "DoS-TCP": 14,
+          "DoS-UDP": 218,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 6,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        },
+        "DDoS-ICMP": {
+          "Benign": 0,
+          "DDoS-ICMP": 195579,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 1,
+          "DDoS-UDP": 1,
+          "DoS-ICMP": 111,
+          "DoS-SYN": 0,
+          "DoS-TCP": 0,
+          "DoS-UDP": 0,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        }
+      },
+      "confusion_column_counts": {
+        "DoS-ICMP": {
+          "Benign": 95,
+          "DDoS-ICMP": 111,
+          "DDoS-SYN": 3,
+          "DDoS-TCP": 0,
+          "DDoS-UDP": 2,
+          "DoS-ICMP": 97733,
+          "DoS-SYN": 1,
+          "DoS-TCP": 18,
+          "DoS-UDP": 3,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 1,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 9,
+          "Recon-Port_Scan": 16,
+          "Recon-VulScan": 0,
+          "Spoofing": 16
+        },
+        "DDoS-ICMP": {
+          "Benign": 10,
+          "DDoS-ICMP": 195579,
+          "DDoS-SYN": 11,
+          "DDoS-TCP": 14,
+          "DDoS-UDP": 3,
+          "DoS-ICMP": 455,
+          "DoS-SYN": 0,
+          "DoS-TCP": 0,
+          "DoS-UDP": 2,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 1,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 9,
+          "Recon-VulScan": 0,
+          "Spoofing": 10
+        }
+      }
+    },
+    "sequence_cnn_lstm_19class": {
+      "unit": "windows",
+      "n_test": 49159,
+      "own_label_order": [
+        "Benign",
+        "DDoS-ICMP",
+        "DDoS-SYN",
+        "DDoS-TCP",
+        "DDoS-UDP",
+        "DoS-ICMP",
+        "DoS-SYN",
+        "DoS-TCP",
+        "DoS-UDP",
+        "MQTT-DDoS-Connect_Flood",
+        "MQTT-DDoS-Publish_Flood",
+        "MQTT-DoS-Connect_Flood",
+        "MQTT-DoS-Publish_Flood",
+        "MQTT-Malformed_Data",
+        "Recon-OS_Scan",
+        "Recon-Ping_Sweep",
+        "Recon-Port_Scan",
+        "Recon-VulScan",
+        "Spoofing"
+      ],
+      "label_order_differs_from_canonical": false,
+      "focus_row_by_predicted_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 2996,
+          "percent_of_total": 76.1178861788618
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 936,
+          "percent_of_total": 23.78048780487805
+        },
+        {
+          "class": "DDoS-UDP",
+          "count": 3,
+          "percent_of_total": 0.07621951219512195
+        },
+        {
+          "class": "Benign",
+          "count": 1,
+          "percent_of_total": 0.02540650406504065
+        }
+      ],
+      "focus_row_errors_only": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 2996,
+          "percent_of_total": 76.1178861788618
+        },
+        {
+          "class": "DDoS-UDP",
+          "count": 3,
+          "percent_of_total": 0.07621951219512195
+        },
+        {
+          "class": "Benign",
+          "count": 1,
+          "percent_of_total": 0.02540650406504065
+        }
+      ],
+      "focus_column_by_true_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 1017,
+          "percent_of_total": 52.047082906857725
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 936,
+          "percent_of_total": 47.90174002047083
+        },
+        {
+          "class": "MQTT-DDoS-Publish_Flood",
+          "count": 1,
+          "percent_of_total": 0.0511770726714432
+        }
+      ],
+      "partner_row_by_predicted_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 6809,
+          "percent_of_total": 87.00485560950678
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 1017,
+          "percent_of_total": 12.995144390493227
+        }
+      ],
+      "partner_column_by_true_class": [
+        {
+          "class": "DDoS-ICMP",
+          "count": 6809,
+          "percent_of_total": 69.39461883408072
+        },
+        {
+          "class": "DoS-ICMP",
+          "count": 2996,
+          "percent_of_total": 30.53403995108031
+        },
+        {
+          "class": "DoS-TCP",
+          "count": 7,
+          "percent_of_total": 0.07134121483897268
+        }
+      ],
+      "per_class": {
+        "DoS-ICMP": {
+          "recomputed": {
+            "tp": 936,
+            "fp": 1018,
+            "fn": 3000,
+            "support": 3936,
+            "precision": 0.4790174002047083,
+            "recall": 0.23780487804878048,
+            "f1": 0.31782682512733446
+          },
+          "against_metrics_json": {
+            "precision": {
+              "recomputed": 0.4790174002047083,
+              "stored": 0.4790174002047083,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "recall": {
+              "recomputed": 0.23780487804878048,
+              "stored": 0.23780487804878048,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "f1": {
+              "recomputed": 0.31782682512733446,
+              "stored": 0.31782682512733446,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "support": {
+              "recomputed": 3936,
+              "stored": 3936,
+              "difference": 0.0,
+              "agrees": true
+            }
+          }
+        },
+        "DDoS-ICMP": {
+          "recomputed": {
+            "tp": 6809,
+            "fp": 3003,
+            "fn": 1017,
+            "support": 7826,
+            "precision": 0.6939461883408071,
+            "recall": 0.8700485560950677,
+            "f1": 0.7720830026080054
+          },
+          "against_metrics_json": {
+            "precision": {
+              "recomputed": 0.6939461883408071,
+              "stored": 0.6939461883408071,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "recall": {
+              "recomputed": 0.8700485560950677,
+              "stored": 0.8700485560950677,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "f1": {
+              "recomputed": 0.7720830026080054,
+              "stored": 0.7720830026080054,
+              "difference": 0.0,
+              "agrees": true
+            },
+            "support": {
+              "recomputed": 7826,
+              "stored": 7826,
+              "difference": 0.0,
+              "agrees": true
+            }
+          }
+        }
+      },
+      "focus_vs_partner_2x2": {
+        "DoS-ICMP": {
+          "n_true": 3936,
+          "predicted_DoS-ICMP": 936,
+          "predicted_DDoS-ICMP": 2996,
+          "predicted_elsewhere": 4
+        },
+        "DDoS-ICMP": {
+          "n_true": 7826,
+          "predicted_DoS-ICMP": 1017,
+          "predicted_DDoS-ICMP": 6809,
+          "predicted_elsewhere": 0
+        }
+      },
+      "disagreements_with_metrics_json": [],
+      "confusion_row_counts": {
+        "DoS-ICMP": {
+          "Benign": 1,
+          "DDoS-ICMP": 2996,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 0,
+          "DDoS-UDP": 3,
+          "DoS-ICMP": 936,
+          "DoS-SYN": 0,
+          "DoS-TCP": 0,
+          "DoS-UDP": 0,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        },
+        "DDoS-ICMP": {
+          "Benign": 0,
+          "DDoS-ICMP": 6809,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 0,
+          "DDoS-UDP": 0,
+          "DoS-ICMP": 1017,
+          "DoS-SYN": 0,
+          "DoS-TCP": 0,
+          "DoS-UDP": 0,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        }
+      },
+      "confusion_column_counts": {
+        "DoS-ICMP": {
+          "Benign": 0,
+          "DDoS-ICMP": 1017,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 0,
+          "DDoS-UDP": 0,
+          "DoS-ICMP": 936,
+          "DoS-SYN": 0,
+          "DoS-TCP": 0,
+          "DoS-UDP": 0,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 1,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        },
+        "DDoS-ICMP": {
+          "Benign": 0,
+          "DDoS-ICMP": 6809,
+          "DDoS-SYN": 0,
+          "DDoS-TCP": 0,
+          "DDoS-UDP": 0,
+          "DoS-ICMP": 2996,
+          "DoS-SYN": 0,
+          "DoS-TCP": 7,
+          "DoS-UDP": 0,
+          "MQTT-DDoS-Connect_Flood": 0,
+          "MQTT-DDoS-Publish_Flood": 0,
+          "MQTT-DoS-Connect_Flood": 0,
+          "MQTT-DoS-Publish_Flood": 0,
+          "MQTT-Malformed_Data": 0,
+          "Recon-OS_Scan": 0,
+          "Recon-Ping_Sweep": 0,
+          "Recon-Port_Scan": 0,
+          "Recon-VulScan": 0,
+          "Spoofing": 0
+        }
+      }
+    }
+  },
+  "all_disagreements": []
+}

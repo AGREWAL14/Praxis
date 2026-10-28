@@ -1,0 +1,1646 @@
+{
+  "generated_by": "AG_PRAXIS_NB04_preprocessing_splits.ipynb",
+  "generated_on": "2026-08-04",
+  "git_sha": "a557ed8",
+  "git_dirty": false,
+  "seed": 42,
+  "mode": "full",
+  "is_fast_pass": false,
+  "enterable_in_ledger": true,
+  "read_from": {
+    "inventory": "/content/repo/data/processed/dataset_inventory.json",
+    "families": "/content/repo/config/feature_families.yaml",
+    "n_files": 72,
+    "total_rows": 8775013
+  },
+  "columns": {
+    "in_the_files": 45,
+    "dropped": {
+      "Drate": "constant in every row of every file, so it separates nothing"
+    },
+    "kept": [
+      "Header_Length",
+      "Protocol Type",
+      "Duration",
+      "Rate",
+      "Srate",
+      "fin_flag_number",
+      "syn_flag_number",
+      "rst_flag_number",
+      "psh_flag_number",
+      "ack_flag_number",
+      "ece_flag_number",
+      "cwr_flag_number",
+      "ack_count",
+      "syn_count",
+      "fin_count",
+      "rst_count",
+      "HTTP",
+      "HTTPS",
+      "DNS",
+      "Telnet",
+      "SMTP",
+      "SSH",
+      "IRC",
+      "TCP",
+      "UDP",
+      "DHCP",
+      "ARP",
+      "ICMP",
+      "IGMP",
+      "IPv",
+      "LLC",
+      "Tot sum",
+      "Min",
+      "Max",
+      "AVG",
+      "Std",
+      "Tot size",
+      "IAT",
+      "Number",
+      "Magnitue",
+      "Radius",
+      "Covariance",
+      "Variance",
+      "Weight"
+    ],
+    "timing_family_named": [
+      "Duration",
+      "Rate",
+      "Srate",
+      "Drate",
+      "IAT"
+    ],
+    "timing_family_live": [
+      "Duration",
+      "Rate",
+      "Srate",
+      "IAT"
+    ]
+  },
+  "timing_excluded_slice": {
+    "why": "NB03 measured 0.9301 capture-identification accuracy from the timing family alone against 0.8010 from all 44 features, so NB09 explains a model trained without it",
+    "not_written": "a column slice of the sequence arrays, recorded here rather than saved as a second copy that could drift from the first",
+    "drop": [
+      "Duration",
+      "Rate",
+      "Srate",
+      "IAT"
+    ],
+    "keep": [
+      "Header_Length",
+      "Protocol Type",
+      "fin_flag_number",
+      "syn_flag_number",
+      "rst_flag_number",
+      "psh_flag_number",
+      "ack_flag_number",
+      "ece_flag_number",
+      "cwr_flag_number",
+      "ack_count",
+      "syn_count",
+      "fin_count",
+      "rst_count",
+      "HTTP",
+      "HTTPS",
+      "DNS",
+      "Telnet",
+      "SMTP",
+      "SSH",
+      "IRC",
+      "TCP",
+      "UDP",
+      "DHCP",
+      "ARP",
+      "ICMP",
+      "IGMP",
+      "IPv",
+      "LLC",
+      "Tot sum",
+      "Min",
+      "Max",
+      "AVG",
+      "Std",
+      "Tot size",
+      "Number",
+      "Magnitue",
+      "Radius",
+      "Covariance",
+      "Variance",
+      "Weight"
+    ],
+    "n_features": 40,
+    "how": "index = [list(npz['features']).index(c) for c in manifest['timing_excluded_slice']['keep']]; X[:, :, index]"
+  },
+  "sequences": {
+    "window": 50,
+    "stride": 25,
+    "dtype": "float32",
+    "windows_per_block_cap": null,
+    "row_order": "position in the file; this dataset has no timestamp column",
+    "label_rule": "a sequence takes the label of the file it was cut from"
+  },
+  "split": {
+    "protocol": "two_tier",
+    "ratios": [
+      0.7,
+      0.15,
+      0.15
+    ],
+    "rows_per_partition": {
+      "train": 6228288,
+      "val": 1317014,
+      "test": 1229711
+    },
+    "recordings_per_partition": {
+      "train": 46,
+      "val": 28,
+      "test": 20
+    },
+    "checks": [
+      {
+        "check": "no recording in more than one partition, 8 classes",
+        "result": "PASS",
+        "detail": "50 recordings checked"
+      },
+      {
+        "check": "every class in all 3 partitions",
+        "result": "PASS",
+        "detail": "19 classes"
+      },
+      {
+        "check": "row counts sum to the dataset total",
+        "result": "PASS",
+        "detail": "8,775,013 rows across 94 blocks against 8,775,013 in the inventory"
+      },
+      {
+        "check": "every file covered exactly once, no gaps or overlaps",
+        "result": "PASS",
+        "detail": "72 files"
+      },
+      {
+        "check": "no empty block",
+        "result": "PASS",
+        "detail": "smallest block 47 rows"
+      }
+    ],
+    "blocks": [
+      {
+        "label": "Benign",
+        "tier": "B",
+        "partition": "train",
+        "recording": "Benign_train",
+        "file": "Benign_train.pcap.csv",
+        "start": 0,
+        "stop": 161237
+      },
+      {
+        "label": "Benign",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Benign_train",
+        "file": "Benign_train.pcap.csv",
+        "start": 161237,
+        "stop": 192732
+      },
+      {
+        "label": "Benign",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Benign_test",
+        "file": "Benign_test.pcap.csv",
+        "start": 0,
+        "stop": 3056
+      },
+      {
+        "label": "Benign",
+        "tier": "B",
+        "partition": "test",
+        "recording": "Benign_test",
+        "file": "Benign_test.pcap.csv",
+        "start": 3056,
+        "stop": 37607
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP1_train",
+        "file": "TCP_IP-DDoS-ICMP1_train.pcap.csv",
+        "start": 0,
+        "stop": 194938
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP2_train",
+        "file": "TCP_IP-DDoS-ICMP2_train.pcap.csv",
+        "start": 0,
+        "stop": 194818
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP3_train",
+        "file": "TCP_IP-DDoS-ICMP3_train.pcap.csv",
+        "start": 0,
+        "stop": 189710
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP4_train",
+        "file": "TCP_IP-DDoS-ICMP4_train.pcap.csv",
+        "start": 0,
+        "stop": 192741
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP5_train",
+        "file": "TCP_IP-DDoS-ICMP5_train.pcap.csv",
+        "start": 0,
+        "stop": 195032
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP6_train",
+        "file": "TCP_IP-DDoS-ICMP6_train.pcap.csv",
+        "start": 0,
+        "stop": 190875
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP7_train",
+        "file": "TCP_IP-DDoS-ICMP7_train.pcap.csv",
+        "start": 0,
+        "stop": 186022
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-ICMP8_train",
+        "file": "TCP_IP-DDoS-ICMP8_train.pcap.csv",
+        "start": 0,
+        "stop": 193340
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DDoS-ICMP1_test",
+        "file": "TCP_IP-DDoS-ICMP1_test.pcap.csv",
+        "start": 0,
+        "stop": 154007
+      },
+      {
+        "label": "DDoS-ICMP",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DDoS-ICMP2_test",
+        "file": "TCP_IP-DDoS-ICMP2_test.pcap.csv",
+        "start": 0,
+        "stop": 195692
+      },
+      {
+        "label": "DDoS-SYN",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-SYN1_train",
+        "file": "TCP_IP-DDoS-SYN1_train.pcap.csv",
+        "start": 0,
+        "stop": 199390
+      },
+      {
+        "label": "DDoS-SYN",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-SYN2_train",
+        "file": "TCP_IP-DDoS-SYN2_train.pcap.csv",
+        "start": 0,
+        "stop": 203669
+      },
+      {
+        "label": "DDoS-SYN",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-SYN3_train",
+        "file": "TCP_IP-DDoS-SYN3_train.pcap.csv",
+        "start": 0,
+        "stop": 202023
+      },
+      {
+        "label": "DDoS-SYN",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DDoS-SYN4_train",
+        "file": "TCP_IP-DDoS-SYN4_train.pcap.csv",
+        "start": 0,
+        "stop": 196880
+      },
+      {
+        "label": "DDoS-SYN",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DDoS-SYN_test",
+        "file": "TCP_IP-DDoS-SYN_test.pcap.csv",
+        "start": 0,
+        "stop": 172397
+      },
+      {
+        "label": "DDoS-TCP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-TCP1_train",
+        "file": "TCP_IP-DDoS-TCP1_train.pcap.csv",
+        "start": 0,
+        "stop": 202311
+      },
+      {
+        "label": "DDoS-TCP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-TCP2_train",
+        "file": "TCP_IP-DDoS-TCP2_train.pcap.csv",
+        "start": 0,
+        "stop": 197081
+      },
+      {
+        "label": "DDoS-TCP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-TCP3_train",
+        "file": "TCP_IP-DDoS-TCP3_train.pcap.csv",
+        "start": 0,
+        "stop": 204075
+      },
+      {
+        "label": "DDoS-TCP",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DDoS-TCP4_train",
+        "file": "TCP_IP-DDoS-TCP4_train.pcap.csv",
+        "start": 0,
+        "stop": 200998
+      },
+      {
+        "label": "DDoS-TCP",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DDoS-TCP_test",
+        "file": "TCP_IP-DDoS-TCP_test.pcap.csv",
+        "start": 0,
+        "stop": 182598
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP1_train",
+        "file": "TCP_IP-DDoS-UDP1_train.pcap.csv",
+        "start": 0,
+        "stop": 206170
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP2_train",
+        "file": "TCP_IP-DDoS-UDP2_train.pcap.csv",
+        "start": 0,
+        "stop": 207295
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP3_train",
+        "file": "TCP_IP-DDoS-UDP3_train.pcap.csv",
+        "start": 0,
+        "stop": 206604
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP4_train",
+        "file": "TCP_IP-DDoS-UDP4_train.pcap.csv",
+        "start": 0,
+        "stop": 206343
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP5_train",
+        "file": "TCP_IP-DDoS-UDP5_train.pcap.csv",
+        "start": 0,
+        "stop": 205507
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP6_train",
+        "file": "TCP_IP-DDoS-UDP6_train.pcap.csv",
+        "start": 0,
+        "stop": 202247
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP7_train",
+        "file": "TCP_IP-DDoS-UDP7_train.pcap.csv",
+        "start": 0,
+        "stop": 197685
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DDoS-UDP8_train",
+        "file": "TCP_IP-DDoS-UDP8_train.pcap.csv",
+        "start": 0,
+        "stop": 204105
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DDoS-UDP1_test",
+        "file": "TCP_IP-DDoS-UDP1_test.pcap.csv",
+        "start": 0,
+        "stop": 205654
+      },
+      {
+        "label": "DDoS-UDP",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DDoS-UDP2_test",
+        "file": "TCP_IP-DDoS-UDP2_test.pcap.csv",
+        "start": 0,
+        "stop": 156416
+      },
+      {
+        "label": "DoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-ICMP1_train",
+        "file": "TCP_IP-DoS-ICMP1_train.pcap.csv",
+        "start": 0,
+        "stop": 104507
+      },
+      {
+        "label": "DoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-ICMP2_train",
+        "file": "TCP_IP-DoS-ICMP2_train.pcap.csv",
+        "start": 0,
+        "stop": 96977
+      },
+      {
+        "label": "DoS-ICMP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-ICMP3_train",
+        "file": "TCP_IP-DoS-ICMP3_train.pcap.csv",
+        "start": 0,
+        "stop": 108686
+      },
+      {
+        "label": "DoS-ICMP",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DoS-ICMP4_train",
+        "file": "TCP_IP-DoS-ICMP4_train.pcap.csv",
+        "start": 0,
+        "stop": 106122
+      },
+      {
+        "label": "DoS-ICMP",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DoS-ICMP_test",
+        "file": "TCP_IP-DoS-ICMP_test.pcap.csv",
+        "start": 0,
+        "stop": 98432
+      },
+      {
+        "label": "DoS-SYN",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-SYN1_train",
+        "file": "TCP_IP-DoS-SYN1_train.pcap.csv",
+        "start": 0,
+        "stop": 111431
+      },
+      {
+        "label": "DoS-SYN",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-SYN2_train",
+        "file": "TCP_IP-DoS-SYN2_train.pcap.csv",
+        "start": 0,
+        "stop": 111647
+      },
+      {
+        "label": "DoS-SYN",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-SYN3_train",
+        "file": "TCP_IP-DoS-SYN3_train.pcap.csv",
+        "start": 0,
+        "stop": 108190
+      },
+      {
+        "label": "DoS-SYN",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DoS-SYN4_train",
+        "file": "TCP_IP-DoS-SYN4_train.pcap.csv",
+        "start": 0,
+        "stop": 110635
+      },
+      {
+        "label": "DoS-SYN",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DoS-SYN_test",
+        "file": "TCP_IP-DoS-SYN_test.pcap.csv",
+        "start": 0,
+        "stop": 98595
+      },
+      {
+        "label": "DoS-TCP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-TCP1_train",
+        "file": "TCP_IP-DoS-TCP1_train.pcap.csv",
+        "start": 0,
+        "stop": 95407
+      },
+      {
+        "label": "DoS-TCP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-TCP2_train",
+        "file": "TCP_IP-DoS-TCP2_train.pcap.csv",
+        "start": 0,
+        "stop": 95521
+      },
+      {
+        "label": "DoS-TCP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-TCP3_train",
+        "file": "TCP_IP-DoS-TCP3_train.pcap.csv",
+        "start": 0,
+        "stop": 95968
+      },
+      {
+        "label": "DoS-TCP",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DoS-TCP4_train",
+        "file": "TCP_IP-DoS-TCP4_train.pcap.csv",
+        "start": 0,
+        "stop": 93488
+      },
+      {
+        "label": "DoS-TCP",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DoS-TCP_test",
+        "file": "TCP_IP-DoS-TCP_test.pcap.csv",
+        "start": 0,
+        "stop": 82096
+      },
+      {
+        "label": "DoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-UDP1_train",
+        "file": "TCP_IP-DoS-UDP1_train.pcap.csv",
+        "start": 0,
+        "stop": 137011
+      },
+      {
+        "label": "DoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-UDP2_train",
+        "file": "TCP_IP-DoS-UDP2_train.pcap.csv",
+        "start": 0,
+        "stop": 140492
+      },
+      {
+        "label": "DoS-UDP",
+        "tier": "A",
+        "partition": "train",
+        "recording": "TCP_IP-DoS-UDP3_train",
+        "file": "TCP_IP-DoS-UDP3_train.pcap.csv",
+        "start": 0,
+        "stop": 146146
+      },
+      {
+        "label": "DoS-UDP",
+        "tier": "A",
+        "partition": "val",
+        "recording": "TCP_IP-DoS-UDP4_train",
+        "file": "TCP_IP-DoS-UDP4_train.pcap.csv",
+        "start": 0,
+        "stop": 143301
+      },
+      {
+        "label": "DoS-UDP",
+        "tier": "A",
+        "partition": "test",
+        "recording": "TCP_IP-DoS-UDP_test",
+        "file": "TCP_IP-DoS-UDP_test.pcap.csv",
+        "start": 0,
+        "stop": 137553
+      },
+      {
+        "label": "MQTT-DDoS-Connect_Flood",
+        "tier": "B",
+        "partition": "train",
+        "recording": "MQTT-DDoS-Connect_Flood_train",
+        "file": "MQTT-DDoS-Connect_Flood_train.pcap.csv",
+        "start": 0,
+        "stop": 150466
+      },
+      {
+        "label": "MQTT-DDoS-Connect_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DDoS-Connect_Flood_train",
+        "file": "MQTT-DDoS-Connect_Flood_train.pcap.csv",
+        "start": 150466,
+        "stop": 173036
+      },
+      {
+        "label": "MQTT-DDoS-Connect_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DDoS-Connect_Flood_test",
+        "file": "MQTT-DDoS-Connect_Flood_test.pcap.csv",
+        "start": 0,
+        "stop": 9673
+      },
+      {
+        "label": "MQTT-DDoS-Connect_Flood",
+        "tier": "B",
+        "partition": "test",
+        "recording": "MQTT-DDoS-Connect_Flood_test",
+        "file": "MQTT-DDoS-Connect_Flood_test.pcap.csv",
+        "start": 9673,
+        "stop": 41916
+      },
+      {
+        "label": "MQTT-DDoS-Publish_Flood",
+        "tier": "B",
+        "partition": "train",
+        "recording": "MQTT-DDoS-Publish_Flood_train",
+        "file": "MQTT-DDoS-Publish_Flood_train.pcap.csv",
+        "start": 0,
+        "stop": 25227
+      },
+      {
+        "label": "MQTT-DDoS-Publish_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DDoS-Publish_Flood_train",
+        "file": "MQTT-DDoS-Publish_Flood_train.pcap.csv",
+        "start": 25227,
+        "stop": 27623
+      },
+      {
+        "label": "MQTT-DDoS-Publish_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DDoS-Publish_Flood_test",
+        "file": "MQTT-DDoS-Publish_Flood_test.pcap.csv",
+        "start": 0,
+        "stop": 3010
+      },
+      {
+        "label": "MQTT-DDoS-Publish_Flood",
+        "tier": "B",
+        "partition": "test",
+        "recording": "MQTT-DDoS-Publish_Flood_test",
+        "file": "MQTT-DDoS-Publish_Flood_test.pcap.csv",
+        "start": 3010,
+        "stop": 8416
+      },
+      {
+        "label": "MQTT-DoS-Connect_Flood",
+        "tier": "B",
+        "partition": "train",
+        "recording": "MQTT-DoS-Connect_Flood_train",
+        "file": "MQTT-DoS-Connect_Flood_train.pcap.csv",
+        "start": 0,
+        "stop": 11132
+      },
+      {
+        "label": "MQTT-DoS-Connect_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DoS-Connect_Flood_train",
+        "file": "MQTT-DoS-Connect_Flood_train.pcap.csv",
+        "start": 11132,
+        "stop": 12773
+      },
+      {
+        "label": "MQTT-DoS-Connect_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DoS-Connect_Flood_test",
+        "file": "MQTT-DoS-Connect_Flood_test.pcap.csv",
+        "start": 0,
+        "stop": 745
+      },
+      {
+        "label": "MQTT-DoS-Connect_Flood",
+        "tier": "B",
+        "partition": "test",
+        "recording": "MQTT-DoS-Connect_Flood_test",
+        "file": "MQTT-DoS-Connect_Flood_test.pcap.csv",
+        "start": 745,
+        "stop": 3131
+      },
+      {
+        "label": "MQTT-DoS-Publish_Flood",
+        "tier": "B",
+        "partition": "train",
+        "recording": "MQTT-DoS-Publish_Flood_train",
+        "file": "MQTT-DoS-Publish_Flood_train.pcap.csv",
+        "start": 0,
+        "stop": 37016
+      },
+      {
+        "label": "MQTT-DoS-Publish_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DoS-Publish_Flood_train",
+        "file": "MQTT-DoS-Publish_Flood_train.pcap.csv",
+        "start": 37016,
+        "stop": 44376
+      },
+      {
+        "label": "MQTT-DoS-Publish_Flood",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-DoS-Publish_Flood_test",
+        "file": "MQTT-DoS-Publish_Flood_test.pcap.csv",
+        "start": 0,
+        "stop": 572
+      },
+      {
+        "label": "MQTT-DoS-Publish_Flood",
+        "tier": "B",
+        "partition": "test",
+        "recording": "MQTT-DoS-Publish_Flood_test",
+        "file": "MQTT-DoS-Publish_Flood_test.pcap.csv",
+        "start": 572,
+        "stop": 8505
+      },
+      {
+        "label": "MQTT-Malformed_Data",
+        "tier": "B",
+        "partition": "train",
+        "recording": "MQTT-Malformed_Data_train",
+        "file": "MQTT-Malformed_Data_train.pcap.csv",
+        "start": 0,
+        "stop": 4813
+      },
+      {
+        "label": "MQTT-Malformed_Data",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-Malformed_Data_train",
+        "file": "MQTT-Malformed_Data_train.pcap.csv",
+        "start": 4813,
+        "stop": 5130
+      },
+      {
+        "label": "MQTT-Malformed_Data",
+        "tier": "B",
+        "partition": "val",
+        "recording": "MQTT-Malformed_Data_test",
+        "file": "MQTT-Malformed_Data_test.pcap.csv",
+        "start": 0,
+        "stop": 715
+      },
+      {
+        "label": "MQTT-Malformed_Data",
+        "tier": "B",
+        "partition": "test",
+        "recording": "MQTT-Malformed_Data_test",
+        "file": "MQTT-Malformed_Data_test.pcap.csv",
+        "start": 715,
+        "stop": 1747
+      },
+      {
+        "label": "Recon-OS_Scan",
+        "tier": "B",
+        "partition": "train",
+        "recording": "Recon-OS_Scan_train",
+        "file": "Recon-OS_Scan_train.pcap.csv",
+        "start": 0,
+        "stop": 14466
+      },
+      {
+        "label": "Recon-OS_Scan",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Recon-OS_Scan_train",
+        "file": "Recon-OS_Scan_train.pcap.csv",
+        "start": 14466,
+        "stop": 16832
+      },
+      {
+        "label": "Recon-OS_Scan",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Recon-OS_Scan_test",
+        "file": "Recon-OS_Scan_test.pcap.csv",
+        "start": 0,
+        "stop": 734
+      },
+      {
+        "label": "Recon-OS_Scan",
+        "tier": "B",
+        "partition": "test",
+        "recording": "Recon-OS_Scan_test",
+        "file": "Recon-OS_Scan_test.pcap.csv",
+        "start": 734,
+        "stop": 3834
+      },
+      {
+        "label": "Recon-Ping_Sweep",
+        "tier": "B",
+        "partition": "train",
+        "recording": "Recon-Ping_Sweep_train",
+        "file": "Recon-Ping_Sweep_train.pcap.csv",
+        "start": 0,
+        "stop": 648
+      },
+      {
+        "label": "Recon-Ping_Sweep",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Recon-Ping_Sweep_train",
+        "file": "Recon-Ping_Sweep_train.pcap.csv",
+        "start": 648,
+        "stop": 740
+      },
+      {
+        "label": "Recon-Ping_Sweep",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Recon-Ping_Sweep_test",
+        "file": "Recon-Ping_Sweep_test.pcap.csv",
+        "start": 0,
+        "stop": 47
+      },
+      {
+        "label": "Recon-Ping_Sweep",
+        "tier": "B",
+        "partition": "test",
+        "recording": "Recon-Ping_Sweep_test",
+        "file": "Recon-Ping_Sweep_test.pcap.csv",
+        "start": 47,
+        "stop": 186
+      },
+      {
+        "label": "Recon-Port_Scan",
+        "tier": "B",
+        "partition": "train",
+        "recording": "Recon-Port_Scan_train",
+        "file": "Recon-Port_Scan_train.pcap.csv",
+        "start": 0,
+        "stop": 74622
+      },
+      {
+        "label": "Recon-Port_Scan",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Recon-Port_Scan_train",
+        "file": "Recon-Port_Scan_train.pcap.csv",
+        "start": 74622,
+        "stop": 83981
+      },
+      {
+        "label": "Recon-Port_Scan",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Recon-Port_Scan_test",
+        "file": "Recon-Port_Scan_test.pcap.csv",
+        "start": 0,
+        "stop": 6631
+      },
+      {
+        "label": "Recon-Port_Scan",
+        "tier": "B",
+        "partition": "test",
+        "recording": "Recon-Port_Scan_test",
+        "file": "Recon-Port_Scan_test.pcap.csv",
+        "start": 6631,
+        "stop": 22622
+      },
+      {
+        "label": "Recon-VulScan",
+        "tier": "B",
+        "partition": "train",
+        "recording": "Recon-VulScan_train",
+        "file": "Recon-VulScan_train.pcap.csv",
+        "start": 0,
+        "stop": 2173
+      },
+      {
+        "label": "Recon-VulScan",
+        "tier": "B",
+        "partition": "train",
+        "recording": "Recon-VulScan_test",
+        "file": "Recon-VulScan_test.pcap.csv",
+        "start": 0,
+        "stop": 71
+      },
+      {
+        "label": "Recon-VulScan",
+        "tier": "B",
+        "partition": "val",
+        "recording": "Recon-VulScan_test",
+        "file": "Recon-VulScan_test.pcap.csv",
+        "start": 71,
+        "stop": 552
+      },
+      {
+        "label": "Recon-VulScan",
+        "tier": "B",
+        "partition": "test",
+        "recording": "Recon-VulScan_test",
+        "file": "Recon-VulScan_test.pcap.csv",
+        "start": 552,
+        "stop": 1034
+      },
+      {
+        "label": "Spoofing",
+        "tier": "B",
+        "partition": "train",
+        "recording": "ARP_Spoofing_train",
+        "file": "ARP_Spoofing_train.pcap.csv",
+        "start": 0,
+        "stop": 12453
+      },
+      {
+        "label": "Spoofing",
+        "tier": "B",
+        "partition": "val",
+        "recording": "ARP_Spoofing_train",
+        "file": "ARP_Spoofing_train.pcap.csv",
+        "start": 12453,
+        "stop": 15122
+      },
+      {
+        "label": "Spoofing",
+        "tier": "B",
+        "partition": "test",
+        "recording": "ARP_Spoofing_train",
+        "file": "ARP_Spoofing_train.pcap.csv",
+        "start": 15122,
+        "stop": 16047
+      },
+      {
+        "label": "Spoofing",
+        "tier": "B",
+        "partition": "test",
+        "recording": "ARP_Spoofing_test",
+        "file": "ARP_Spoofing_test.pcap.csv",
+        "start": 0,
+        "stop": 1744
+      }
+    ]
+  },
+  "shipped_split": {
+    "rows_per_partition": {
+      "train": 7160831,
+      "test": 1614182
+    },
+    "checks": [
+      {
+        "check": "no recording in more than one partition, 8 classes",
+        "result": "PASS",
+        "detail": "50 recordings checked"
+      },
+      {
+        "check": "every class in all 2 partitions",
+        "result": "PASS",
+        "detail": "19 classes"
+      },
+      {
+        "check": "row counts sum to the dataset total",
+        "result": "PASS",
+        "detail": "8,775,013 rows across 72 blocks against 8,775,013 in the inventory"
+      },
+      {
+        "check": "every file covered exactly once, no gaps or overlaps",
+        "result": "PASS",
+        "detail": "72 files"
+      },
+      {
+        "check": "no empty block",
+        "result": "PASS",
+        "detail": "smallest block 186 rows"
+      }
+    ],
+    "used_for": "reproduction of published results in NB05, and nothing else",
+    "arrays_written": false,
+    "why_no_arrays": "NB05 reproduces the published baseline as published, fitting its own scaler on the shipped training side. Rows scaled by this notebook's scaler would put this project's preprocessing inside a result whose value is that it was produced the way the original was. NB05 reads the CSVs itself, using the file lists and row ranges in splits.json, and is the only notebook that does."
+  },
+  "limitation": {
+    "classes_split_within_one_recording": [
+      "Benign",
+      "MQTT-DDoS-Connect_Flood",
+      "MQTT-DDoS-Publish_Flood",
+      "MQTT-DoS-Connect_Flood",
+      "MQTT-DoS-Publish_Flood",
+      "MQTT-Malformed_Data",
+      "Recon-OS_Scan",
+      "Recon-Ping_Sweep",
+      "Recon-Port_Scan",
+      "Recon-VulScan",
+      "Spoofing"
+    ],
+    "n_classes": 11,
+    "of_classes": 19,
+    "rows": 706185,
+    "share_of_rows": 0.080477,
+    "share_of_test_partition": 0.086144,
+    "statement": "11 of 19 classes have one recording each. Their training, validation and test rows are consecutive stretches of that single recording, so anything a model learns about the session helps it on all three sides. Their scores are not evidence of generalisation to a new recording."
+  },
+  "scaler": {
+    "fitted_on": "train",
+    "n_blocks": 46,
+    "n_rows": 6228288,
+    "file": "scaler.joblib",
+    "mean": {
+      "Header_Length": 28266.030696,
+      "Protocol Type": 8.180356,
+      "Duration": 64.69466,
+      "Rate": 15924.34391,
+      "Srate": 15924.34391,
+      "fin_flag_number": 0.005084,
+      "syn_flag_number": 0.132313,
+      "rst_flag_number": 0.041981,
+      "psh_flag_number": 0.021895,
+      "ack_flag_number": 0.097104,
+      "ece_flag_number": 2e-06,
+      "cwr_flag_number": 1e-06,
+      "ack_count": 0.028044,
+      "syn_count": 0.266712,
+      "fin_count": 0.094624,
+      "rst_count": 67.816318,
+      "HTTP": 0.000456,
+      "HTTPS": 0.006203,
+      "DNS": 0.000149,
+      "Telnet": 1.3e-05,
+      "SMTP": 1.3e-05,
+      "SSH": 1.4e-05,
+      "IRC": 1.3e-05,
+      "TCP": 0.36995,
+      "UDP": 0.33321,
+      "DHCP": 4e-06,
+      "ARP": 0.000765,
+      "ICMP": 0.29607,
+      "IGMP": 5e-06,
+      "IPv": 0.999235,
+      "LLC": 0.999235,
+      "Tot sum": 628.49822,
+      "Min": 54.31168,
+      "Max": 71.981633,
+      "AVG": 59.871081,
+      "Std": 6.233563,
+      "Tot size": 59.871959,
+      "IAT": 84684530.180279,
+      "Number": 9.499088,
+      "Magnitue": 10.389914,
+      "Radius": 8.80424,
+      "Covariance": 2476.205539,
+      "Variance": 0.091067,
+      "Weight": 141.527429
+    },
+    "scale": {
+      "Header_Length": 258904.768099,
+      "Protocol Type": 6.516518,
+      "Duration": 8.405819,
+      "Rate": 40641.168446,
+      "Srate": 40641.168446,
+      "fin_flag_number": 0.034077,
+      "syn_flag_number": 0.307293,
+      "rst_flag_number": 0.141902,
+      "psh_flag_number": 0.095878,
+      "ack_flag_number": 0.252493,
+      "ece_flag_number": 0.000412,
+      "cwr_flag_number": 0.00032,
+      "ack_count": 0.177831,
+      "syn_count": 0.584324,
+      "fin_count": 0.624491,
+      "rst_count": 510.113677,
+      "HTTP": 0.019762,
+      "HTTPS": 0.064571,
+      "DNS": 0.005449,
+      "Telnet": 0.000971,
+      "SMTP": 0.000971,
+      "SSH": 0.000977,
+      "IRC": 0.000971,
+      "TCP": 0.479775,
+      "UDP": 0.468118,
+      "DHCP": 0.001154,
+      "ARP": 0.019531,
+      "ICMP": 0.45489,
+      "IGMP": 0.001242,
+      "IPv": 0.019531,
+      "LLC": 0.019531,
+      "Tot sum": 948.64298,
+      "Min": 64.390827,
+      "Max": 132.565648,
+      "AVG": 84.7558,
+      "Std": 38.710803,
+      "Tot size": 84.529344,
+      "IAT": 17696417.453981,
+      "Number": 0.835792,
+      "Magnitue": 3.0692,
+      "Radius": 54.727049,
+      "Covariance": 20311.122637,
+      "Variance": 0.23129,
+      "Weight": 21.512991
+    }
+  },
+  "arrays": {
+    "records_train": {
+      "file": "records_train.npz",
+      "shape": [
+        6228288,
+        44
+      ],
+      "n_features": 44,
+      "n_rows": 6228288,
+      "by_class": {
+        "Benign": 161237,
+        "DDoS-ICMP": 1537476,
+        "DDoS-SYN": 605082,
+        "DDoS-TCP": 603467,
+        "DDoS-UDP": 1635956,
+        "DoS-ICMP": 310170,
+        "DoS-SYN": 331268,
+        "DoS-TCP": 286896,
+        "DoS-UDP": 423649,
+        "MQTT-DDoS-Connect_Flood": 150466,
+        "MQTT-DDoS-Publish_Flood": 25227,
+        "MQTT-DoS-Connect_Flood": 11132,
+        "MQTT-DoS-Publish_Flood": 37016,
+        "MQTT-Malformed_Data": 4813,
+        "Recon-OS_Scan": 14466,
+        "Recon-Ping_Sweep": 648,
+        "Recon-Port_Scan": 74622,
+        "Recon-VulScan": 2244,
+        "Spoofing": 12453
+      }
+    },
+    "sequences_train": {
+      "file": "sequences_train.npz",
+      "shape": [
+        249061,
+        50,
+        44
+      ],
+      "n_features": 44,
+      "window": 50,
+      "stride": 25,
+      "by_class": {
+        "Benign": 6448,
+        "DDoS-ICMP": 61487,
+        "DDoS-SYN": 24198,
+        "DDoS-TCP": 24135,
+        "DDoS-UDP": 65426,
+        "DoS-ICMP": 12403,
+        "DoS-SYN": 13246,
+        "DoS-TCP": 11471,
+        "DoS-UDP": 16941,
+        "MQTT-DDoS-Connect_Flood": 6017,
+        "MQTT-DDoS-Publish_Flood": 1008,
+        "MQTT-DoS-Connect_Flood": 444,
+        "MQTT-DoS-Publish_Flood": 1479,
+        "MQTT-Malformed_Data": 191,
+        "Recon-OS_Scan": 577,
+        "Recon-Ping_Sweep": 24,
+        "Recon-Port_Scan": 2983,
+        "Recon-VulScan": 86,
+        "Spoofing": 497
+      }
+    },
+    "records_val": {
+      "file": "records_val.npz",
+      "shape": [
+        1317014,
+        44
+      ],
+      "n_features": 44,
+      "n_rows": 1317014,
+      "by_class": {
+        "Benign": 34551,
+        "DDoS-ICMP": 154007,
+        "DDoS-SYN": 196880,
+        "DDoS-TCP": 200998,
+        "DDoS-UDP": 205654,
+        "DoS-ICMP": 106122,
+        "DoS-SYN": 110635,
+        "DoS-TCP": 93488,
+        "DoS-UDP": 143301,
+        "MQTT-DDoS-Connect_Flood": 32243,
+        "MQTT-DDoS-Publish_Flood": 5406,
+        "MQTT-DoS-Connect_Flood": 2386,
+        "MQTT-DoS-Publish_Flood": 7932,
+        "MQTT-Malformed_Data": 1032,
+        "Recon-OS_Scan": 3100,
+        "Recon-Ping_Sweep": 139,
+        "Recon-Port_Scan": 15990,
+        "Recon-VulScan": 481,
+        "Spoofing": 2669
+      }
+    },
+    "sequences_val": {
+      "file": "sequences_val.npz",
+      "shape": [
+        52637,
+        50,
+        44
+      ],
+      "n_features": 44,
+      "window": 50,
+      "stride": 25,
+      "by_class": {
+        "Benign": 1379,
+        "DDoS-ICMP": 6159,
+        "DDoS-SYN": 7874,
+        "DDoS-TCP": 8038,
+        "DDoS-UDP": 8225,
+        "DoS-ICMP": 4243,
+        "DoS-SYN": 4424,
+        "DoS-TCP": 3738,
+        "DoS-UDP": 5731,
+        "MQTT-DDoS-Connect_Flood": 1286,
+        "MQTT-DDoS-Publish_Flood": 213,
+        "MQTT-DoS-Connect_Flood": 92,
+        "MQTT-DoS-Publish_Flood": 314,
+        "MQTT-Malformed_Data": 38,
+        "Recon-OS_Scan": 121,
+        "Recon-Ping_Sweep": 2,
+        "Recon-Port_Scan": 637,
+        "Recon-VulScan": 18,
+        "Spoofing": 105
+      }
+    },
+    "records_test": {
+      "file": "records_test.npz",
+      "shape": [
+        1229711,
+        44
+      ],
+      "n_features": 44,
+      "n_rows": 1229711,
+      "by_class": {
+        "Benign": 34551,
+        "DDoS-ICMP": 195692,
+        "DDoS-SYN": 172397,
+        "DDoS-TCP": 182598,
+        "DDoS-UDP": 156416,
+        "DoS-ICMP": 98432,
+        "DoS-SYN": 98595,
+        "DoS-TCP": 82096,
+        "DoS-UDP": 137553,
+        "MQTT-DDoS-Connect_Flood": 32243,
+        "MQTT-DDoS-Publish_Flood": 5406,
+        "MQTT-DoS-Connect_Flood": 2386,
+        "MQTT-DoS-Publish_Flood": 7933,
+        "MQTT-Malformed_Data": 1032,
+        "Recon-OS_Scan": 3100,
+        "Recon-Ping_Sweep": 139,
+        "Recon-Port_Scan": 15991,
+        "Recon-VulScan": 482,
+        "Spoofing": 2669
+      }
+    },
+    "sequences_test": {
+      "file": "sequences_test.npz",
+      "shape": [
+        49159,
+        50,
+        44
+      ],
+      "n_features": 44,
+      "window": 50,
+      "stride": 25,
+      "by_class": {
+        "Benign": 1381,
+        "DDoS-ICMP": 7826,
+        "DDoS-SYN": 6894,
+        "DDoS-TCP": 7302,
+        "DDoS-UDP": 6255,
+        "DoS-ICMP": 3936,
+        "DoS-SYN": 3942,
+        "DoS-TCP": 3282,
+        "DoS-UDP": 5501,
+        "MQTT-DDoS-Connect_Flood": 1288,
+        "MQTT-DDoS-Publish_Flood": 215,
+        "MQTT-DoS-Connect_Flood": 94,
+        "MQTT-DoS-Publish_Flood": 316,
+        "MQTT-Malformed_Data": 40,
+        "Recon-OS_Scan": 123,
+        "Recon-Ping_Sweep": 4,
+        "Recon-Port_Scan": 638,
+        "Recon-VulScan": 18,
+        "Spoofing": 104
+      }
+    }
+  },
+  "files": [
+    {
+      "file": "records_train.npz",
+      "bytes": 1158481008,
+      "arrays": {
+        "X": {
+          "shape": [
+            6228288,
+            44
+          ],
+          "dtype": "float32",
+          "sha256": "adb812c71812d4c970439a5a4fe2f04e4dcb53de01a7c301db39e26b1136352b"
+        },
+        "y": {
+          "shape": [
+            6228288
+          ],
+          "dtype": "int16",
+          "sha256": "8576b99bef4cc9dbb59687448b18657cb2d17df973b1da95cf81221be98d57cd"
+        },
+        "recording": {
+          "shape": [
+            6228288
+          ],
+          "dtype": "int16",
+          "sha256": "768b9e4d72311bfd1a75ed67dcba4a4446facd114fe8b9228c0282cbf4c1b11b"
+        },
+        "source_file": {
+          "shape": [
+            6228288
+          ],
+          "dtype": "int16",
+          "sha256": "768b9e4d72311bfd1a75ed67dcba4a4446facd114fe8b9228c0282cbf4c1b11b"
+        },
+        "row": {
+          "shape": [
+            6228288
+          ],
+          "dtype": "int32",
+          "sha256": "c90cd26d191d007d1250d2c9a77cadf8596013ba9cc75f230384cfd09ccfd4ec"
+        }
+      }
+    },
+    {
+      "file": "sequences_train.npz",
+      "bytes": 2194247006,
+      "arrays": {
+        "X": {
+          "shape": [
+            249061,
+            50,
+            44
+          ],
+          "dtype": "float32",
+          "sha256": "b6c8bd9c82c871839199e69302517fb5f3c8dd70d8951a86898c86a1516ca2e9"
+        },
+        "y": {
+          "shape": [
+            249061
+          ],
+          "dtype": "int16",
+          "sha256": "cf57e19724ba97011d106809f58bebb5da83f4dcf79bfd06cff67e5a2c47da39"
+        },
+        "recording": {
+          "shape": [
+            249061
+          ],
+          "dtype": "int16",
+          "sha256": "5de47e23a56b118897bc0bf9202f35bb8740361d4f429859a3d6bb3461a01bb7"
+        },
+        "source_file": {
+          "shape": [
+            249061
+          ],
+          "dtype": "int16",
+          "sha256": "5de47e23a56b118897bc0bf9202f35bb8740361d4f429859a3d6bb3461a01bb7"
+        },
+        "start_row": {
+          "shape": [
+            249061
+          ],
+          "dtype": "int32",
+          "sha256": "b3b26c22c95a8038f59fea5d09d453a419b050529e30dc6302975a188f2f4bab"
+        }
+      }
+    },
+    {
+      "file": "records_val.npz",
+      "bytes": 244979220,
+      "arrays": {
+        "X": {
+          "shape": [
+            1317014,
+            44
+          ],
+          "dtype": "float32",
+          "sha256": "11ebf4888fa8b4cfd6522422485d1ac081d1e1466e14601fc9a966907b4972a7"
+        },
+        "y": {
+          "shape": [
+            1317014
+          ],
+          "dtype": "int16",
+          "sha256": "65f9bddc59c7b3aaebc1a153e221d079b077cef187ca7d04cdda7ebbda450211"
+        },
+        "recording": {
+          "shape": [
+            1317014
+          ],
+          "dtype": "int16",
+          "sha256": "41779ec06bd4c89d5e3216dc8a662fd1c2a98cabff710c42f3db37c339cac3ff"
+        },
+        "source_file": {
+          "shape": [
+            1317014
+          ],
+          "dtype": "int16",
+          "sha256": "41779ec06bd4c89d5e3216dc8a662fd1c2a98cabff710c42f3db37c339cac3ff"
+        },
+        "row": {
+          "shape": [
+            1317014
+          ],
+          "dtype": "int32",
+          "sha256": "a332b9ba4d92246b5ac715c16adbd6cdb006980c85fa2eb707c9cfb8ac9ac7ae"
+        }
+      }
+    },
+    {
+      "file": "sequences_val.npz",
+      "bytes": 463746598,
+      "arrays": {
+        "X": {
+          "shape": [
+            52637,
+            50,
+            44
+          ],
+          "dtype": "float32",
+          "sha256": "6e1bddcb0b95654a16f7c0f0e2c4178018033a91a7f8decc96b777bd9e898109"
+        },
+        "y": {
+          "shape": [
+            52637
+          ],
+          "dtype": "int16",
+          "sha256": "25b8518384cda1313c19e2555a33e0c470ed2e6da504dc9a7327c8e33a09124c"
+        },
+        "recording": {
+          "shape": [
+            52637
+          ],
+          "dtype": "int16",
+          "sha256": "4503bb6b2582938b452650cb5192c5be3d82fea87b90882b49b69ff98950d1e0"
+        },
+        "source_file": {
+          "shape": [
+            52637
+          ],
+          "dtype": "int16",
+          "sha256": "4503bb6b2582938b452650cb5192c5be3d82fea87b90882b49b69ff98950d1e0"
+        },
+        "start_row": {
+          "shape": [
+            52637
+          ],
+          "dtype": "int32",
+          "sha256": "20fcb3c8f184ac4be4cc12054af590feadf2f8d3f8df4600f2e59baa9d3cd456"
+        }
+      }
+    },
+    {
+      "file": "records_test.npz",
+      "bytes": 228738558,
+      "arrays": {
+        "X": {
+          "shape": [
+            1229711,
+            44
+          ],
+          "dtype": "float32",
+          "sha256": "15535764124259294ea359cd8b50107e5a8924340c2086f2d3b90af3f9850bae"
+        },
+        "y": {
+          "shape": [
+            1229711
+          ],
+          "dtype": "int16",
+          "sha256": "6ab10c8d8d1b63e7e8d14b2336f7726ed36521834df6e083fdb5563e632b9630"
+        },
+        "recording": {
+          "shape": [
+            1229711
+          ],
+          "dtype": "int16",
+          "sha256": "90c9da825deceb9b91b757ee9b4f2e17badea1d3ab6f6bdfefc9efb75d609fc2"
+        },
+        "source_file": {
+          "shape": [
+            1229711
+          ],
+          "dtype": "int16",
+          "sha256": "90c9da825deceb9b91b757ee9b4f2e17badea1d3ab6f6bdfefc9efb75d609fc2"
+        },
+        "row": {
+          "shape": [
+            1229711
+          ],
+          "dtype": "int32",
+          "sha256": "b44fc095db2ea0bff87a772ceb6c8fc49d3c03ac7b6677215540b0e7a994a497"
+        }
+      }
+    },
+    {
+      "file": "sequences_test.npz",
+      "bytes": 433103114,
+      "arrays": {
+        "X": {
+          "shape": [
+            49159,
+            50,
+            44
+          ],
+          "dtype": "float32",
+          "sha256": "2c4ee2a967fb8bb46ff2d8ba8d8fe11ddaade2e02f2fe6d3d4d0259ee51bc57c"
+        },
+        "y": {
+          "shape": [
+            49159
+          ],
+          "dtype": "int16",
+          "sha256": "cef73ef470c183f93db2eca90c9861cbcb1335f4b6d466dff7748bbad91492fe"
+        },
+        "recording": {
+          "shape": [
+            49159
+          ],
+          "dtype": "int16",
+          "sha256": "09a23994796c9454d3ec92b370ef582b9a1650b86e6673fded977642f350ff65"
+        },
+        "source_file": {
+          "shape": [
+            49159
+          ],
+          "dtype": "int16",
+          "sha256": "09a23994796c9454d3ec92b370ef582b9a1650b86e6673fded977642f350ff65"
+        },
+        "start_row": {
+          "shape": [
+            49159
+          ],
+          "dtype": "int32",
+          "sha256": "92808a7fe635cfbab69d3185c479abc8b11b0d901fb91c2b275335164b365d8c"
+        }
+      }
+    },
+    {
+      "file": "splits.json",
+      "bytes": 78055,
+      "sha256": "706a1aceea823e918d272079a37a8ba84e3b15a5d78e992f8e9af4eab2665c5f"
+    },
+    {
+      "file": "scaler.joblib",
+      "bytes": 1671,
+      "sha256": "45c359e3812ac514e9dd2e73c9e28da14c067eeef1d42253a6b94668a8c4a176"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "run_id": "seq_timing_excluded_seed_44",
+  "parent": "sequence_cnn_lstm_19class",
+  "model": "mohammadi_cnn_lstm",
+  "task": "19-class",
+  "split": "two_tier",
+  "n_features": 40,
+  "preprocessing": "StandardScaler fitted on the training side of the split, and nothing else",
+  "optimizer": "adam",
+  "loss": "categorical_crossentropy",
+  "batch_size": 32,
+  "epochs": 10,
+  "class_weight": null,
+  "early_stopping": false,
+  "seed": 42,
+  "observed": {
+    "mode": "full",
+    "input": "a window of 50 records at stride 25, reshaped to (50, features, 1)",
+    "window": 50,
+    "stride": 25,
+    "lstm_units": 128,
+    "n_classes": 19,
+    "classes": [
+      "Benign",
+      "DDoS-ICMP",
+      "DDoS-SYN",
+      "DDoS-TCP",
+      "DDoS-UDP",
+      "DoS-ICMP",
+      "DoS-SYN",
+      "DoS-TCP",
+      "DoS-UDP",
+      "MQTT-DDoS-Connect_Flood",
+      "MQTT-DDoS-Publish_Flood",
+      "MQTT-DoS-Connect_Flood",
+      "MQTT-DoS-Publish_Flood",
+      "MQTT-Malformed_Data",
+      "Recon-OS_Scan",
+      "Recon-Ping_Sweep",
+      "Recon-Port_Scan",
+      "Recon-VulScan",
+      "Spoofing"
+    ],
+    "features": [
+      "Header_Length",
+      "Protocol Type",
+      "fin_flag_number",
+      "syn_flag_number",
+      "rst_flag_number",
+      "psh_flag_number",
+      "ack_flag_number",
+      "ece_flag_number",
+      "cwr_flag_number",
+      "ack_count",
+      "syn_count",
+      "fin_count",
+      "rst_count",
+      "HTTP",
+      "HTTPS",
+      "DNS",
+      "Telnet",
+      "SMTP",
+      "SSH",
+      "IRC",
+      "TCP",
+      "UDP",
+      "DHCP",
+      "ARP",
+      "ICMP",
+      "IGMP",
+      "IPv",
+      "LLC",
+      "Tot sum",
+      "Min",
+      "Max",
+      "AVG",
+      "Std",
+      "Tot size",
+      "Number",
+      "Magnitue",
+      "Radius",
+      "Covariance",
+      "Variance",
+      "Weight"
+    ],
+    "scaler_fitted_by": "src/preprocessing.py in NB04, on the two-tier training partition",
+    "model": {
+      "encoder": {
+        "source": "Mohammadi et al. (2024), arXiv:2410.23306, reproduced in baselines/mohammadi",
+        "architecture": [
+          "Reshape input to (samples, features, 1)",
+          "Conv1D, 32 filters, kernel 3, ReLU",
+          "MaxPooling1D, pool 2",
+          "Conv1D, 64 filters, kernel 3, ReLU",
+          "MaxPooling1D, pool 2",
+          "Flatten",
+          "Dense 128, ReLU",
+          "Dense n_classes, softmax"
+        ],
+        "used_up_to": "Dense 128, ReLU",
+        "head_dropped": "Dense n_classes, softmax",
+        "applied": "to each record of the window, the same weights at every timestep",
+        "input_shape_per_record": [
+          44,
+          1
+        ]
+      },
+      "added": [
+        "TimeDistributed over 50 records",
+        "LSTM, 128 units",
+        "Dense n_classes, softmax"
+      ],
+      "input_shape": [
+        50,
+        44,
+        1
+      ],
+      "window": 50,
+      "lstm_units": 128,
+      "n_classes": 19,
+      "compile": {
+        "optimizer": "adam",
+        "loss": "categorical_crossentropy",
+        "metrics": [
+          "accuracy"
+        ]
+      },
+      "fit": {
+        "batch_size": 32,
+        "epochs": 10,
+        "shuffle": true,
+        "class_weight": null,
+        "validation_split": 0.0,
+        "early_stopping": false
+      }
+    },
+    "compared_against": "published_cnn_19class",
+    "notebook": "AG_PRAXIS_NB06_sequence_model.ipynb",
+    "git_sha": "20d4709",
+    "run_date": "2026-08-12",
+    "changed_from_parent": [
+      "n_features"
+    ],
+    "n_train": 249061,
+    "n_test": 49159,
+    "sequences_from": "/content/drive/MyDrive/AG_PRAXIS_artifacts/NB04",
+    "environment": {
+      "tensorflow": "2.20.0",
+      "keras": "3.13.2",
+      "shap": "0.52.0",
+      "scipy": "1.16.3",
+      "backend": "tensorflow",
+      "accelerator": "NVIDIA A100-SXM4-40GB",
+      "run_date": "2026-08-12"
+    },
+    "seed_used": 44,
+    "dropped": [
+      "Duration",
+      "Rate",
+      "Srate",
+      "IAT"
+    ],
+    "registered_under": "PREREGISTRATION.md Amendment 18",
+    "n_parameters_expected": 206035,
+    "scored_on": "49,159 windows"
+  }
+}

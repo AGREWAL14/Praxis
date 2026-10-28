@@ -1,0 +1,5 @@
+measure,value,as a proportion,compared against
+Attack classes reaching an attack pattern,18 of 18,1.0,a pass mark of 15 of 18
+Features the mapping declines to map,20 of 40,0.5,a class whose highest-ranked features all fell here would reach nothing
+Classes whose resolved category matches the documented one,9 of 18,0.5,a majority-class baseline of 0.667
+"The same, for the model with exact attributions",6 of 18,0.333,the same baseline

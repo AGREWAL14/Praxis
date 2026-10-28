@@ -1,0 +1,158 @@
+{
+  "n_test": 12000,
+  "n_classes": 5,
+  "labels": [
+    "TCP_IP-DoS-SYN1_train",
+    "TCP_IP-DoS-SYN2_train",
+    "TCP_IP-DoS-SYN3_train",
+    "TCP_IP-DoS-SYN4_train",
+    "TCP_IP-DoS-SYN_test"
+  ],
+  "accuracy": 0.9105833333333333,
+  "macro_precision": 0.9193900814730828,
+  "macro_recall": 0.9105833333333333,
+  "macro_f1": 0.9102686822696274,
+  "weighted_precision": 0.9193900814730828,
+  "weighted_recall": 0.9105833333333333,
+  "weighted_f1": 0.9102686822696276,
+  "per_class_precision": {
+    "TCP_IP-DoS-SYN1_train": 0.8497994896099161,
+    "TCP_IP-DoS-SYN2_train": 0.9265822784810127,
+    "TCP_IP-DoS-SYN3_train": 0.9853403141361257,
+    "TCP_IP-DoS-SYN4_train": 0.9940036900369004,
+    "TCP_IP-DoS-SYN_test": 0.8412246351014596
+  },
+  "per_class_recall": {
+    "TCP_IP-DoS-SYN1_train": 0.97125,
+    "TCP_IP-DoS-SYN2_train": 0.915,
+    "TCP_IP-DoS-SYN3_train": 0.7841666666666667,
+    "TCP_IP-DoS-SYN4_train": 0.8979166666666667,
+    "TCP_IP-DoS-SYN_test": 0.9845833333333334
+  },
+  "per_class_f1": {
+    "TCP_IP-DoS-SYN1_train": 0.9064748201438849,
+    "TCP_IP-DoS-SYN2_train": 0.9207547169811321,
+    "TCP_IP-DoS-SYN3_train": 0.8733178654292343,
+    "TCP_IP-DoS-SYN4_train": 0.9435201401050788,
+    "TCP_IP-DoS-SYN_test": 0.9072758686888078
+  },
+  "support": {
+    "TCP_IP-DoS-SYN1_train": 2400,
+    "TCP_IP-DoS-SYN2_train": 2400,
+    "TCP_IP-DoS-SYN3_train": 2400,
+    "TCP_IP-DoS-SYN4_train": 2400,
+    "TCP_IP-DoS-SYN_test": 2400
+  },
+  "chance_rate": 0.2,
+  "majority_class_rate": 0.2,
+  "train_seconds": 0.277,
+  "inference_seconds": 0.045,
+  "inference_rows_per_second": 267701.5,
+  "top_features": [
+    {
+      "feature": "IAT",
+      "importance": 0.49368402538175704
+    },
+    {
+      "feature": "rst_count",
+      "importance": 0.05084491259388084
+    },
+    {
+      "feature": "Max",
+      "importance": 0.04510352812153198
+    },
+    {
+      "feature": "Rate",
+      "importance": 0.04110322223217417
+    },
+    {
+      "feature": "ack_flag_number",
+      "importance": 0.03978538382378792
+    },
+    {
+      "feature": "rst_flag_number",
+      "importance": 0.03821559158242156
+    },
+    {
+      "feature": "Srate",
+      "importance": 0.031159249245211445
+    },
+    {
+      "feature": "syn_flag_number",
+      "importance": 0.028945361652971135
+    },
+    {
+      "feature": "fin_count",
+      "importance": 0.027750910608650464
+    },
+    {
+      "feature": "Header_Length",
+      "importance": 0.026924117509410924
+    },
+    {
+      "feature": "Magnitue",
+      "importance": 0.02236382703336884
+    },
+    {
+      "feature": "Protocol Type",
+      "importance": 0.01902955156640867
+    },
+    {
+      "feature": "Tot sum",
+      "importance": 0.017718820383629333
+    },
+    {
+      "feature": "AVG",
+      "importance": 0.017487734774019256
+    },
+    {
+      "feature": "Min",
+      "importance": 0.01620743818733167
+    }
+  ],
+  "feature_importances": {
+    "IAT": 0.49368402538175704,
+    "rst_count": 0.05084491259388084,
+    "Max": 0.04510352812153198,
+    "Rate": 0.04110322223217417,
+    "ack_flag_number": 0.03978538382378792,
+    "rst_flag_number": 0.03821559158242156,
+    "Srate": 0.031159249245211445,
+    "syn_flag_number": 0.028945361652971135,
+    "fin_count": 0.027750910608650464,
+    "Header_Length": 0.026924117509410924,
+    "Magnitue": 0.02236382703336884,
+    "Protocol Type": 0.01902955156640867,
+    "Tot sum": 0.017718820383629333,
+    "AVG": 0.017487734774019256,
+    "Min": 0.01620743818733167,
+    "Radius": 0.01518998330374857,
+    "TCP": 0.013780914455759508,
+    "Tot size": 0.01311034606562356,
+    "Covariance": 0.011857846316720934,
+    "UDP": 0.00971510486428244,
+    "Std": 0.008134729464823992,
+    "syn_count": 0.006499259287324245,
+    "Variance": 0.004850191141427391,
+    "HTTPS": 0.0004372474160897337,
+    "psh_flag_number": 0.00010070298764442145,
+    "fin_flag_number": 0.0,
+    "ece_flag_number": 0.0,
+    "cwr_flag_number": 0.0,
+    "ack_count": 0.0,
+    "HTTP": 0.0,
+    "DNS": 0.0,
+    "Telnet": 0.0,
+    "SMTP": 0.0,
+    "SSH": 0.0,
+    "IRC": 0.0,
+    "DHCP": 0.0,
+    "ARP": 0.0,
+    "ICMP": 0.0,
+    "IGMP": 0.0,
+    "IPv": 0.0,
+    "LLC": 0.0,
+    "Number": 0.0,
+    "Weight": 0.0
+  }
+}

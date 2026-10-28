@@ -1,0 +1,7 @@
+intervention,Recon-VulScan,Recon-OS_Scan,MQTT-DDoS-Publish_Flood,Spoofing,MQTT-Malformed_Data,volumetric mean,macro F1,"classes at or above the floor, of five"
+none (untreated),0.5385,0.6061,0.0796,0.7653,0.8421,0.7613,0.7138,4
+class-weighted loss,0.3729,0.6667,0.0717,0.4295,0.6,0.6614,0.6481,2
+focal loss,0.3333,0.3377,0.0631,0.6667,0.95,0.7524,0.6838,2
+logit adjustment,0.4746,0.573,0.0631,0.7442,0.8706,0.772,0.7238,3
+threshold tuning,0.3902,0.8193,0.0804,0.8406,0.8732,0.7643,0.732,3
+window resampling,0.3768,0.8142,0.0541,0.8547,0.9756,0.7788,0.7699,3
