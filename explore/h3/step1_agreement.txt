@@ -1,0 +1,77 @@
+STEP 1 — H3 agreement, sequence model seed 42
+==============================================================================
+artefact: data/processed/NB09b/threat_mapping.json (git_sha 6912da6, generated 2026-08-17)
+arm: sequence, seed 42 (H3 is scored on this)
+
+Raw agreement
+------------------------------------------------------------------------------
+  recomputed from per_class : 9 of 18 = 0.5000
+  stored n_agree            : 9 of 18 = 0.5000
+  agree                     : yes
+  majority-class baseline   : 0.667 (all-DoS rule = 12 of 18)
+  pass mark                 : 15 of 18
+
+Cohen's kappa
+------------------------------------------------------------------------------
+  observed agreement  po = 0.5000
+  expected agreement  pe = 0.5185
+  kappa                  = -0.0385
+
+  marginals
+    category                  assigned  documented
+    Denial of Service               12          12
+    Information Disclosure           6           4
+    Spoofing                         0           1
+    Tampering                        0           1
+
+Agreement split by documented category
+------------------------------------------------------------------------------
+  DoS classes         8 of 12 = 0.6667
+  non-DoS classes     1 of 6  = 0.1667
+
+  DoS classes:
+    MISS  DDoS-ICMP                  assigned Information Disclosure documented Denial of Service      CAPEC-298
+    agree DDoS-SYN                   assigned Denial of Service      documented Denial of Service      CAPEC-482
+    agree DDoS-TCP                   assigned Denial of Service      documented Denial of Service      CAPEC-482
+    agree DDoS-UDP                   assigned Denial of Service      documented Denial of Service      CAPEC-482
+    MISS  DoS-ICMP                   assigned Information Disclosure documented Denial of Service      CAPEC-298
+    agree DoS-SYN                    assigned Denial of Service      documented Denial of Service      CAPEC-482
+    agree DoS-TCP                    assigned Denial of Service      documented Denial of Service      CAPEC-482
+    agree DoS-UDP                    assigned Denial of Service      documented Denial of Service      CAPEC-482
+    agree MQTT-DDoS-Connect_Flood    assigned Denial of Service      documented Denial of Service      CAPEC-482
+    agree MQTT-DDoS-Publish_Flood    assigned Denial of Service      documented Denial of Service      CAPEC-125
+    MISS  MQTT-DoS-Connect_Flood     assigned Information Disclosure documented Denial of Service      CAPEC-297
+    MISS  MQTT-DoS-Publish_Flood     assigned Information Disclosure documented Denial of Service      CAPEC-297
+
+  non-DoS classes:
+    MISS  MQTT-Malformed_Data        assigned Information Disclosure documented Tampering              CAPEC-297
+    MISS  Recon-OS_Scan              assigned Denial of Service      documented Information Disclosure CAPEC-125
+    agree Recon-Ping_Sweep           assigned Information Disclosure documented Information Disclosure CAPEC-303
+    MISS  Recon-Port_Scan            assigned Denial of Service      documented Information Disclosure CAPEC-125
+    MISS  Recon-VulScan              assigned Denial of Service      documented Information Disclosure CAPEC-125
+    MISS  Spoofing                   assigned Denial of Service      documented Spoofing               CAPEC-125
+
+Confusion — documented category to assigned category
+------------------------------------------------------------------------------
+  documented              assigned                  n
+  Denial of Service       Denial of Service         8
+  Denial of Service       Information Disclosure    4   <- disagreement
+  Information Disclosure  Denial of Service         3   <- disagreement
+  Information Disclosure  Information Disclosure    1
+  Spoofing                Denial of Service         1   <- disagreement
+  Tampering               Information Disclosure    1   <- disagreement
+
+Direction of the disagreements
+------------------------------------------------------------------------------
+   4x  Denial of Service  ->  Information Disclosure
+   3x  Information Disclosure  ->  Denial of Service
+   1x  Spoofing  ->  Denial of Service
+   1x  Tampering  ->  Information Disclosure
+
+  total disagreements: 9 of 18
+  categories the disagreements land on: Information Disclosure (5), Denial of Service (4)
+
+CAPEC ids behind the assignments
+------------------------------------------------------------------------------
+  Denial of Service       CAPEC-125 x5, CAPEC-482 x7
+  Information Disclosure  CAPEC-297 x3, CAPEC-298 x2, CAPEC-303 x1

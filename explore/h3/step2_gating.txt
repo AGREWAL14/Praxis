@@ -1,0 +1,96 @@
+STEP 2 — confidence gating by attribution concentration
+============================================================================================
+artefact: threat_mapping.json git_sha 6912da6; ranking table results/chapter4/tables/feature_ranking_by_class.csv
+top-5 reproduction check vs artefact top_features: 18 of 18 classes
+
+Per-class concentration (sorted by top-1 share)
+--------------------------------------------------------------------------------------------
+  class                         top1    top3  agrees  documented              assigned
+  DDoS-TCP                    0.4366  0.6805  yes     Denial of Service       Denial of Service
+  Recon-Port_Scan             0.3089  0.5546  NO      Information Disclosure  Denial of Service
+  DoS-SYN                     0.3035  0.5315  yes     Denial of Service       Denial of Service
+  Recon-OS_Scan               0.2938  0.5824  NO      Information Disclosure  Denial of Service
+  DDoS-ICMP                   0.2828  0.5828  NO      Denial of Service       Information Disclosure
+  MQTT-DDoS-Connect_Flood     0.2746  0.5638  yes     Denial of Service       Denial of Service
+  Recon-Ping_Sweep            0.2741  0.6085  yes     Information Disclosure  Information Disclosure
+  DoS-ICMP                    0.2661  0.5550  NO      Denial of Service       Information Disclosure
+  MQTT-DoS-Publish_Flood      0.2449  0.5119  NO      Denial of Service       Information Disclosure
+  Recon-VulScan               0.2376  0.5011  NO      Information Disclosure  Denial of Service
+  MQTT-DoS-Connect_Flood      0.2221  0.5422  NO      Denial of Service       Information Disclosure
+  DoS-TCP                     0.2124  0.5127  yes     Denial of Service       Denial of Service
+  MQTT-Malformed_Data         0.2094  0.5229  NO      Tampering               Information Disclosure
+  DDoS-SYN                    0.1800  0.4618  yes     Denial of Service       Denial of Service
+  DoS-UDP                     0.1754  0.4322  yes     Denial of Service       Denial of Service
+  DDoS-UDP                    0.1738  0.4478  yes     Denial of Service       Denial of Service
+  Spoofing                    0.1663  0.3997  NO      Spoofing                Denial of Service
+  MQTT-DDoS-Publish_Flood     0.1310  0.3846  yes     Denial of Service       Denial of Service
+
+Precision-coverage sweep on top1_share
+--------------------------------------------------------------------------------------------
+   threshold   kept  coverage  agree  precision   dropped classes
+      0.1310     18    1.0000      9     0.5000   0 dropped
+      0.1663     17    0.9444      8     0.4706   1 dropped
+      0.1738     16    0.8889      8     0.5000   2 dropped
+      0.1754     15    0.8333      7     0.4667   3 dropped
+      0.1800     14    0.7778      6     0.4286   4 dropped
+      0.2094     13    0.7222      5     0.3846   5 dropped
+      0.2124     12    0.6667      5     0.4167   6 dropped
+      0.2221     11    0.6111      4     0.3636   7 dropped
+      0.2376     10    0.5556      4     0.4000   8 dropped
+      0.2449      9    0.5000      4     0.4444   9 dropped
+      0.2661      8    0.4444      4     0.5000   10 dropped
+      0.2741      7    0.3889      4     0.5714   11 dropped
+      0.2746      6    0.3333      3     0.5000   12 dropped
+      0.2828      5    0.2778      2     0.4000   13 dropped
+      0.2938      4    0.2222      2     0.5000   14 dropped
+      0.3035      3    0.1667      2     0.6667   15 dropped
+      0.3089      2    0.1111      1     0.5000   16 dropped
+      0.4366      1    0.0556      1     1.0000   17 dropped
+
+  precision as threshold rises: 0.500 0.471 0.500 0.467 0.429 0.385 0.417 0.364 0.400 0.444 0.500 0.571 0.500 0.400 0.500 0.667 0.500 1.000
+  first (all 18 kept) = 0.5000;  last (strictest) = 1.0000
+  monotone non-decreasing: False
+
+Precision-coverage sweep on top3_share
+--------------------------------------------------------------------------------------------
+   threshold   kept  coverage  agree  precision   dropped classes
+      0.3846     18    1.0000      9     0.5000   0 dropped
+      0.3997     17    0.9444      8     0.4706   1 dropped
+      0.4322     16    0.8889      8     0.5000   2 dropped
+      0.4478     15    0.8333      7     0.4667   3 dropped
+      0.4618     14    0.7778      6     0.4286   4 dropped
+      0.5011     13    0.7222      5     0.3846   5 dropped
+      0.5119     12    0.6667      5     0.4167   6 dropped
+      0.5127     11    0.6111      5     0.4545   7 dropped
+      0.5229     10    0.5556      4     0.4000   8 dropped
+      0.5315      9    0.5000      4     0.4444   9 dropped
+      0.5422      8    0.4444      3     0.3750   10 dropped
+      0.5546      7    0.3889      3     0.4286   11 dropped
+      0.5550      6    0.3333      3     0.5000   12 dropped
+      0.5638      5    0.2778      3     0.6000   13 dropped
+      0.5824      4    0.2222      2     0.5000   14 dropped
+      0.5828      3    0.1667      2     0.6667   15 dropped
+      0.6085      2    0.1111      2     1.0000   16 dropped
+      0.6805      1    0.0556      1     1.0000   17 dropped
+
+  precision as threshold rises: 0.500 0.471 0.500 0.467 0.429 0.385 0.417 0.455 0.400 0.444 0.375 0.429 0.500 0.600 0.500 0.667 1.000 1.000
+  first (all 18 kept) = 0.5000;  last (strictest) = 1.0000
+  monotone non-decreasing: False
+
+Concentration of agreeing vs disagreeing classes
+--------------------------------------------------------------------------------------------
+  top1_share
+    agree    n=9   min 0.1310  median 0.2124  max 0.4366
+    disagree n=9   min 0.1663  median 0.2449  max 0.3089
+  top3_share
+    agree    n=9   min 0.3846  median 0.5127  max 0.6805
+    disagree n=9   min 0.3997  median 0.5422  max 0.5828
+
+Same, split by documented DoS / non-DoS
+--------------------------------------------------------------------------------------------
+  top1_share
+    DoS      n=12  median 0.2335  agreement 8/12
+    non-DoS  n=6   median 0.2559  agreement 1/6
+  top3_share
+    DoS      n=12  median 0.5221  agreement 8/12
+    non-DoS  n=6   median 0.5388  agreement 1/6
