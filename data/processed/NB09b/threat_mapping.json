@@ -1,0 +1,587 @@
+{
+  "generated_by": "AG_PRAXIS_NB09b_threat_mapping.ipynb",
+  "generated_on": "2026-08-17",
+  "git_sha": "6912da6",
+  "git_dirty": false,
+  "is_fast_pass": false,
+  "reads": {
+    "attributions": "/content/drive/MyDrive/AG_PRAXIS_artifacts/NB09a",
+    "written_by": "AG_PRAXIS_NB09a_shap_attributions.ipynb",
+    "written_on": "2026-08-13",
+    "at": "281326e"
+  },
+  "registered_under": "PREREGISTRATION.md Amendment 18",
+  "rule_files": {
+    "feature_to_capec": "config/shap_capec_map.yaml",
+    "capec_to_stride": "config/capec_stride.yaml",
+    "ground_truth": "config/stride_ground_truth.yaml",
+    "committed_at": "8f51f1f, before any model trained"
+  },
+  "k": 10,
+  "pass_mark": 15,
+  "n_attack_classes": 18,
+  "majority_class_baseline": 0.667,
+  "h3": [
+    {
+      "model": "sequence, seed 42 (H3 is scored on this)",
+      "n_assigned": 18,
+      "n_agree": 9,
+      "proportion": 0.5,
+      "per_class": [
+        {
+          "class": "DDoS-ICMP",
+          "assigned": "Information Disclosure",
+          "capec": 298,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "UDP, Max, TCP, ack_flag_number, Std"
+        },
+        {
+          "class": "DDoS-SYN",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "syn_count, syn_flag_number, ack_flag_number, rst_flag_number, TCP"
+        },
+        {
+          "class": "DDoS-TCP",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "TCP, Max, ICMP, UDP, Min"
+        },
+        {
+          "class": "DDoS-UDP",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "ack_flag_number, Max, syn_count, UDP, Std"
+        },
+        {
+          "class": "DoS-ICMP",
+          "assigned": "Information Disclosure",
+          "capec": 298,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "UDP, Max, ack_flag_number, TCP, Std"
+        },
+        {
+          "class": "DoS-SYN",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "syn_count, rst_flag_number, ack_flag_number, TCP, syn_flag_number"
+        },
+        {
+          "class": "DoS-TCP",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "Max, TCP, ICMP, Min, UDP"
+        },
+        {
+          "class": "DoS-UDP",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "ack_flag_number, UDP, Max, ICMP, syn_count"
+        },
+        {
+          "class": "MQTT-DDoS-Connect_Flood",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "syn_count, ack_count, fin_flag_number, ack_flag_number, Max"
+        },
+        {
+          "class": "MQTT-DDoS-Publish_Flood",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "ack_flag_number, Max, psh_flag_number, AVG, Tot size"
+        },
+        {
+          "class": "MQTT-DoS-Connect_Flood",
+          "assigned": "Information Disclosure",
+          "capec": 297,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "syn_count, ack_flag_number, ack_count, fin_count, psh_flag_number"
+        },
+        {
+          "class": "MQTT-DoS-Publish_Flood",
+          "assigned": "Information Disclosure",
+          "capec": 297,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "ack_flag_number, psh_flag_number, Max, AVG, Tot sum"
+        },
+        {
+          "class": "Recon-OS_Scan",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Information Disclosure",
+          "agrees": false,
+          "top_features": "Number, ack_flag_number, fin_count, rst_flag_number, SSH"
+        },
+        {
+          "class": "Recon-Ping_Sweep",
+          "assigned": "Information Disclosure",
+          "capec": 303,
+          "truth": "Information Disclosure",
+          "agrees": true,
+          "top_features": "LLC, psh_flag_number, IPv, ack_flag_number, Number"
+        },
+        {
+          "class": "Recon-Port_Scan",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Information Disclosure",
+          "agrees": false,
+          "top_features": "Number, fin_count, rst_flag_number, ack_flag_number, TCP"
+        },
+        {
+          "class": "Recon-VulScan",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Information Disclosure",
+          "agrees": false,
+          "top_features": "Number, ack_flag_number, psh_flag_number, syn_count, Std"
+        },
+        {
+          "class": "Spoofing",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Spoofing",
+          "agrees": false,
+          "top_features": "Header_Length, Number, Max, AVG, ack_flag_number"
+        },
+        {
+          "class": "MQTT-Malformed_Data",
+          "assigned": "Information Disclosure",
+          "capec": 297,
+          "truth": "Tampering",
+          "agrees": false,
+          "top_features": "Number, ack_flag_number, syn_count, psh_flag_number, ack_count"
+        }
+      ]
+    },
+    {
+      "model": "forest (exactness check, not what H3 rests on)",
+      "n_assigned": 18,
+      "n_agree": 6,
+      "proportion": 0.3333333333333333,
+      "per_class": [
+        {
+          "class": "DDoS-ICMP",
+          "assigned": "Information Disclosure",
+          "capec": 285,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "ICMP, Protocol Type, Tot size, AVG, Magnitue"
+        },
+        {
+          "class": "DDoS-SYN",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "syn_count, syn_flag_number, rst_count, Protocol Type, AVG"
+        },
+        {
+          "class": "DDoS-TCP",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "Header_Length, syn_count, syn_flag_number, Protocol Type, AVG"
+        },
+        {
+          "class": "DDoS-UDP",
+          "assigned": "Information Disclosure",
+          "capec": 298,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "Protocol Type, UDP, Header_Length, AVG, Min"
+        },
+        {
+          "class": "DoS-ICMP",
+          "assigned": "Information Disclosure",
+          "capec": 285,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "ICMP, Protocol Type, Magnitue, Min, TCP"
+        },
+        {
+          "class": "DoS-SYN",
+          "assigned": "Information Disclosure",
+          "capec": 287,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "rst_count, syn_count, syn_flag_number, AVG, Tot size"
+        },
+        {
+          "class": "DoS-TCP",
+          "assigned": "Denial of Service",
+          "capec": 482,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "Header_Length, syn_count, syn_flag_number, Protocol Type, Tot size"
+        },
+        {
+          "class": "DoS-UDP",
+          "assigned": "Tampering",
+          "capec": 153,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "Header_Length, Protocol Type, UDP, ICMP, TCP"
+        },
+        {
+          "class": "MQTT-DDoS-Connect_Flood",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Denial of Service",
+          "agrees": true,
+          "top_features": "fin_flag_number, ack_count, AVG, rst_count, Magnitue"
+        },
+        {
+          "class": "MQTT-DDoS-Publish_Flood",
+          "assigned": "Information Disclosure",
+          "capec": 302,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "fin_count, syn_flag_number, rst_flag_number, psh_flag_number, ack_count"
+        },
+        {
+          "class": "MQTT-DoS-Connect_Flood",
+          "assigned": "Information Disclosure",
+          "capec": 302,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "fin_flag_number, syn_count, AVG, ack_count, psh_flag_number"
+        },
+        {
+          "class": "MQTT-DoS-Publish_Flood",
+          "assigned": "Information Disclosure",
+          "capec": 297,
+          "truth": "Denial of Service",
+          "agrees": false,
+          "top_features": "ack_flag_number, rst_count, AVG, Min, Magnitue"
+        },
+        {
+          "class": "Recon-OS_Scan",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Information Disclosure",
+          "agrees": false,
+          "top_features": "fin_count, ack_flag_number, Tot sum, AVG, syn_count"
+        },
+        {
+          "class": "Recon-Ping_Sweep",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Information Disclosure",
+          "agrees": false,
+          "top_features": "Protocol Type, Tot size, Min, Header_Length, TCP"
+        },
+        {
+          "class": "Recon-Port_Scan",
+          "assigned": "Information Disclosure",
+          "capec": 302,
+          "truth": "Information Disclosure",
+          "agrees": true,
+          "top_features": "fin_count, rst_count, Tot sum, syn_count, AVG"
+        },
+        {
+          "class": "Recon-VulScan",
+          "assigned": "Information Disclosure",
+          "capec": 287,
+          "truth": "Information Disclosure",
+          "agrees": true,
+          "top_features": "syn_count, fin_count, Variance, rst_count, Std"
+        },
+        {
+          "class": "Spoofing",
+          "assigned": "Tampering",
+          "capec": 153,
+          "truth": "Spoofing",
+          "agrees": false,
+          "top_features": "Header_Length, Magnitue, Variance, Min, AVG"
+        },
+        {
+          "class": "MQTT-Malformed_Data",
+          "assigned": "Denial of Service",
+          "capec": 125,
+          "truth": "Tampering",
+          "agrees": false,
+          "top_features": "Tot sum, AVG, rst_count, Magnitue, Number"
+        }
+      ]
+    }
+  ],
+  "nsamples": 50,
+  "nsamples_note": "fixed at 50 by Amendment 19 on the cost curve. The fixture stability plateau that amendment records was measured on Gaussian noise and says nothing about this corpus; the across-seed tau below is the real-data check the amendment commits to, and a disagreement with the plateau is a finding rather than a reason to revise nsamples",
+  "kendall_tau": {
+    "k": 10,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "pairs": 10,
+    "no_pass_mark": true,
+    "per_class": [
+      {
+        "class": "DDoS-ICMP",
+        "mean tau": 0.14498834498834495,
+        "min": 0.0,
+        "max": 0.4545454545454545,
+        "pairs": 10
+      },
+      {
+        "class": "DDoS-TCP",
+        "mean tau": 0.17124708624708623,
+        "min": -0.17948717948717946,
+        "max": 0.38181818181818183,
+        "pairs": 10
+      },
+      {
+        "class": "MQTT-DDoS-Publish_Flood",
+        "mean tau": 0.23072261072261074,
+        "min": -0.1515151515151515,
+        "max": 0.6000000000000001,
+        "pairs": 10
+      },
+      {
+        "class": "DDoS-UDP",
+        "mean tau": 0.30326340326340323,
+        "min": 0.10256410256410255,
+        "max": 0.5151515151515151,
+        "pairs": 10
+      },
+      {
+        "class": "DoS-ICMP",
+        "mean tau": 0.3043756243756243,
+        "min": 0.14285714285714285,
+        "max": 0.5272727272727272,
+        "pairs": 10
+      },
+      {
+        "class": "DoS-TCP",
+        "mean tau": 0.3073792873792874,
+        "min": 0.05494505494505495,
+        "max": 0.6666666666666666,
+        "pairs": 10
+      },
+      {
+        "class": "DoS-UDP",
+        "mean tau": 0.35456099456099455,
+        "min": 0.0303030303030303,
+        "max": 0.6363636363636364,
+        "pairs": 10
+      },
+      {
+        "class": "Spoofing",
+        "mean tau": 0.3738461538461539,
+        "min": 0.1818181818181818,
+        "max": 0.6727272727272727,
+        "pairs": 10
+      },
+      {
+        "class": "Recon-OS_Scan",
+        "mean tau": 0.44808080808080797,
+        "min": 0.2424242424242424,
+        "max": 0.7333333333333333,
+        "pairs": 10
+      },
+      {
+        "class": "Recon-Ping_Sweep",
+        "mean tau": 0.5007659007659008,
+        "min": 0.3636363636363636,
+        "max": 0.7272727272727272,
+        "pairs": 10
+      },
+      {
+        "class": "Recon-VulScan",
+        "mean tau": 0.5110955710955711,
+        "min": 0.3090909090909091,
+        "max": 0.6666666666666666,
+        "pairs": 10
+      },
+      {
+        "class": "Recon-Port_Scan",
+        "mean tau": 0.5466666666666666,
+        "min": 0.23636363636363636,
+        "max": 0.7777777777777777,
+        "pairs": 10
+      },
+      {
+        "class": "DDoS-SYN",
+        "mean tau": 0.5664646464646464,
+        "min": 0.28888888888888886,
+        "max": 0.7818181818181819,
+        "pairs": 10
+      },
+      {
+        "class": "Benign",
+        "mean tau": 0.5877544677544677,
+        "min": 0.3589743589743589,
+        "max": 0.7777777777777777,
+        "pairs": 10
+      },
+      {
+        "class": "MQTT-DoS-Publish_Flood",
+        "mean tau": 0.5963636363636364,
+        "min": 0.4666666666666666,
+        "max": 0.7333333333333333,
+        "pairs": 10
+      },
+      {
+        "class": "DoS-SYN",
+        "mean tau": 0.6181818181818182,
+        "min": 0.4222222222222222,
+        "max": 0.8181818181818182,
+        "pairs": 10
+      },
+      {
+        "class": "MQTT-Malformed_Data",
+        "mean tau": 0.6648484848484848,
+        "min": 0.6000000000000001,
+        "max": 0.7575757575757575,
+        "pairs": 10
+      },
+      {
+        "class": "MQTT-DoS-Connect_Flood",
+        "mean tau": 0.7133333333333333,
+        "min": 0.606060606060606,
+        "max": 0.8181818181818182,
+        "pairs": 10
+      },
+      {
+        "class": "MQTT-DDoS-Connect_Flood",
+        "mean tau": 0.72,
+        "min": 0.606060606060606,
+        "max": 0.8545454545454545,
+        "pairs": 10
+      }
+    ],
+    "mean_across_classes": 0.455996780996781
+  },
+  "maude": {
+    "window": [
+      "2019-01-01",
+      "2026-08-17"
+    ],
+    "endpoint": "https://api.fda.gov/device/event.json",
+    "per_generic_name": [
+      {
+        "generic_name": "pulse oximeter",
+        "records": 13
+      },
+      {
+        "generic_name": "electrocardiograph",
+        "records": 797
+      },
+      {
+        "generic_name": "heart rate monitor",
+        "records": 2
+      },
+      {
+        "generic_name": "electromyograph",
+        "records": 17
+      },
+      {
+        "generic_name": "galvanic skin response device",
+        "records": 0
+      },
+      {
+        "generic_name": "sleep monitor",
+        "records": 0
+      },
+      {
+        "generic_name": "infant monitor",
+        "records": 0
+      },
+      {
+        "generic_name": "personal emergency response system",
+        "records": 0
+      }
+    ],
+    "denominator": 829,
+    "per_keyword": [
+      {
+        "keyword": "hack",
+        "records": 0
+      },
+      {
+        "keyword": "hacked",
+        "records": 0
+      },
+      {
+        "keyword": "hacking",
+        "records": 1
+      },
+      {
+        "keyword": "cyber",
+        "records": 0
+      },
+      {
+        "keyword": "cyberattack",
+        "records": 0
+      },
+      {
+        "keyword": "cybersecurity",
+        "records": 0
+      },
+      {
+        "keyword": "malware",
+        "records": 0
+      },
+      {
+        "keyword": "ransomware",
+        "records": 0
+      },
+      {
+        "keyword": "unauthorized access",
+        "records": 0
+      },
+      {
+        "keyword": "unauthorised access",
+        "records": 0
+      },
+      {
+        "keyword": "intrusion",
+        "records": 0
+      },
+      {
+        "keyword": "denial of service",
+        "records": 0
+      },
+      {
+        "keyword": "breach",
+        "records": 0
+      },
+      {
+        "keyword": "exploit",
+        "records": 0
+      },
+      {
+        "keyword": "tampering",
+        "records": 0
+      }
+    ],
+    "numerator": 1,
+    "share": 0.0012062726176115801,
+    "reported_as": "device-category adverse events, never as cyber-caused harm"
+  }
+}

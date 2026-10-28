@@ -1,0 +1,53 @@
+# AG_PRAXIS — CAPEC to STRIDE correspondence
+#
+# PROVENANCE, STATED PLAINLY. Brett Crawley, "CAPEC-STRIDE Mapping", published at
+# ostering.com on 7 March 2022 and since split into six per-category mind maps.
+# Retrieved 2026-08-11 from the Markdown export at
+# https://www.ostering.com/media/files/docs/capec-stride-mapping.md
+#
+# This is a community artifact by a single author on a personal blog. It is not a
+# MITRE output and not a standards-body document. No official CAPEC-to-STRIDE mapping
+# exists: CAPEC's own taxonomy mappings go to ATT&CK, WASC and OWASP, not STRIDE.
+# PROJECT_RECORD.md Section 6 lists the correspondence as cited rather than derived,
+# and this file is that citation.
+#
+# VERIFICATION. Every row below was read out of the Markdown export named above on
+# 2026-08-11. CAPEC IDs and names were separately verified against capec.mitre.org by
+# reading parent patterns 125, 169, 292, 300, 224 and 310 and their child lists. A row
+# the source did not confirm is not in this file.
+#
+# Committed before any model trains.
+
+source:
+  author: Brett Crawley
+  title: CAPEC-STRIDE Mapping
+  published: '2022-03-07'
+  url: https://ostering.com/blog/2022/03/07/capec-stride-mapping/
+  retrieved_from: https://www.ostering.com/media/files/docs/capec-stride-mapping.md
+  retrieved_on: '2026-08-11'
+  kind: >-
+    Community artifact, single author, personal blog. Not a MITRE or standards-body
+    output. Cited because no official CAPEC-to-STRIDE correspondence exists.
+
+mapping:
+  125: {name: Flooding, stride: Denial of Service, verified_against_source: true}
+  482: {name: TCP Flood, stride: Denial of Service, verified_against_source: true}
+  486: {name: UDP Flood, stride: Denial of Service, verified_against_source: true}
+  487: {name: ICMP Flood, stride: Denial of Service, verified_against_source: true}
+  488: {name: HTTP Flood, stride: Denial of Service, verified_against_source: true}
+  489: {name: SSL Flood, stride: Denial of Service, verified_against_source: true}
+  285: {name: ICMP Echo Request Ping, stride: Information Disclosure, verified_against_source: true}
+  297: {name: TCP ACK Ping, stride: Information Disclosure, verified_against_source: true}
+  298: {name: UDP Ping, stride: Information Disclosure, verified_against_source: true}
+  299: {name: TCP SYN Ping, stride: Information Disclosure, verified_against_source: true}
+  300: {name: Port Scanning, stride: Information Disclosure, verified_against_source: true}
+  287: {name: TCP SYN Scan, stride: Information Disclosure, verified_against_source: true}
+  302: {name: TCP FIN Scan, stride: Information Disclosure, verified_against_source: true}
+  303: {name: TCP Xmas Scan, stride: Information Disclosure, verified_against_source: true}
+  305: {name: TCP ACK Scan, stride: Information Disclosure, verified_against_source: true}
+  308: {name: UDP Scan, stride: Information Disclosure, verified_against_source: true}
+  312: {name: Active OS Fingerprinting, stride: Information Disclosure, verified_against_source: true}
+  151: {name: Identity Spoofing, stride: Spoofing, verified_against_source: true}
+  153: {name: Input Data Manipulation, stride: Tampering, verified_against_source: true}
+
+dropped: []

@@ -1,0 +1,528 @@
+{
+  "generated_by": "AG_PRAXIS_NB01_dataset_inventory.ipynb",
+  "generated_on": "2026-08-08",
+  "git_sha": "a4c8ff2",
+  "git_dirty": false,
+  "mode": "full",
+  "is_fast_pass": false,
+  "enterable_in_ledger": true,
+  "scanned": true,
+  "rows_scanned": 8775013,
+  "counted_over": "every row of every file, summed from the constancy scan",
+  "modal_share_denominator": "rows that are not null",
+  "zero_share_denominator": "all rows",
+  "thresholds": {
+    "near_constant_above": 0.9,
+    "zero_heavy_above": 0.9,
+    "comparison": "strict greater-than, matching NB02's wording"
+  },
+  "dropped_column": "Drate",
+  "n_columns": 45,
+  "n_modelled_columns": 44,
+  "near_constant_columns": [
+    "Drate",
+    "IGMP",
+    "DHCP",
+    "cwr_flag_number",
+    "ece_flag_number",
+    "IRC",
+    "SMTP",
+    "Telnet",
+    "SSH",
+    "HTTP",
+    "DNS",
+    "ARP",
+    "IPv",
+    "LLC",
+    "fin_flag_number",
+    "HTTPS",
+    "ack_count",
+    "Number",
+    "Weight",
+    "Duration",
+    "psh_flag_number"
+  ],
+  "zero_heavy_columns": [
+    "IGMP",
+    "DHCP",
+    "cwr_flag_number",
+    "ece_flag_number",
+    "IRC",
+    "SMTP",
+    "Telnet",
+    "SSH",
+    "HTTP",
+    "DNS",
+    "ARP",
+    "fin_flag_number",
+    "HTTPS",
+    "ack_count",
+    "psh_flag_number"
+  ],
+  "gates": [
+    {
+      "gate": "Drate is one value in every row",
+      "expected": "100.000000%, exact",
+      "got": "100.000000% at 0.0, exact=True",
+      "result": "PASS"
+    },
+    {
+      "gate": "columns zero in more than 90% of rows",
+      "expected": "15 of 44, from NB02",
+      "got": "15 of 44",
+      "result": "PASS"
+    }
+  ],
+  "per_column": [
+    {
+      "column": "Drate",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 1.0,
+      "modal_value": 0.0,
+      "modal_share": 1.0,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "IGMP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.999965925976406,
+      "modal_value": 0.0,
+      "modal_share": 0.999965925976406,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "DHCP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9999390314293551,
+      "modal_value": 0.0,
+      "modal_share": 0.9999390314293551,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "cwr_flag_number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9999313961130314,
+      "modal_value": 0.0,
+      "modal_share": 0.9999313961130314,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "ece_flag_number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9999304844334703,
+      "modal_value": 0.0,
+      "modal_share": 0.9999304844334703,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "IRC",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9994180065602182,
+      "modal_value": 0.0,
+      "modal_share": 0.9994180065602182,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "SMTP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9994158413212607,
+      "modal_value": 0.0,
+      "modal_share": 0.9994158413212607,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "Telnet",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9994156134013704,
+      "modal_value": 0.0,
+      "modal_share": 0.9994156134013704,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "SSH",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9993772088998615,
+      "modal_value": 0.0,
+      "modal_share": 0.9993772088998615,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "HTTP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9981490625711894,
+      "modal_value": 0.0,
+      "modal_share": 0.9981490625711894,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "DNS",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9974109440065787,
+      "modal_value": 0.0,
+      "modal_share": 0.9974109440065787,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "ARP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9943932846595213,
+      "modal_value": 0.0,
+      "modal_share": 0.9943932846595213,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "IPv",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 9.253547544601929e-05,
+      "modal_value": 1.0,
+      "modal_share": 0.9943932846595213,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "LLC",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 9.253547544601929e-05,
+      "modal_value": 1.0,
+      "modal_share": 0.9943932846595213,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "fin_flag_number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.971039017264134,
+      "modal_value": 0.0,
+      "modal_share": 0.971039017264134,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "HTTPS",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9707585618391676,
+      "modal_value": 0.0,
+      "modal_share": 0.9707585618391676,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "ack_count",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9686761717617968,
+      "modal_value": 0.0,
+      "modal_share": 0.9686703598045951,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 9.5,
+      "modal_share": 0.9552678725376247,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "Weight",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 141.55,
+      "modal_share": 0.9552282144767192,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "Duration",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 9.253547544601929e-05,
+      "modal_value": 64.0,
+      "modal_share": 0.9357434570182404,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "psh_flag_number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.9253964638001106,
+      "modal_value": 0.0,
+      "modal_share": 0.9253873470045002,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "rst_flag_number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.8817999471909614,
+      "modal_value": 0.0,
+      "modal_share": 0.8817999471909614,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "fin_count",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.8670517069319441,
+      "modal_value": 0.0,
+      "modal_share": 0.8668352969961411,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "ack_flag_number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.8201763347814983,
+      "modal_value": 0.0,
+      "modal_share": 0.8201757649817727,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "rst_count",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7998033735106718,
+      "modal_value": 0.0,
+      "modal_share": 0.7981850283298726,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "syn_flag_number",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7896695993498813,
+      "modal_value": 0.0,
+      "modal_share": 0.7896695993498813,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "syn_count",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7819778728532938,
+      "modal_value": 0.0,
+      "modal_share": 0.7817809500681082,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Variance",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7706297415171921,
+      "modal_value": 0.0,
+      "modal_share": 0.7706297415171921,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "Covariance",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7706297415171921,
+      "modal_value": 0.0,
+      "modal_share": 0.7706283739978504,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Radius",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7706297415171921,
+      "modal_value": 0.0,
+      "modal_share": 0.7706283739978504,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Std",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7665538501196523,
+      "modal_value": 0.0,
+      "modal_share": 0.7665524826003107,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "ICMP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.7114799715966232,
+      "modal_value": 0.0,
+      "modal_share": 0.7114799715966232,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "UDP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.6423702164315882,
+      "modal_value": 0.0,
+      "modal_share": 0.6423702164315882,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "TCP",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.5667649723140011,
+      "modal_value": 0.0,
+      "modal_share": 0.5667649723140011,
+      "modal_share_exact": true,
+      "n_files": 72
+    },
+    {
+      "column": "Protocol Type",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 9.253547544601929e-05,
+      "modal_value": 6.0,
+      "modal_share": 0.38354461697093784,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Min",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 50.0,
+      "modal_share": 0.3000466210135529,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Magnitue",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 10.0,
+      "modal_share": 0.27027059675011306,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Max",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 50.0,
+      "modal_share": 0.26929145290155126,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Tot size",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 50.0,
+      "modal_share": 0.2692577207577926,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "AVG",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 50.0,
+      "modal_share": 0.2692573788779572,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Tot sum",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.0,
+      "modal_value": 525.0,
+      "modal_share": 0.26905441621567966,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Header_Length",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.24907917515335876,
+      "modal_value": 0.0,
+      "modal_share": 0.24907017231769343,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Rate",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.038292592842882396,
+      "modal_value": 0.0,
+      "modal_share": 0.03827481509144203,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "Srate",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.038292592842882396,
+      "modal_value": 0.0,
+      "modal_share": 0.03827481509144203,
+      "modal_share_exact": false,
+      "n_files": 72
+    },
+    {
+      "column": "IAT",
+      "n_rows": 8775013,
+      "n_null": 0,
+      "zero_share": 0.001263473911662581,
+      "modal_value": 0.0,
+      "modal_share": 0.0012613086727051002,
+      "modal_share_exact": false,
+      "n_files": 72
+    }
+  ]
+}

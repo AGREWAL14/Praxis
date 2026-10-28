@@ -1,0 +1,2236 @@
+{
+  "generated_by": "AG_PRAXIS_NB04_preprocessing_splits.ipynb",
+  "git_sha": "bc71318",
+  "generated_on": "2026-08-06",
+  "columns": [
+    "IAT",
+    "Rate",
+    "Header_Length"
+  ],
+  "control_column": "Header_Length",
+  "rows_read_per_file": 100000,
+  "shuffles": 30,
+  "shuffle_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "z_threshold": 3.0,
+  "share_required": 0.5,
+  "rule": "row order carries structure if z is above 3 for at least half of all file and column combinations",
+  "files": 72,
+  "combinations": 216,
+  "combinations_above_z": 143,
+  "combinations_not_scored": 0,
+  "share_above_z": 0.6620370370370371,
+  "per_column": [
+    {
+      "column": "IAT",
+      "median_observed": -0.25933944669113707,
+      "median_null": -5.974296959543954e-05,
+      "share_above_3": 0.0
+    },
+    {
+      "column": "Rate",
+      "median_observed": 0.7229953154788592,
+      "median_null": -0.0001873097925335859,
+      "share_above_3": 0.9861111111111112
+    },
+    {
+      "column": "Header_Length",
+      "median_observed": 0.6749223041834156,
+      "median_null": -1.2806324036319631e-05,
+      "share_above_3": 1.0
+    }
+  ],
+  "per_file": [
+    {
+      "file": "ARP_Spoofing_train.pcap.csv",
+      "label": "Spoofing",
+      "rows_read": 16047,
+      "column": "IAT",
+      "observed": -0.9983797301072138,
+      "null_mean": -0.000540142505957732,
+      "null_std": 0.007634634792188403,
+      "z": -130.69905958333783
+    },
+    {
+      "file": "ARP_Spoofing_train.pcap.csv",
+      "label": "Spoofing",
+      "rows_read": 16047,
+      "column": "Rate",
+      "observed": 0.27894450694235073,
+      "null_mean": -0.001656259318243367,
+      "null_std": 0.0039291634226672175,
+      "z": 71.41488812652008
+    },
+    {
+      "file": "ARP_Spoofing_train.pcap.csv",
+      "label": "Spoofing",
+      "rows_read": 16047,
+      "column": "Header_Length",
+      "observed": 0.929279930032422,
+      "null_mean": 0.001919597871445144,
+      "null_std": 0.006965577573542733,
+      "z": 133.13473611769945
+    },
+    {
+      "file": "Benign_train.pcap.csv",
+      "label": "Benign",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.9995000310441454,
+      "null_mean": -0.0008580052040445215,
+      "null_std": 0.0035781929189924195,
+      "z": -279.0911637378422
+    },
+    {
+      "file": "Benign_train.pcap.csv",
+      "label": "Benign",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.2556284409670985,
+      "null_mean": -0.00040321624953946843,
+      "null_std": 0.0018016376024603922,
+      "z": 142.11052037712267
+    },
+    {
+      "file": "Benign_train.pcap.csv",
+      "label": "Benign",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.9722996926735598,
+      "null_mean": 0.0007906817973912305,
+      "null_std": 0.0030380267263034116,
+      "z": 319.7829046284508
+    },
+    {
+      "file": "MQTT-DDoS-Connect_Flood_train.pcap.csv",
+      "label": "MQTT-DDoS-Connect_Flood",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.25102563870213324,
+      "null_mean": 0.00021398421009032474,
+      "null_std": 0.000711589418046719,
+      "z": -353.0682392690227
+    },
+    {
+      "file": "MQTT-DDoS-Connect_Flood_train.pcap.csv",
+      "label": "MQTT-DDoS-Connect_Flood",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.43125844644541483,
+      "null_mean": 1.6299613063025348e-05,
+      "null_std": 0.0022245343607511714,
+      "z": 193.85726489148578
+    },
+    {
+      "file": "MQTT-DDoS-Connect_Flood_train.pcap.csv",
+      "label": "MQTT-DDoS-Connect_Flood",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.3493973709424363,
+      "null_mean": -0.0006697076499190257,
+      "null_std": 0.002512766427632068,
+      "z": 139.31540741024813
+    },
+    {
+      "file": "MQTT-DDoS-Publish_Flood_train.pcap.csv",
+      "label": "MQTT-DDoS-Publish_Flood",
+      "rows_read": 27623,
+      "column": "IAT",
+      "observed": -0.24463753060729207,
+      "null_mean": -0.0008719813098568561,
+      "null_std": 0.0056663201364417545,
+      "z": -43.02008065688135
+    },
+    {
+      "file": "MQTT-DDoS-Publish_Flood_train.pcap.csv",
+      "label": "MQTT-DDoS-Publish_Flood",
+      "rows_read": 27623,
+      "column": "Rate",
+      "observed": 0.18074350048295307,
+      "null_mean": 0.00010004826244012412,
+      "null_std": 0.006287950596671879,
+      "z": 28.728510099319944
+    },
+    {
+      "file": "MQTT-DDoS-Publish_Flood_train.pcap.csv",
+      "label": "MQTT-DDoS-Publish_Flood",
+      "rows_read": 27623,
+      "column": "Header_Length",
+      "observed": 0.6320969960859263,
+      "null_mean": -0.0009216314265735649,
+      "null_std": 0.007232347692892673,
+      "z": 87.52602258524931
+    },
+    {
+      "file": "MQTT-DoS-Connect_Flood_train.pcap.csv",
+      "label": "MQTT-DoS-Connect_Flood",
+      "rows_read": 12773,
+      "column": "IAT",
+      "observed": -0.358490430369113,
+      "null_mean": -0.0031081302794052296,
+      "null_std": 0.016665018060963717,
+      "z": -21.325047401068133
+    },
+    {
+      "file": "MQTT-DoS-Connect_Flood_train.pcap.csv",
+      "label": "MQTT-DoS-Connect_Flood",
+      "rows_read": 12773,
+      "column": "Rate",
+      "observed": 0.1428837677952431,
+      "null_mean": -0.0013787246799240051,
+      "null_std": 0.0053458861403473164,
+      "z": 26.98570240513849
+    },
+    {
+      "file": "MQTT-DoS-Connect_Flood_train.pcap.csv",
+      "label": "MQTT-DoS-Connect_Flood",
+      "rows_read": 12773,
+      "column": "Header_Length",
+      "observed": 0.5369176128739633,
+      "null_mean": -4.136523512605304e-05,
+      "null_std": 0.009966105122370223,
+      "z": 53.87851838967813
+    },
+    {
+      "file": "MQTT-DoS-Publish_Flood_train.pcap.csv",
+      "label": "MQTT-DoS-Publish_Flood",
+      "rows_read": 44376,
+      "column": "IAT",
+      "observed": -0.25817542343074074,
+      "null_mean": -0.0003426658439296575,
+      "null_std": 0.004099955995439904,
+      "z": -62.886713387553556
+    },
+    {
+      "file": "MQTT-DoS-Publish_Flood_train.pcap.csv",
+      "label": "MQTT-DoS-Publish_Flood",
+      "rows_read": 44376,
+      "column": "Rate",
+      "observed": 0.16993021703880476,
+      "null_mean": 0.0004340592889166682,
+      "null_std": 0.004095472898788166,
+      "z": 41.38622374965327
+    },
+    {
+      "file": "MQTT-DoS-Publish_Flood_train.pcap.csv",
+      "label": "MQTT-DoS-Publish_Flood",
+      "rows_read": 44376,
+      "column": "Header_Length",
+      "observed": 0.9470319413220725,
+      "null_mean": -0.0010815910538870884,
+      "null_std": 0.0038941983594011935,
+      "z": 243.46821729999132
+    },
+    {
+      "file": "MQTT-Malformed_Data_train.pcap.csv",
+      "label": "MQTT-Malformed_Data",
+      "rows_read": 5130,
+      "column": "IAT",
+      "observed": -0.9976606664035249,
+      "null_mean": -0.000780035699137953,
+      "null_std": 0.014444835758569306,
+      "z": -69.01294326679997
+    },
+    {
+      "file": "MQTT-Malformed_Data_train.pcap.csv",
+      "label": "MQTT-Malformed_Data",
+      "rows_read": 5130,
+      "column": "Rate",
+      "observed": 0.4740764096178725,
+      "null_mean": -0.0026726528107891686,
+      "null_std": 0.009020619096787122,
+      "z": 52.85103575634466
+    },
+    {
+      "file": "MQTT-Malformed_Data_train.pcap.csv",
+      "label": "MQTT-Malformed_Data",
+      "rows_read": 5130,
+      "column": "Header_Length",
+      "observed": 0.9476054938091513,
+      "null_mean": 5.256231990167995e-05,
+      "null_std": 0.01400331863599033,
+      "z": 67.6663122592895
+    },
+    {
+      "file": "Recon-OS_Scan_train.pcap.csv",
+      "label": "Recon-OS_Scan",
+      "rows_read": 16832,
+      "column": "IAT",
+      "observed": -0.999524686700784,
+      "null_mean": 0.0008040723362967744,
+      "null_std": 0.010362892153904018,
+      "z": -96.52988221634888
+    },
+    {
+      "file": "Recon-OS_Scan_train.pcap.csv",
+      "label": "Recon-OS_Scan",
+      "rows_read": 16832,
+      "column": "Rate",
+      "observed": 0.8727243619513833,
+      "null_mean": 0.0005698568744741915,
+      "null_std": 0.00861770844318964,
+      "z": 101.20492133452845
+    },
+    {
+      "file": "Recon-OS_Scan_train.pcap.csv",
+      "label": "Recon-OS_Scan",
+      "rows_read": 16832,
+      "column": "Header_Length",
+      "observed": 0.7822508143280972,
+      "null_mean": 0.00048677662249613506,
+      "null_std": 0.0069342084632656705,
+      "z": 112.74019837260974
+    },
+    {
+      "file": "Recon-Ping_Sweep_train.pcap.csv",
+      "label": "Recon-Ping_Sweep",
+      "rows_read": 740,
+      "column": "IAT",
+      "observed": -0.9945872704928815,
+      "null_mean": -0.001353792884477334,
+      "null_std": 0.03051573080442378,
+      "z": -32.5482448371978
+    },
+    {
+      "file": "Recon-Ping_Sweep_train.pcap.csv",
+      "label": "Recon-Ping_Sweep",
+      "rows_read": 740,
+      "column": "Rate",
+      "observed": 0.6646113496151516,
+      "null_mean": -0.01079522332270579,
+      "null_std": 0.021412444656915258,
+      "z": 31.54271190233906
+    },
+    {
+      "file": "Recon-Ping_Sweep_train.pcap.csv",
+      "label": "Recon-Ping_Sweep",
+      "rows_read": 740,
+      "column": "Header_Length",
+      "observed": 0.5016242126670847,
+      "null_mean": -0.012973267244240165,
+      "null_std": 0.041967331533587046,
+      "z": 12.261858476741255
+    },
+    {
+      "file": "Recon-Port_Scan_train.pcap.csv",
+      "label": "Recon-Port_Scan",
+      "rows_read": 83981,
+      "column": "IAT",
+      "observed": -0.999690409665488,
+      "null_mean": -0.00014448294999121737,
+      "null_std": 0.0028981496138251513,
+      "z": -344.89107185747946
+    },
+    {
+      "file": "Recon-Port_Scan_train.pcap.csv",
+      "label": "Recon-Port_Scan",
+      "rows_read": 83981,
+      "column": "Rate",
+      "observed": 0.7015021072789585,
+      "null_mean": 0.0001893608247606884,
+      "null_std": 0.002023428032558124,
+      "z": 346.5963380805599
+    },
+    {
+      "file": "Recon-Port_Scan_train.pcap.csv",
+      "label": "Recon-Port_Scan",
+      "rows_read": 83981,
+      "column": "Header_Length",
+      "observed": 0.812585441818977,
+      "null_mean": 0.0007085458091438873,
+      "null_std": 0.0031679044245174802,
+      "z": 256.28200450949345
+    },
+    {
+      "file": "Recon-VulScan_train.pcap.csv",
+      "label": "Recon-VulScan",
+      "rows_read": 2173,
+      "column": "IAT",
+      "observed": -0.9990796136955736,
+      "null_mean": 0.001135385167717911,
+      "null_std": 0.023494922482685317,
+      "z": -42.57153857819298
+    },
+    {
+      "file": "Recon-VulScan_train.pcap.csv",
+      "label": "Recon-VulScan",
+      "rows_read": 2173,
+      "column": "Rate",
+      "observed": 0.94705848678866,
+      "null_mean": 0.0034126258187498902,
+      "null_std": 0.023092789714701585,
+      "z": 40.86322495584654
+    },
+    {
+      "file": "Recon-VulScan_train.pcap.csv",
+      "label": "Recon-VulScan",
+      "rows_read": 2173,
+      "column": "Header_Length",
+      "observed": 0.9763336788845466,
+      "null_mean": -0.0010019730023389942,
+      "null_std": 0.021748849740243513,
+      "z": 44.93734903499052
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP1_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.27054945976041234,
+      "null_mean": 0.0008475237243701562,
+      "null_std": 0.003577020569448397,
+      "z": -75.87235751530326
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP1_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9828723409716915,
+      "null_mean": -0.000535227799909828,
+      "null_std": 0.003124264497620621,
+      "z": 314.76450522052323
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP1_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.652437084769216,
+      "null_mean": -0.00024278245735588632,
+      "null_std": 0.0023897149377790543,
+      "z": 273.1203864144388
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP2_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2922240192705109,
+      "null_mean": 8.288273456301053e-05,
+      "null_std": 0.0006284196483403157,
+      "z": -465.14602587151666
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP2_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9861596834532763,
+      "null_mean": 0.0008489073419005734,
+      "null_std": 0.0038899967518434973,
+      "z": 253.29347014092747
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP2_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.22031388891290554,
+      "null_mean": 0.0002814106394428514,
+      "null_std": 0.0032843675017745957,
+      "z": 66.9938665982341
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP3_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.23723795490616298,
+      "null_mean": -0.0002615344950800406,
+      "null_std": 0.0014876163679898012,
+      "z": -159.29941718193544
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP3_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.84757582103191,
+      "null_mean": 2.348505888518088e-05,
+      "null_std": 0.003474375352110032,
+      "z": 243.94380286467768
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP3_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.9078582707216099,
+      "null_mean": -0.0005535368744752391,
+      "null_std": 0.0005842746644098049,
+      "z": 1554.7684384256193
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP4_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.24999092191335243,
+      "null_mean": 4.2585394245362444e-05,
+      "null_std": 0.000758937861892865,
+      "z": -329.45188250852294
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP4_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9764272526273272,
+      "null_mean": 0.0006655529867939727,
+      "null_std": 0.0030314316686369763,
+      "z": 321.8814759163829
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP4_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.21397120752650445,
+      "null_mean": -0.00020356122240774632,
+      "null_std": 0.002774239410487564,
+      "z": 77.20125665407934
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP5_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.32677608159301813,
+      "null_mean": -0.00017546777154251537,
+      "null_std": 0.004205843656311682,
+      "z": -77.654007259958
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP5_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9839602618609284,
+      "null_mean": 0.0007897880682029798,
+      "null_std": 0.0027655375140256074,
+      "z": 355.5079143951261
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP5_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.21204825673124172,
+      "null_mean": -0.0006443964536612996,
+      "null_std": 0.001318701688011137,
+      "z": 161.28943726892896
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP6_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.23541391927634056,
+      "null_mean": 5.086733790283882e-05,
+      "null_std": 0.0004756133588095301,
+      "z": -495.07605758512864
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP6_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.960498272886318,
+      "null_mean": 0.0005399225087199818,
+      "null_std": 0.0034220517474723364,
+      "z": 280.5212840766249
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP6_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5860644660588153,
+      "null_mean": -0.0007673803059220868,
+      "null_std": 0.002279083789153594,
+      "z": 257.48585864088614
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP7_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.24576960062377864,
+      "null_mean": 0.00020365596992115653,
+      "null_std": 0.0007855307936805486,
+      "z": -313.1299989414923
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP7_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9455464808973758,
+      "null_mean": 5.295442859866192e-05,
+      "null_std": 0.0031958057978707308,
+      "z": 295.8545000133397
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP7_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8702684206128934,
+      "null_mean": -0.00038838014234478875,
+      "null_std": 0.0018549953591195359,
+      "z": 469.35794015597486
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP8_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.25538207040410876,
+      "null_mean": 2.0528598185577593e-05,
+      "null_std": 0.0011773442629268176,
+      "z": -216.931111013678
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP8_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9876190954532823,
+      "null_mean": -0.0005454568174939091,
+      "null_std": 0.002825551813643089,
+      "z": 349.7244493976201
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP8_train.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.44080566844996005,
+      "null_mean": -0.0006202285397845052,
+      "null_std": 0.002068241325966212,
+      "z": 213.43055640933264
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN1_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.28771396106382097,
+      "null_mean": -0.00047627971045425237,
+      "null_std": 0.003450449815875826,
+      "z": -83.2464451538349
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN1_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.935693174640508,
+      "null_mean": -0.0008093689810415211,
+      "null_std": 0.0034073652708757033,
+      "z": 274.84653659713615
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN1_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.7725341692425992,
+      "null_mean": 6.932236270655329e-06,
+      "null_std": 0.0020362112435824043,
+      "z": 379.3944461514633
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN2_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2791857847016353,
+      "null_mean": 0.0005779813445294098,
+      "null_std": 0.005049164267115404,
+      "z": -55.40793510487117
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN2_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.74448852367876,
+      "null_mean": 0.001189907802541974,
+      "null_std": 0.0033716030814908123,
+      "z": 220.45851718333216
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN2_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.46988886970346316,
+      "null_mean": -2.5133048678434176e-05,
+      "null_std": 0.0014145084572916046,
+      "z": 332.2101047397751
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN3_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.24251054972467811,
+      "null_mean": 2.8755493258768352e-05,
+      "null_std": 0.0010384945797257087,
+      "z": -233.54893704115173
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN3_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.16990523358511286,
+      "null_mean": -0.000522094850924975,
+      "null_std": 0.0002282647383814002,
+      "z": 746.6213557315905
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN3_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.466000590626274,
+      "null_mean": 0.0004636061273819217,
+      "null_std": 0.0027932872954624746,
+      "z": 166.66276514239283
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN4_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.25244585088703086,
+      "null_mean": -0.0006706638403575313,
+      "null_std": 0.0021276264572533924,
+      "z": -118.33617982533288
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN4_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9810115773734784,
+      "null_mean": 0.0007639777328513843,
+      "null_std": 0.0029815023138302383,
+      "z": 328.7764007740564
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN4_train.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8521348085635841,
+      "null_mean": -5.4960794375766497e-05,
+      "null_std": 0.003120659937018921,
+      "z": 273.07998518160645
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP1_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.24634367151028136,
+      "null_mean": 0.00015136480690319977,
+      "null_std": 0.0009675159836191959,
+      "z": -254.77102238158207
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP1_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9274646635867347,
+      "null_mean": -0.00018718477282169576,
+      "null_std": 0.0010266630917313666,
+      "z": 903.5601414239627
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP1_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.35387967123320985,
+      "null_mean": 0.0005518144941586155,
+      "null_std": 0.004326077441338372,
+      "z": 81.67395557064764
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP2_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.24619690072460668,
+      "null_mean": 0.00013902743617894781,
+      "null_std": 0.0023911104065666468,
+      "z": -103.02156164946604
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP2_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9346534073289778,
+      "null_mean": -0.000586522443868142,
+      "null_std": 0.002307122907726762,
+      "z": 405.37065738485086
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP2_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8602363837752424,
+      "null_mean": 0.00019003169161803477,
+      "null_std": 0.0021307243288145113,
+      "z": 403.64036795043097
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP3_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.26168407211141465,
+      "null_mean": 0.0009257870700872156,
+      "null_std": 0.004477850731114025,
+      "z": -58.64640760728715
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP3_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9781609245954029,
+      "null_mean": -0.0008330925672119789,
+      "null_std": 0.0030047320675795014,
+      "z": 325.81740905479654
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP3_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.6438921979676298,
+      "null_mean": -0.0004437830864470528,
+      "null_std": 0.0013023034112381673,
+      "z": 494.7664081148903
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP4_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2316787836747372,
+      "null_mean": -0.000249384637423452,
+      "null_std": 0.0013523250093349414,
+      "z": -171.13445173296634
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP4_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9723812204126007,
+      "null_mean": -0.00018743481224547606,
+      "null_std": 0.003380642606516396,
+      "z": 287.68751046033685
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP4_train.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8555572816977888,
+      "null_mean": -0.00013877879110077215,
+      "null_std": 0.004671796405328273,
+      "z": 183.16210430594788
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP1_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.3439379820125116,
+      "null_mean": -0.00031451460148071073,
+      "null_std": 0.0030798578296852208,
+      "z": -111.57121088480606
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP1_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.03593833703671964,
+      "null_mean": -0.00022683187648298405,
+      "null_std": 0.0032512248208973137,
+      "z": 11.123552170477499
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP1_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.6301310352699552,
+      "null_mean": -0.0002632053158371697,
+      "null_std": 0.0028745937875730865,
+      "z": 219.2985469150446
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP2_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.3152034363515405,
+      "null_mean": 0.0001693807336498104,
+      "null_std": 0.001154225773587797,
+      "z": -273.2332133815424
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP2_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.04019381547519101,
+      "null_mean": 0.0014233335626416853,
+      "null_std": 0.0030457068636135826,
+      "z": 12.729551348401943
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP2_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.6098537368263748,
+      "null_mean": -0.0002203088058253004,
+      "null_std": 0.003673168007689114,
+      "z": 166.08933878197792
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP3_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2265080372024016,
+      "null_mean": -0.0002909300662716056,
+      "null_std": 0.001242269249124824,
+      "z": -182.09990088340308
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP3_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.03655235256691908,
+      "null_mean": 0.0008048189182663727,
+      "null_std": 0.003549047473829348,
+      "z": 10.072430394987606
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP3_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5757191804732555,
+      "null_mean": -0.0002107975971700657,
+      "null_std": 0.0030327035808780578,
+      "z": 189.90645234892253
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP4_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.21529103146348713,
+      "null_mean": -0.0004756746584657538,
+      "null_std": 0.0018954054617937438,
+      "z": -113.33477777452842
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP4_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.042712037407222736,
+      "null_mean": 0.00034531604122936364,
+      "null_std": 0.003538704485021557,
+      "z": 11.97238185480619
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP4_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5840656205114823,
+      "null_mean": 0.0004962477272560052,
+      "null_std": 0.002670972087359568,
+      "z": 218.48576237317516
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP5_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.3005387661180018,
+      "null_mean": 0.00010264556280464534,
+      "null_std": 0.0011712154608190478,
+      "z": -256.69180585318054
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP5_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.040007964064071845,
+      "null_mean": 0.0008862560718648631,
+      "null_std": 0.0025060701583771434,
+      "z": 15.610779235941678
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP5_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5952340185591508,
+      "null_mean": 0.0007205429740667499,
+      "null_std": 0.003442187548035668,
+      "z": 172.7138534111401
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP6_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.24659667772003777,
+      "null_mean": -6.068472671865142e-05,
+      "null_std": 0.0006552589436914255,
+      "z": -376.2420877530484
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP6_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.040992566773014744,
+      "null_mean": -0.00021156560063838735,
+      "null_std": 0.003029073368258907,
+      "z": 13.602883576681743
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP6_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5727324752447297,
+      "null_mean": 0.0001233189035048673,
+      "null_std": 0.0026277338357016617,
+      "z": 217.9098767772748
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP7_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2666144815559671,
+      "null_mean": 1.25291652470796e-05,
+      "null_std": 0.0011999757482069684,
+      "z": -222.19366609668108
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP7_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.03193597402049352,
+      "null_mean": -0.0007252162847406603,
+      "null_std": 0.0032380181982710195,
+      "z": 10.086784046696847
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP7_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.7588060074058309,
+      "null_mean": 0.0009275924928002674,
+      "null_std": 0.002458923686194663,
+      "z": 308.21550874801426
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP8_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.25032531370581906,
+      "null_mean": 3.918755058636553e-05,
+      "null_std": 0.0008904991587007777,
+      "z": -281.15074428782475
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP8_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.0408561006277019,
+      "null_mean": 1.1947308790426171e-05,
+      "null_std": 0.003056597346563805,
+      "z": 13.362621466915831
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP8_train.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.6009987180497804,
+      "null_mean": 0.0003093791231326869,
+      "null_std": 0.002644442272326834,
+      "z": 227.15161726639002
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP1_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.23770125237712775,
+      "null_mean": -0.0004328308435451499,
+      "null_std": 0.001398120564728975,
+      "z": -169.70526542507224
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP1_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.6245459322129703,
+      "null_mean": -0.0003606938962093788,
+      "null_std": 0.0002809552969872023,
+      "z": 2224.2208380134034
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP1_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.6549142374756731,
+      "null_mean": 0.00013040555634733468,
+      "null_std": 0.0028695982101203344,
+      "z": 228.17962096926033
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP2_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 96977,
+      "column": "IAT",
+      "observed": -0.23864123567670528,
+      "null_mean": 0.00030133841785823673,
+      "null_std": 0.001998038620222822,
+      "z": -119.58856634508723
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP2_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 96977,
+      "column": "Rate",
+      "observed": 0.9799623714756155,
+      "null_mean": 0.0005954115815896679,
+      "null_std": 0.003404426505235781,
+      "z": 287.67457849004074
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP2_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 96977,
+      "column": "Header_Length",
+      "observed": 0.6896688754804957,
+      "null_mean": -0.0007472687976152796,
+      "null_std": 0.002724266352023963,
+      "z": 253.43195380480114
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP3_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.20980329276446377,
+      "null_mean": -0.00040461641289829894,
+      "null_std": 0.0009375330339649626,
+      "z": -223.35071807122168
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP3_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9659215103432044,
+      "null_mean": -0.0002064819897534197,
+      "null_std": 0.003906706871282294,
+      "z": 247.2998420830705
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP3_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.49917149983771203,
+      "null_mean": 0.0001756263825252465,
+      "null_std": 0.0020317896243697256,
+      "z": 245.59426205849365
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP4_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.23567041399735522,
+      "null_mean": 0.0002702216000094674,
+      "null_std": 0.0010779639379794325,
+      "z": -218.8761861919229
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP4_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9858919271525785,
+      "null_mean": 0.0006021398230481967,
+      "null_std": 0.003784597463500215,
+      "z": 260.34203025076204
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP4_train.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.7987252282840397,
+      "null_mean": -4.795993942050881e-07,
+      "null_std": 0.0032663619229942277,
+      "z": 244.53068175349452
+    },
+    {
+      "file": "TCP_IP-DoS-SYN1_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2399032122324034,
+      "null_mean": 0.00042189779819731187,
+      "null_std": 0.0012559319549892126,
+      "z": -191.3520147934009
+    },
+    {
+      "file": "TCP_IP-DoS-SYN1_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.24076669308869764,
+      "null_mean": -0.0001763920321269482,
+      "null_std": 0.0004781208120393471,
+      "z": 503.9376639831275
+    },
+    {
+      "file": "TCP_IP-DoS-SYN1_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.3697020834807984,
+      "null_mean": 0.0011808978773138125,
+      "null_std": 0.002700666820046522,
+      "z": 136.4556275020761
+    },
+    {
+      "file": "TCP_IP-DoS-SYN2_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2834895801391293,
+      "null_mean": 0.0005640609232646429,
+      "null_std": 0.0020476981275026392,
+      "z": -138.71851385087905
+    },
+    {
+      "file": "TCP_IP-DoS-SYN2_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.8699295361079349,
+      "null_mean": -0.0004542806912547664,
+      "null_std": 0.001159355924233932,
+      "z": 750.7477200104131
+    },
+    {
+      "file": "TCP_IP-DoS-SYN2_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5054960677025302,
+      "null_mean": 0.0005023730893711523,
+      "null_std": 0.0035055115289341016,
+      "z": 144.0570628408999
+    },
+    {
+      "file": "TCP_IP-DoS-SYN3_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.21721021671016852,
+      "null_mean": 0.0006162253124095124,
+      "null_std": 0.0051037899768837346,
+      "z": -42.67935064122255
+    },
+    {
+      "file": "TCP_IP-DoS-SYN3_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.8891533802064163,
+      "null_mean": 0.00044282707718909883,
+      "null_std": 0.004477441317730347,
+      "z": 198.48625365786415
+    },
+    {
+      "file": "TCP_IP-DoS-SYN3_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8790230468708582,
+      "null_mean": -0.0003336214077812554,
+      "null_std": 0.0021143535436677326,
+      "z": 415.89859506335665
+    },
+    {
+      "file": "TCP_IP-DoS-SYN4_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2684984336168393,
+      "null_mean": 0.0003686730544701175,
+      "null_std": 0.0032301938755792147,
+      "z": -83.23559421742081
+    },
+    {
+      "file": "TCP_IP-DoS-SYN4_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9294458181207431,
+      "null_mean": 0.00013029821115488692,
+      "null_std": 0.003722453816614425,
+      "z": 249.65132294234922
+    },
+    {
+      "file": "TCP_IP-DoS-SYN4_train.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.759776707552672,
+      "null_mean": 0.0002333960447990403,
+      "null_std": 0.003727185102608149,
+      "z": 203.78470362965663
+    },
+    {
+      "file": "TCP_IP-DoS-TCP1_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95407,
+      "column": "IAT",
+      "observed": -0.2440866292575983,
+      "null_mean": -3.745136734887693e-05,
+      "null_std": 0.000909003810841683,
+      "z": -268.4798182136052
+    },
+    {
+      "file": "TCP_IP-DoS-TCP1_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95407,
+      "column": "Rate",
+      "observed": 0.9634404007984014,
+      "null_mean": -0.0005423682720381146,
+      "null_std": 0.002706071524189811,
+      "z": 356.2295972051415
+    },
+    {
+      "file": "TCP_IP-DoS-TCP1_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95407,
+      "column": "Header_Length",
+      "observed": 0.6707208304701707,
+      "null_mean": -7.482473490629652e-05,
+      "null_std": 0.0029326960722425174,
+      "z": 228.7300281655664
+    },
+    {
+      "file": "TCP_IP-DoS-TCP2_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95521,
+      "column": "IAT",
+      "observed": -0.2605034699515334,
+      "null_mean": 0.0002976685991710281,
+      "null_std": 0.002157110449534952,
+      "z": -120.90300643016685
+    },
+    {
+      "file": "TCP_IP-DoS-TCP2_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95521,
+      "column": "Rate",
+      "observed": 0.9531562191286062,
+      "null_mean": 0.00011420640227697665,
+      "null_std": 0.0034476928662324764,
+      "z": 276.42891919423835
+    },
+    {
+      "file": "TCP_IP-DoS-TCP2_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95521,
+      "column": "Header_Length",
+      "observed": 0.5586344060197583,
+      "null_mean": 0.0009388519645732082,
+      "null_std": 0.0024344745027514107,
+      "z": 229.08252003661778
+    },
+    {
+      "file": "TCP_IP-DoS-TCP3_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95968,
+      "column": "IAT",
+      "observed": -0.23091112967631164,
+      "null_mean": -0.00018538858585803375,
+      "null_std": 0.001658382325046582,
+      "z": -139.12698996232535
+    },
+    {
+      "file": "TCP_IP-DoS-TCP3_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95968,
+      "column": "Rate",
+      "observed": 0.912789747966544,
+      "null_mean": 0.0006035467283838763,
+      "null_std": 0.0033345644076544305,
+      "z": 273.5548304732857
+    },
+    {
+      "file": "TCP_IP-DoS-TCP3_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 95968,
+      "column": "Header_Length",
+      "observed": 0.6031909884576345,
+      "null_mean": 0.0003408326194872383,
+      "null_std": 0.0035927356458762636,
+      "z": 167.79697012500705
+    },
+    {
+      "file": "TCP_IP-DoS-TCP4_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 93488,
+      "column": "IAT",
+      "observed": -0.25733413867193666,
+      "null_mean": -0.0007112153237294675,
+      "null_std": 0.002349812770523369,
+      "z": -109.2099449655515
+    },
+    {
+      "file": "TCP_IP-DoS-TCP4_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 93488,
+      "column": "Rate",
+      "observed": 0.9835468965733395,
+      "null_mean": -0.000507415711020407,
+      "null_std": 0.003162271372788304,
+      "z": 311.1859155264967
+    },
+    {
+      "file": "TCP_IP-DoS-TCP4_train.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 93488,
+      "column": "Header_Length",
+      "observed": 0.8420815754462004,
+      "null_mean": -0.00047026653358846616,
+      "null_std": 0.0023473877237074315,
+      "z": 358.9316896695167
+    },
+    {
+      "file": "TCP_IP-DoS-UDP1_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.23751057424147132,
+      "null_mean": -7.915919877105461e-06,
+      "null_std": 0.0018112462189890993,
+      "z": -131.12665513480007
+    },
+    {
+      "file": "TCP_IP-DoS-UDP1_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.01945130762909599,
+      "null_mean": -0.00018958196690734645,
+      "null_std": 0.002936012750307776,
+      "z": 6.689647241465292
+    },
+    {
+      "file": "TCP_IP-DoS-UDP1_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.886827679060754,
+      "null_mean": -0.0009248477683643258,
+      "null_std": 0.0020342256082782235,
+      "z": 436.40809712375784
+    },
+    {
+      "file": "TCP_IP-DoS-UDP2_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2341347092505341,
+      "null_mean": -0.001104525391392834,
+      "null_std": 0.004496560257442202,
+      "z": -51.82409898176186
+    },
+    {
+      "file": "TCP_IP-DoS-UDP2_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.010712557365080045,
+      "null_mean": -1.1481211590796061e-05,
+      "null_std": 0.002917962057584883,
+      "z": 3.6751809533626467
+    },
+    {
+      "file": "TCP_IP-DoS-UDP2_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8064976296149257,
+      "null_mean": -0.00014340945963181744,
+      "null_std": 0.0030260799596787584,
+      "z": 266.56302867826025
+    },
+    {
+      "file": "TCP_IP-DoS-UDP3_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2450519353983995,
+      "null_mean": 0.00014484065692166225,
+      "null_std": 0.002521881266000722,
+      "z": -97.22772414427023
+    },
+    {
+      "file": "TCP_IP-DoS-UDP3_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": -0.0018170082492495706,
+      "null_mean": 0.00033453507807664834,
+      "null_std": 0.002383129009597908,
+      "z": -0.9028228512434737
+    },
+    {
+      "file": "TCP_IP-DoS-UDP3_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5485909699880307,
+      "null_mean": 7.34281224695577e-05,
+      "null_std": 0.0031316424116966026,
+      "z": 175.15331246532568
+    },
+    {
+      "file": "TCP_IP-DoS-UDP4_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2490911816383567,
+      "null_mean": -0.0006578615952500936,
+      "null_std": 0.002595005959097636,
+      "z": -95.73516360228112
+    },
+    {
+      "file": "TCP_IP-DoS-UDP4_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.054806552608286645,
+      "null_mean": 0.00014683473686121198,
+      "null_std": 0.0036132539678830717,
+      "z": 15.127560464134604
+    },
+    {
+      "file": "TCP_IP-DoS-UDP4_train.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.6821826718650444,
+      "null_mean": -0.00016880425247209617,
+      "null_std": 0.002705605080988969,
+      "z": 252.19921447963108
+    },
+    {
+      "file": "ARP_Spoofing_test.pcap.csv",
+      "label": "Spoofing",
+      "rows_read": 1744,
+      "column": "IAT",
+      "observed": -0.9977051055820585,
+      "null_mean": -0.004092540230098981,
+      "null_std": 0.021497351164804227,
+      "z": -46.22023233163332
+    },
+    {
+      "file": "ARP_Spoofing_test.pcap.csv",
+      "label": "Spoofing",
+      "rows_read": 1744,
+      "column": "Rate",
+      "observed": 0.23583553903677487,
+      "null_mean": -0.0030998651070514253,
+      "null_std": 0.006311520104117848,
+      "z": 37.85702971744268
+    },
+    {
+      "file": "ARP_Spoofing_test.pcap.csv",
+      "label": "Spoofing",
+      "rows_read": 1744,
+      "column": "Header_Length",
+      "observed": 0.8584659932000366,
+      "null_mean": -0.0007122938191725232,
+      "null_std": 0.017145339487467076,
+      "z": 50.11147709540849
+    },
+    {
+      "file": "Benign_test.pcap.csv",
+      "label": "Benign",
+      "rows_read": 37607,
+      "column": "IAT",
+      "observed": -0.9993086945161609,
+      "null_mean": -0.0008066461295871136,
+      "null_std": 0.0038768379229105953,
+      "z": -257.55578856826
+    },
+    {
+      "file": "Benign_test.pcap.csv",
+      "label": "Benign",
+      "rows_read": 37607,
+      "column": "Rate",
+      "observed": 0.5148590570742897,
+      "null_mean": -0.0022991738347159373,
+      "null_std": 0.0035992443995819592,
+      "z": 143.6852220896897
+    },
+    {
+      "file": "Benign_test.pcap.csv",
+      "label": "Benign",
+      "rows_read": 37607,
+      "column": "Header_Length",
+      "observed": 0.977642815290877,
+      "null_mean": -0.0010605479383200007,
+      "null_std": 0.004968088961949974,
+      "z": 196.99795449014184
+    },
+    {
+      "file": "MQTT-DDoS-Connect_Flood_test.pcap.csv",
+      "label": "MQTT-DDoS-Connect_Flood",
+      "rows_read": 41916,
+      "column": "IAT",
+      "observed": -0.2868898478318447,
+      "null_mean": 0.0001837929201597257,
+      "null_std": 0.002172597026221012,
+      "z": -132.13386435096834
+    },
+    {
+      "file": "MQTT-DDoS-Connect_Flood_test.pcap.csv",
+      "label": "MQTT-DDoS-Connect_Flood",
+      "rows_read": 41916,
+      "column": "Rate",
+      "observed": 0.459460421820667,
+      "null_mean": 0.0005084895664185767,
+      "null_std": 0.0049854439574827545,
+      "z": 92.05838761167861
+    },
+    {
+      "file": "MQTT-DDoS-Connect_Flood_test.pcap.csv",
+      "label": "MQTT-DDoS-Connect_Flood",
+      "rows_read": 41916,
+      "column": "Header_Length",
+      "observed": 0.705140222858397,
+      "null_mean": 0.0005221260871713432,
+      "null_std": 0.004097440204910729,
+      "z": 171.96543733005547
+    },
+    {
+      "file": "MQTT-DDoS-Publish_Flood_test.pcap.csv",
+      "label": "MQTT-DDoS-Publish_Flood",
+      "rows_read": 8416,
+      "column": "IAT",
+      "observed": -0.26535513708502867,
+      "null_mean": -0.0021538591679805203,
+      "null_std": 0.007935169458584097,
+      "z": -33.16895490269873
+    },
+    {
+      "file": "MQTT-DDoS-Publish_Flood_test.pcap.csv",
+      "label": "MQTT-DDoS-Publish_Flood",
+      "rows_read": 8416,
+      "column": "Rate",
+      "observed": 0.1779673479858086,
+      "null_mean": -0.0011071249052421774,
+      "null_std": 0.006046159558685039,
+      "z": 29.61788738006728
+    },
+    {
+      "file": "MQTT-DDoS-Publish_Flood_test.pcap.csv",
+      "label": "MQTT-DDoS-Publish_Flood",
+      "rows_read": 8416,
+      "column": "Header_Length",
+      "observed": 0.9451014851318802,
+      "null_mean": 0.001622078264247893,
+      "null_std": 0.010437753432721871,
+      "z": 90.39104180310183
+    },
+    {
+      "file": "MQTT-DoS-Connect_Flood_test.pcap.csv",
+      "label": "MQTT-DoS-Connect_Flood",
+      "rows_read": 3131,
+      "column": "IAT",
+      "observed": -0.28921263880127346,
+      "null_mean": -6.270949446408717e-05,
+      "null_std": 7.213723237366271e-08,
+      "z": -4008331.340035967
+    },
+    {
+      "file": "MQTT-DoS-Connect_Flood_test.pcap.csv",
+      "label": "MQTT-DoS-Connect_Flood",
+      "rows_read": 3131,
+      "column": "Rate",
+      "observed": 0.10724066298546449,
+      "null_mean": -0.0014548651898178813,
+      "null_std": 0.013579600361607453,
+      "z": 8.004324522140488
+    },
+    {
+      "file": "MQTT-DoS-Connect_Flood_test.pcap.csv",
+      "label": "MQTT-DoS-Connect_Flood",
+      "rows_read": 3131,
+      "column": "Header_Length",
+      "observed": 0.3359307049045759,
+      "null_mean": -0.002768379340723325,
+      "null_std": 0.016364834494117502,
+      "z": 20.696761972572826
+    },
+    {
+      "file": "MQTT-DoS-Publish_Flood_test.pcap.csv",
+      "label": "MQTT-DoS-Publish_Flood",
+      "rows_read": 8505,
+      "column": "IAT",
+      "observed": -0.25401548334130386,
+      "null_mean": -0.0024107993588913675,
+      "null_std": 0.008483117889108703,
+      "z": -29.659458617855876
+    },
+    {
+      "file": "MQTT-DoS-Publish_Flood_test.pcap.csv",
+      "label": "MQTT-DoS-Publish_Flood",
+      "rows_read": 8505,
+      "column": "Rate",
+      "observed": 0.08135579342055028,
+      "null_mean": -0.0012512819380855614,
+      "null_std": 0.0024470774567127195,
+      "z": 33.7574420180414
+    },
+    {
+      "file": "MQTT-DoS-Publish_Flood_test.pcap.csv",
+      "label": "MQTT-DoS-Publish_Flood",
+      "rows_read": 8505,
+      "column": "Header_Length",
+      "observed": 0.9766458948715293,
+      "null_mean": 0.0008329625498074353,
+      "null_std": 0.011494115337499103,
+      "z": 84.89674095562364
+    },
+    {
+      "file": "MQTT-Malformed_Data_test.pcap.csv",
+      "label": "MQTT-Malformed_Data",
+      "rows_read": 1747,
+      "column": "IAT",
+      "observed": -0.9988551801679976,
+      "null_mean": -0.0008785885840567484,
+      "null_std": 0.023038174153393598,
+      "z": -43.318389076286046
+    },
+    {
+      "file": "MQTT-Malformed_Data_test.pcap.csv",
+      "label": "MQTT-Malformed_Data",
+      "rows_read": 1747,
+      "column": "Rate",
+      "observed": 0.6274033578959786,
+      "null_mean": -0.00369161746976396,
+      "null_std": 0.013431646130928475,
+      "z": 46.98567615718726
+    },
+    {
+      "file": "MQTT-Malformed_Data_test.pcap.csv",
+      "label": "MQTT-Malformed_Data",
+      "rows_read": 1747,
+      "column": "Header_Length",
+      "observed": 0.9610094121053949,
+      "null_mean": 0.0025872329823531685,
+      "null_std": 0.023590646279014138,
+      "z": 40.62721164089679
+    },
+    {
+      "file": "Recon-OS_Scan_test.pcap.csv",
+      "label": "Recon-OS_Scan",
+      "rows_read": 3834,
+      "column": "IAT",
+      "observed": -0.998956431031821,
+      "null_mean": -0.0019653749674455696,
+      "null_std": 0.014866085927308993,
+      "z": -67.06479842369963
+    },
+    {
+      "file": "Recon-OS_Scan_test.pcap.csv",
+      "label": "Recon-OS_Scan",
+      "rows_read": 3834,
+      "column": "Rate",
+      "observed": 0.977343629010675,
+      "null_mean": 0.003945084012263747,
+      "null_std": 0.016467645203405955,
+      "z": 59.10975934780803
+    },
+    {
+      "file": "Recon-OS_Scan_test.pcap.csv",
+      "label": "Recon-OS_Scan",
+      "rows_read": 3834,
+      "column": "Header_Length",
+      "observed": 0.7883120898463883,
+      "null_mean": -0.0031416894050565864,
+      "null_std": 0.014913513425699366,
+      "z": 53.06957231738502
+    },
+    {
+      "file": "Recon-Ping_Sweep_test.pcap.csv",
+      "label": "Recon-Ping_Sweep",
+      "rows_read": 186,
+      "column": "IAT",
+      "observed": -0.9783777469013958,
+      "null_mean": -0.014765466912135953,
+      "null_std": 0.091545636397613,
+      "z": -10.526031801275298
+    },
+    {
+      "file": "Recon-Ping_Sweep_test.pcap.csv",
+      "label": "Recon-Ping_Sweep",
+      "rows_read": 186,
+      "column": "Rate",
+      "observed": 0.9476841845304557,
+      "null_mean": -0.024706145550639803,
+      "null_std": 0.07162131634835919,
+      "z": 13.576828515011961
+    },
+    {
+      "file": "Recon-Ping_Sweep_test.pcap.csv",
+      "label": "Recon-Ping_Sweep",
+      "rows_read": 186,
+      "column": "Header_Length",
+      "observed": 0.7572564717157593,
+      "null_mean": -0.0035901038445650566,
+      "null_std": 0.06215638511224689,
+      "z": 12.240843385379117
+    },
+    {
+      "file": "Recon-Port_Scan_test.pcap.csv",
+      "label": "Recon-Port_Scan",
+      "rows_read": 22622,
+      "column": "IAT",
+      "observed": -0.9996463619270087,
+      "null_mean": -0.0017653282186223423,
+      "null_std": 0.0066734951471806876,
+      "z": -149.52899668024114
+    },
+    {
+      "file": "Recon-Port_Scan_test.pcap.csv",
+      "label": "Recon-Port_Scan",
+      "rows_read": 22622,
+      "column": "Rate",
+      "observed": 0.4324490358758162,
+      "null_mean": -0.00022128296122192213,
+      "null_std": 0.002737364318379301,
+      "z": 158.06091864790847
+    },
+    {
+      "file": "Recon-Port_Scan_test.pcap.csv",
+      "label": "Recon-Port_Scan",
+      "rows_read": 22622,
+      "column": "Header_Length",
+      "observed": 0.8955993474206805,
+      "null_mean": 8.013519428559634e-05,
+      "null_std": 0.0061088409835038755,
+      "z": 146.5939635103659
+    },
+    {
+      "file": "Recon-VulScan_test.pcap.csv",
+      "label": "Recon-VulScan",
+      "rows_read": 1034,
+      "column": "IAT",
+      "observed": -0.9961277801889505,
+      "null_mean": -0.0002578979863238953,
+      "null_std": 0.023961269620813828,
+      "z": -41.561649193144994
+    },
+    {
+      "file": "Recon-VulScan_test.pcap.csv",
+      "label": "Recon-VulScan",
+      "rows_read": 1034,
+      "column": "Rate",
+      "observed": 0.07411707725106118,
+      "null_mean": -0.003959765525728951,
+      "null_std": 0.004736637065389879,
+      "z": 16.483602543097422
+    },
+    {
+      "file": "Recon-VulScan_test.pcap.csv",
+      "label": "Recon-VulScan",
+      "rows_read": 1034,
+      "column": "Header_Length",
+      "observed": 0.6791237778966605,
+      "null_mean": 0.0013484386643648895,
+      "null_std": 0.029328358403199084,
+      "z": 23.109896909823807
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP1_test.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.27448520645857793,
+      "null_mean": -5.880121247222765e-05,
+      "null_std": 0.00395916601183132,
+      "z": -69.31419506684674
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP1_test.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9743269448523143,
+      "null_mean": -0.0006404328500063593,
+      "null_std": 0.002195833460299167,
+      "z": 444.0078882710386
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP1_test.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.3624642271560564,
+      "null_mean": -0.00026204065256129494,
+      "null_std": 0.0021902418977696597,
+      "z": 165.61014022149092
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP2_test.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.27269500759059645,
+      "null_mean": -0.00022043572231901086,
+      "null_std": 0.0011606884418542884,
+      "z": -234.75255033381612
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP2_test.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9904690232286135,
+      "null_mean": 0.00030488864818808243,
+      "null_std": 0.0033380047679744344,
+      "z": 296.6335291310192
+    },
+    {
+      "file": "TCP_IP-DDoS-ICMP2_test.pcap.csv",
+      "label": "DDoS-ICMP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.19298720003585135,
+      "null_mean": 0.0007883231623907459,
+      "null_std": 0.0035178751671237933,
+      "z": 54.63493380028091
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN_test.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.252948026967699,
+      "null_mean": -0.00037802634142567864,
+      "null_std": 0.0010971255373287195,
+      "z": -230.2106659929096
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN_test.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9224360074014866,
+      "null_mean": -0.0004319938114277906,
+      "null_std": 0.0036275267179320505,
+      "z": 254.40694803180253
+    },
+    {
+      "file": "TCP_IP-DDoS-SYN_test.pcap.csv",
+      "label": "DDoS-SYN",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8715519328827448,
+      "null_mean": 0.00019819874167024365,
+      "null_std": 0.003917696073113643,
+      "z": 222.414837159268
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP_test.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.31190933015399336,
+      "null_mean": 0.00017822858868044635,
+      "null_std": 0.002440993691007749,
+      "z": -127.85266913730956
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP_test.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.9856742309788358,
+      "null_mean": -0.000580502990891945,
+      "null_std": 0.0038022680596230198,
+      "z": 259.3859029674807
+    },
+    {
+      "file": "TCP_IP-DDoS-TCP_test.pcap.csv",
+      "label": "DDoS-TCP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.39588096049600596,
+      "null_mean": 0.00017421355979466987,
+      "null_std": 0.003125426336411274,
+      "z": 126.60888606658888
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP1_test.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.2932441769422568,
+      "null_mean": 7.960040002623025e-05,
+      "null_std": 0.003555361536580508,
+      "z": -82.50181432305119
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP1_test.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.03425970228708825,
+      "null_mean": 0.0009830866374456358,
+      "null_std": 0.0026383875840000934,
+      "z": 12.612481900476316
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP1_test.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8645676247995671,
+      "null_mean": 0.0017811883530203232,
+      "null_std": 0.008136855857636419,
+      "z": 106.0343763662501
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP2_test.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.3112920371955578,
+      "null_mean": 0.00047966942690144584,
+      "null_std": 0.004458724848966588,
+      "z": -69.92396193604984
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP2_test.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.023537382307467034,
+      "null_mean": 0.0004872052563008928,
+      "null_std": 0.0029434006516199673,
+      "z": 7.831138121981442
+    },
+    {
+      "file": "TCP_IP-DDoS-UDP2_test.pcap.csv",
+      "label": "DDoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.8203404957412518,
+      "null_mean": -0.00043797543362067876,
+      "null_std": 0.0016806277169857807,
+      "z": 488.37613641582993
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP_test.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 98432,
+      "column": "IAT",
+      "observed": -0.24249988675811146,
+      "null_mean": 0.0001707832266676918,
+      "null_std": 0.0007893166437379442,
+      "z": -307.4440047730029
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP_test.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 98432,
+      "column": "Rate",
+      "observed": 0.9882077528567564,
+      "null_mean": 0.00047979007525719545,
+      "null_std": 0.0031227667152357616,
+      "z": 316.2989915200656
+    },
+    {
+      "file": "TCP_IP-DoS-ICMP_test.pcap.csv",
+      "label": "DoS-ICMP",
+      "rows_read": 98432,
+      "column": "Header_Length",
+      "observed": 0.7244224864917524,
+      "null_mean": -7.184612711284212e-05,
+      "null_std": 0.0018278329774734073,
+      "z": 396.3679075428027
+    },
+    {
+      "file": "TCP_IP-DoS-SYN_test.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 98595,
+      "column": "IAT",
+      "observed": -0.2099881938030682,
+      "null_mean": 0.0009181909964999762,
+      "null_std": 0.0046680197858127255,
+      "z": -45.18112486167372
+    },
+    {
+      "file": "TCP_IP-DoS-SYN_test.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 98595,
+      "column": "Rate",
+      "observed": 0.9732789199630973,
+      "null_mean": -0.0010270434354505535,
+      "null_std": 0.002944148152761992,
+      "z": 330.9296655076691
+    },
+    {
+      "file": "TCP_IP-DoS-SYN_test.pcap.csv",
+      "label": "DoS-SYN",
+      "rows_read": 98595,
+      "column": "Header_Length",
+      "observed": 0.5578299529767707,
+      "null_mean": 0.00029130517872689565,
+      "null_std": 0.0032646318168513145,
+      "z": 170.78147830335766
+    },
+    {
+      "file": "TCP_IP-DoS-TCP_test.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 82096,
+      "column": "IAT",
+      "observed": -0.2358084704264821,
+      "null_mean": -4.0044892753893265e-06,
+      "null_std": 0.0003657910877995222,
+      "z": -644.6424579552447
+    },
+    {
+      "file": "TCP_IP-DoS-TCP_test.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 82096,
+      "column": "Rate",
+      "observed": 0.9912039722322338,
+      "null_mean": -0.0003260861648414197,
+      "null_std": 0.0033254471667394777,
+      "z": 298.1644298289204
+    },
+    {
+      "file": "TCP_IP-DoS-TCP_test.pcap.csv",
+      "label": "DoS-TCP",
+      "rows_read": 82096,
+      "column": "Header_Length",
+      "observed": 0.6042851273239718,
+      "null_mean": 0.0006291936912164609,
+      "null_std": 0.004146496114098504,
+      "z": 145.58217758368673
+    },
+    {
+      "file": "TCP_IP-DoS-UDP_test.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "IAT",
+      "observed": -0.21522571348311356,
+      "null_mean": -0.00044572300017813455,
+      "null_std": 0.0015153190797123606,
+      "z": -141.73911841966984
+    },
+    {
+      "file": "TCP_IP-DoS-UDP_test.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Rate",
+      "observed": 0.01963362487533062,
+      "null_mean": -0.0008284159036226439,
+      "null_std": 0.0033618331267191016,
+      "z": 6.086572416794135
+    },
+    {
+      "file": "TCP_IP-DoS-UDP_test.pcap.csv",
+      "label": "DoS-UDP",
+      "rows_read": 100000,
+      "column": "Header_Length",
+      "observed": 0.5797867874811269,
+      "null_mean": -0.0005540303491920384,
+      "null_std": 0.003511130129978064,
+      "z": 165.28604647129515
+    }
+  ],
+  "verdict": "pass"
+}

@@ -1,0 +1,32 @@
+project: AG_PRAXIS
+
+paths:
+  data_root:    /content/drive/MyDrive/AG_PRAXIS_data/csv
+  train_dir:    /content/drive/MyDrive/AG_PRAXIS_data/csv/train
+  test_dir:     /content/drive/MyDrive/AG_PRAXIS_data/csv/test
+  artifacts:    /content/drive/MyDrive/AG_PRAXIS_artifacts
+  repo:         /content/repo
+
+seed: 42
+
+split:
+  protocol: capture_disjoint
+  train: 0.70
+  val:   0.15
+  test:  0.15
+
+sequence:
+  window: 50
+  stride: 25
+
+training:
+  batch_size: 32
+  epochs: 10
+
+metrics:
+  primary: macro_f1
+  report: [macro_f1, weighted_f1, accuracy, per_class_f1]
+
+fast_mode:
+  default: true
+  subsample_frac: 0.01

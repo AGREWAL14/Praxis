@@ -1,0 +1,126 @@
+# AG_PRAXIS — feature to CAPEC candidate patterns
+#
+# The first hop of the H3 mapping: SHAP ranks the 40 timing-excluded features, and this
+# file says which CAPEC patterns a feature points at. The second hop, CAPEC to STRIDE,
+# is config/capec_stride.yaml.
+#
+# THE CONSTRAINT THIS FILE IS BUILT UNDER. Every entry is written from what the feature
+# measures, on its own terms, without reference to any class label. No entry reasons
+# "DDoS-ICMP uses ICMP". If it did, this file and stride_ground_truth.yaml would be two
+# readings of the same source and H3 would measure whether the author agrees with the
+# author. The only class-specific input to the mapping is SHAP.
+#
+# THE MQTT GAP. config/feature_families.yaml has no MQTT column. Five of the eighteen
+# attack classes are MQTT attacks and no feature names their protocol, so those five can
+# reach a pattern only through generic volume or TCP features. Recorded, not worked around.
+#
+# WHAT IS REFUSED. Twenty of the forty features get no entry, listed under no_entry
+# with the reason. A class whose top-ranked features fall entirely there gets no STRIDE
+# assignment and counts against H3. That is the designed behaviour, not a gap to fill.
+#
+# CAPEC IDs and names verified against capec.mitre.org on 2026-08-11.
+# Committed before any model trains.
+
+written_on: '2026-08-11'
+n_features: 40
+capec_verified_on: '2026-08-11'
+
+features:
+  syn_flag_number:
+    - {capec: 287, name: TCP SYN Scan, abstraction: Detailed, parent: 300,
+       basis: The SYN flag is the probe a half-open scan sends.}
+    - {capec: 299, name: TCP SYN Ping, abstraction: Detailed, parent: 292,
+       basis: A SYN to a port used as a liveness probe.}
+    - {capec: 482, name: TCP Flood, abstraction: Standard, parent: 125,
+       basis: SYN volume is the mechanism of connection-table exhaustion.}
+  syn_count:
+    - {capec: 287, name: TCP SYN Scan, abstraction: Detailed, parent: 300,
+       basis: Count of SYNs, same observable as the flag.}
+    - {capec: 299, name: TCP SYN Ping, abstraction: Detailed, parent: 292, basis: As above.}
+    - {capec: 482, name: TCP Flood, abstraction: Standard, parent: 125, basis: As above.}
+  fin_flag_number:
+    - {capec: 302, name: TCP FIN Scan, abstraction: Detailed, parent: 300,
+       basis: A bare FIN is the probe of a FIN scan.}
+  fin_count:
+    - {capec: 302, name: TCP FIN Scan, abstraction: Detailed, parent: 300, basis: As above.}
+  psh_flag_number:
+    - {capec: 303, name: TCP Xmas Scan, abstraction: Detailed, parent: 300,
+       basis: PSH set together with FIN and URG is the Xmas probe.}
+  ack_flag_number:
+    - {capec: 305, name: TCP ACK Scan, abstraction: Detailed, parent: 300,
+       basis: A bare ACK is the ACK-scan probe.}
+    - {capec: 297, name: TCP ACK Ping, abstraction: Detailed, parent: 292,
+       basis: An ACK used as a liveness probe.}
+  ack_count:
+    - {capec: 305, name: TCP ACK Scan, abstraction: Detailed, parent: 300, basis: As above.}
+    - {capec: 297, name: TCP ACK Ping, abstraction: Detailed, parent: 292, basis: As above.}
+  rst_flag_number:
+    - {capec: 300, name: Port Scanning, abstraction: Standard, parent: 169,
+       basis: RST is what a closed port returns, so its prevalence indicates scanning
+              rather than any one scan type.}
+  rst_count:
+    - {capec: 300, name: Port Scanning, abstraction: Standard, parent: 169, basis: As above.}
+  ICMP:
+    - {capec: 487, name: ICMP Flood, abstraction: Standard, parent: 125,
+       basis: ICMP volume is the flood mechanism.}
+    - {capec: 285, name: ICMP Echo Request Ping, abstraction: Detailed, parent: 292,
+       basis: Echo request is the host-discovery probe.}
+  UDP:
+    - {capec: 486, name: UDP Flood, abstraction: Standard, parent: 125, basis: UDP volume is the flood mechanism.}
+    - {capec: 298, name: UDP Ping, abstraction: Detailed, parent: 292, basis: A UDP datagram used as a liveness probe.}
+    - {capec: 308, name: UDP Scan, abstraction: Detailed, parent: 300, basis: UDP probes used to enumerate open ports.}
+  TCP:
+    - {capec: 482, name: TCP Flood, abstraction: Standard, parent: 125, basis: TCP volume is the flood mechanism.}
+  HTTP:
+    - {capec: 488, name: HTTP Flood, abstraction: Standard, parent: 125, basis: HTTP request volume is the flood mechanism.}
+  HTTPS:
+    - {capec: 489, name: SSL Flood, abstraction: Standard, parent: 125,
+       basis: TLS handshake volume is the flood mechanism.}
+  Header_Length:
+    - {capec: 312, name: Active OS Fingerprinting, abstraction: Detailed, parent: 224,
+       basis: Header size and option layout are what an OS fingerprint reads.}
+    - {capec: 153, name: Input Data Manipulation, abstraction: Meta,
+       basis: CAPEC-153 is defined over controlling the format, structure and composition
+              of data presented to a parser, and header length is exactly that structural
+              property.}
+  ARP:
+    - {capec: 151, name: Identity Spoofing, abstraction: Meta,
+       basis: ARP is the protocol by which a host asserts the binding between its network
+              and link-layer identity, so ARP traffic is the observable where an identity
+              claim is made. This is a functional link rather than a pattern named for the
+              protocol, and it is the weakest entry in this file.}
+  Tot sum:
+    - {capec: 125, name: Flooding, abstraction: Meta, basis: Total bytes is a direct measure of volume.}
+  Number:
+    - {capec: 125, name: Flooding, abstraction: Meta, basis: Packet count is a direct measure of volume.}
+  Weight:
+    - {capec: 125, name: Flooding, abstraction: Meta, basis: A weighted count of packets, a measure of volume.}
+  Tot size:
+    - {capec: 125, name: Flooding, abstraction: Meta, basis: Aggregate size, a measure of volume.}
+
+no_entry:
+  Protocol Type: Which L3 or L4 protocol a packet is. Protocol identity alone selects no attack pattern.
+  ece_flag_number: ECN echo. Congestion signalling, no attack pattern on its own terms.
+  cwr_flag_number: Congestion window reduced. As above.
+  DNS: CAPEC-142 DNS Cache Poisoning exists but was not verified as reachable from DNS packet presence alone. No entry rather than a forced one.
+  Telnet: Protocol presence with no verified pattern keyed to it.
+  SMTP: As above.
+  SSH: As above.
+  IRC: As above.
+  DHCP: As above.
+  IGMP: As above.
+  IPv: Layer indicator, near-constant across the corpus.
+  LLC: As above.
+  Min: Packet-size statistic. Size distribution is not volume and points at no verified pattern.
+  Max: As above.
+  AVG: As above.
+  Std: Dispersion of packet size. As above.
+  Variance: As above.
+  Covariance: As above.
+  Radius: As above.
+  Magnitue: As above. The column name is the benchmark's own misspelling and is kept as released.
+
+coverage:
+  with_entries: 20
+  without_entries: 20
+  capec_ids_used: [125, 151, 153, 285, 287, 297, 298, 299, 300, 302, 303, 305, 308, 312, 482, 486, 487, 488, 489]

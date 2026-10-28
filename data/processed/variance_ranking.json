@@ -1,0 +1,1174 @@
+{
+  "statistic": "variance of the per-recording means divided by the mean within-recording variance",
+  "computed_on": "400,000 rows, 8,000 from each of 50 recordings",
+  "is_fast_pass": false,
+  "across_all_recordings": [
+    {
+      "rank": 1,
+      "feature": "Protocol Type",
+      "between_recordings": 39.95187532331664,
+      "within_recordings": 0.10061504619385232,
+      "ratio": 397.076549031667
+    },
+    {
+      "rank": 2,
+      "feature": "UDP",
+      "between_recordings": 0.20700935219350747,
+      "within_recordings": 0.0005642237953031781,
+      "ratio": 366.8922755770585
+    },
+    {
+      "rank": 3,
+      "feature": "ICMP",
+      "between_recordings": 0.20753828680205108,
+      "within_recordings": 0.0005749373460712625,
+      "ratio": 360.9754840596614
+    },
+    {
+      "rank": 4,
+      "feature": "TCP",
+      "between_recordings": 0.23791908850168275,
+      "within_recordings": 0.0007969817334924301,
+      "ratio": 298.52514619011976
+    },
+    {
+      "rank": 5,
+      "feature": "syn_flag_number",
+      "between_recordings": 0.11426336338924442,
+      "within_recordings": 0.008376292807832754,
+      "ratio": 13.641280935451016
+    },
+    {
+      "rank": 6,
+      "feature": "syn_count",
+      "between_recordings": 0.31668714638544904,
+      "within_recordings": 0.030498772158329076,
+      "ratio": 10.383603141182954
+    },
+    {
+      "rank": 7,
+      "feature": "fin_count",
+      "between_recordings": 0.008529050349223752,
+      "within_recordings": 0.009429871735042514,
+      "ratio": 0.9044715123249022
+    },
+    {
+      "rank": 8,
+      "feature": "ack_flag_number",
+      "between_recordings": 0.008739381222465897,
+      "within_recordings": 0.011308534917625367,
+      "ratio": 0.7728128609166505
+    },
+    {
+      "rank": 9,
+      "feature": "rst_flag_number",
+      "between_recordings": 0.006059565314988454,
+      "within_recordings": 0.008116301655330282,
+      "ratio": 0.7465919297133206
+    },
+    {
+      "rank": 10,
+      "feature": "Variance",
+      "between_recordings": 0.00376668737841864,
+      "within_recordings": 0.007307702844263986,
+      "ratio": 0.5154406875445429
+    },
+    {
+      "rank": 11,
+      "feature": "Magnitue",
+      "between_recordings": 0.2859062863300355,
+      "within_recordings": 1.5772028423077427,
+      "ratio": 0.18127426521226728
+    },
+    {
+      "rank": 12,
+      "feature": "Rate",
+      "between_recordings": 159875062.74278587,
+      "within_recordings": 1368684934.24,
+      "ratio": 0.11680925152548778
+    },
+    {
+      "rank": 13,
+      "feature": "Srate",
+      "between_recordings": 159875062.74278587,
+      "within_recordings": 1368684934.24,
+      "ratio": 0.11680925152548778
+    },
+    {
+      "rank": 14,
+      "feature": "Duration",
+      "between_recordings": 0.7859858520273356,
+      "within_recordings": 17.851985726729037,
+      "ratio": 0.04402792294699808
+    },
+    {
+      "rank": 15,
+      "feature": "Min",
+      "between_recordings": 27.608663891291695,
+      "within_recordings": 698.6695687775314,
+      "ratio": 0.03951605326048311
+    },
+    {
+      "rank": 16,
+      "feature": "Header_Length",
+      "between_recordings": 134300329.32898957,
+      "within_recordings": 5137610158.422376,
+      "ratio": 0.026140622816393226
+    },
+    {
+      "rank": 17,
+      "feature": "Tot size",
+      "between_recordings": 32.04379385618246,
+      "within_recordings": 1330.8582532584667,
+      "ratio": 0.0240775407732015
+    },
+    {
+      "rank": 18,
+      "feature": "Tot sum",
+      "between_recordings": 3535.5397993482375,
+      "within_recordings": 147617.54849121094,
+      "ratio": 0.02395067412705842
+    },
+    {
+      "rank": 19,
+      "feature": "AVG",
+      "between_recordings": 32.072838413852594,
+      "within_recordings": 1351.3531562715768,
+      "ratio": 0.023733868726323548
+    },
+    {
+      "rank": 20,
+      "feature": "Max",
+      "between_recordings": 51.459255850499616,
+      "within_recordings": 2868.5335330963135,
+      "ratio": 0.017939220600623123
+    },
+    {
+      "rank": 21,
+      "feature": "Std",
+      "between_recordings": 1.916168558088724,
+      "within_recordings": 236.3448256444931,
+      "ratio": 0.008107512203254242
+    },
+    {
+      "rank": 22,
+      "feature": "Radius",
+      "between_recordings": 3.8186764927772963,
+      "within_recordings": 471.52702388286593,
+      "ratio": 0.008098531577960864
+    },
+    {
+      "rank": 23,
+      "feature": "HTTPS",
+      "between_recordings": 4.424299764897239e-06,
+      "within_recordings": 0.0009675181053762572,
+      "ratio": 0.004572834079602755
+    },
+    {
+      "rank": 24,
+      "feature": "Covariance",
+      "between_recordings": 309160.6792703436,
+      "within_recordings": 85111450.0809375,
+      "ratio": 0.0036324217126643297
+    },
+    {
+      "rank": 25,
+      "feature": "rst_count",
+      "between_recordings": 12.170401940708132,
+      "within_recordings": 4328.7327807014435,
+      "ratio": 0.0028115392095734762
+    },
+    {
+      "rank": 26,
+      "feature": "psh_flag_number",
+      "between_recordings": 2.1805861924335244e-07,
+      "within_recordings": 9.693431878076808e-05,
+      "ratio": 0.002249550231394576
+    },
+    {
+      "rank": 27,
+      "feature": "IRC",
+      "between_recordings": 6.61849964768822e-11,
+      "within_recordings": 6.189534033751443e-08,
+      "ratio": 0.0010693049931703475
+    },
+    {
+      "rank": 28,
+      "feature": "SMTP",
+      "between_recordings": 6.559312391967562e-11,
+      "within_recordings": 6.214619617139761e-08,
+      "ratio": 0.0010554648226380819
+    },
+    {
+      "rank": 29,
+      "feature": "Telnet",
+      "between_recordings": 6.276562307482174e-11,
+      "within_recordings": 6.11498273883626e-08,
+      "ratio": 0.0010264235526978222
+    },
+    {
+      "rank": 30,
+      "feature": "SSH",
+      "between_recordings": 6.225062278342809e-11,
+      "within_recordings": 6.065077343464509e-08,
+      "ratio": 0.0010263780535380465
+    },
+    {
+      "rank": 31,
+      "feature": "DNS",
+      "between_recordings": 1.1869600216823535e-09,
+      "within_recordings": 1.3563660782445198e-06,
+      "ratio": 0.0008751029981659373
+    },
+    {
+      "rank": 32,
+      "feature": "ARP",
+      "between_recordings": 5.772155850997722e-09,
+      "within_recordings": 6.793297027201106e-06,
+      "ratio": 0.0008496840087935765
+    },
+    {
+      "rank": 33,
+      "feature": "LLC",
+      "between_recordings": 5.772073592424929e-09,
+      "within_recordings": 6.793963353288746e-06,
+      "ratio": 0.0008495885674200535
+    },
+    {
+      "rank": 34,
+      "feature": "IPv",
+      "between_recordings": 5.772073592424929e-09,
+      "within_recordings": 6.793963353288746e-06,
+      "ratio": 0.0008495885674200535
+    },
+    {
+      "rank": 35,
+      "feature": "fin_flag_number",
+      "between_recordings": 7.201562539962113e-11,
+      "within_recordings": 9.812683305909786e-08,
+      "ratio": 0.0007339034915785879
+    },
+    {
+      "rank": 36,
+      "feature": "ack_count",
+      "between_recordings": 2.052025596490867e-09,
+      "within_recordings": 3.3339907201046513e-06,
+      "ratio": 0.0006154862951827458
+    },
+    {
+      "rank": 37,
+      "feature": "cwr_flag_number",
+      "between_recordings": 3.488124823765106e-12,
+      "within_recordings": 9.245699192916845e-09,
+      "ratio": 0.00037726998802182186
+    },
+    {
+      "rank": 38,
+      "feature": "ece_flag_number",
+      "between_recordings": 2.993124848774607e-12,
+      "within_recordings": 8.246329201710977e-09,
+      "ratio": 0.0003629645113068713
+    },
+    {
+      "rank": 39,
+      "feature": "IAT",
+      "between_recordings": 512019192.31999993,
+      "within_recordings": 1637994245160.96,
+      "ratio": 0.00031258912772900836
+    },
+    {
+      "rank": 40,
+      "feature": "HTTP",
+      "between_recordings": 2.4162561353555885e-10,
+      "within_recordings": 9.282667519805444e-07,
+      "ratio": 0.0002602976062861542
+    },
+    {
+      "rank": 41,
+      "feature": "DHCP",
+      "between_recordings": 2.290725150881214e-10,
+      "within_recordings": 9.737510216822897e-07,
+      "ratio": 0.00023524752219758076
+    },
+    {
+      "rank": 42,
+      "feature": "Weight",
+      "between_recordings": 0.00032041673781350253,
+      "within_recordings": 1.9253095442615449,
+      "ratio": 0.00016642349214364841
+    },
+    {
+      "rank": 43,
+      "feature": "IGMP",
+      "between_recordings": 4.922500276072833e-12,
+      "within_recordings": 3.049348046957334e-08,
+      "ratio": 0.0001614279577231122
+    },
+    {
+      "rank": 44,
+      "feature": "Number",
+      "between_recordings": 6.604517169762405e-07,
+      "within_recordings": 0.004392100784070862,
+      "ratio": 0.0001503726233631857
+    }
+  ],
+  "within_class": [
+    {
+      "rank": 1,
+      "feature": "Variance",
+      "median_ratio": 0.04148820469526619,
+      "max_ratio": 0.3709516448879737,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 2,
+      "feature": "UDP",
+      "median_ratio": 0.02840188164714434,
+      "max_ratio": 0.06845828982269507,
+      "worst_class": "DoS-TCP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 3,
+      "feature": "Rate",
+      "median_ratio": 0.021101491317863732,
+      "max_ratio": 0.031966800460417326,
+      "worst_class": "DoS-TCP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 4,
+      "feature": "Srate",
+      "median_ratio": 0.021101491317863732,
+      "max_ratio": 0.031966800460417326,
+      "worst_class": "DoS-TCP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 5,
+      "feature": "Protocol Type",
+      "median_ratio": 0.014418522009106479,
+      "max_ratio": 0.06848087733400844,
+      "worst_class": "DoS-TCP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 6,
+      "feature": "Duration",
+      "median_ratio": 0.013875316409805072,
+      "max_ratio": 0.07136747915412193,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 7,
+      "feature": "Std",
+      "median_ratio": 0.005641728577519042,
+      "max_ratio": 0.0089425000085937,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 8,
+      "feature": "Radius",
+      "median_ratio": 0.0056387557301312615,
+      "max_ratio": 0.008933251947104892,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 9,
+      "feature": "Max",
+      "median_ratio": 0.00556624000084919,
+      "max_ratio": 0.008401672727008909,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 10,
+      "feature": "ack_flag_number",
+      "median_ratio": 0.004407942689301264,
+      "max_ratio": 0.4246679820696895,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 11,
+      "feature": "TCP",
+      "median_ratio": 0.003984107747771833,
+      "max_ratio": 0.05889274356447148,
+      "worst_class": "DoS-TCP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 12,
+      "feature": "HTTPS",
+      "median_ratio": 0.002896032780765441,
+      "max_ratio": 0.007051446875673085,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 13,
+      "feature": "Magnitue",
+      "median_ratio": 0.002575373262502275,
+      "max_ratio": 0.004442952316354101,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 14,
+      "feature": "ICMP",
+      "median_ratio": 0.0024604033974289724,
+      "max_ratio": 0.11088924862061444,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 15,
+      "feature": "syn_flag_number",
+      "median_ratio": 0.0022833371029159946,
+      "max_ratio": 0.2753835690132684,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 16,
+      "feature": "Tot size",
+      "median_ratio": 0.0020754375341421587,
+      "max_ratio": 0.0032251320890658327,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 17,
+      "feature": "Covariance",
+      "median_ratio": 0.002053613462114442,
+      "max_ratio": 0.0039485665036756955,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 18,
+      "feature": "Tot sum",
+      "median_ratio": 0.002046171784878337,
+      "max_ratio": 0.003155904028374645,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 19,
+      "feature": "AVG",
+      "median_ratio": 0.002037150359341369,
+      "max_ratio": 0.003093639707180917,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 20,
+      "feature": "syn_count",
+      "median_ratio": 0.0017974738926914932,
+      "max_ratio": 0.039512915080680056,
+      "worst_class": "DDoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 21,
+      "feature": "Header_Length",
+      "median_ratio": 0.0017612652968289461,
+      "max_ratio": 0.004029724576296268,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 22,
+      "feature": "rst_count",
+      "median_ratio": 0.0017050677329945897,
+      "max_ratio": 0.005794698180831253,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 23,
+      "feature": "Min",
+      "median_ratio": 0.001377993890963711,
+      "max_ratio": 0.0028563315127121485,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 24,
+      "feature": "psh_flag_number",
+      "median_ratio": 0.0008546295503108852,
+      "max_ratio": 0.001957412654229217,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 25,
+      "feature": "IPv",
+      "median_ratio": 0.0007221943439326957,
+      "max_ratio": 0.001296866732771681,
+      "worst_class": "DDoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 26,
+      "feature": "LLC",
+      "median_ratio": 0.0007221943439326957,
+      "max_ratio": 0.001296866732771681,
+      "worst_class": "DDoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 27,
+      "feature": "ARP",
+      "median_ratio": 0.0007221117664235031,
+      "max_ratio": 0.0012972453030558049,
+      "worst_class": "DDoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 28,
+      "feature": "DNS",
+      "median_ratio": 0.000552562341707668,
+      "max_ratio": 0.004440983112334569,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 29,
+      "feature": "fin_flag_number",
+      "median_ratio": 0.0004731865017941726,
+      "max_ratio": 0.0008440358801760338,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 30,
+      "feature": "ack_count",
+      "median_ratio": 0.0003770550858203341,
+      "max_ratio": 0.0007555531574778381,
+      "worst_class": "DoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 31,
+      "feature": "rst_flag_number",
+      "median_ratio": 0.00030952926462523965,
+      "max_ratio": 0.29004314593345526,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 32,
+      "feature": "ece_flag_number",
+      "median_ratio": 0.00020004676641609267,
+      "max_ratio": 0.0006004480953386619,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 7
+    },
+    {
+      "rank": 33,
+      "feature": "cwr_flag_number",
+      "median_ratio": 0.00020004676641609267,
+      "max_ratio": 0.0006004480953386619,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 7
+    },
+    {
+      "rank": 34,
+      "feature": "fin_count",
+      "median_ratio": 0.00019735145375767685,
+      "max_ratio": 0.33113115497393053,
+      "worst_class": "DDoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 35,
+      "feature": "DHCP",
+      "median_ratio": 0.00015807579315486474,
+      "max_ratio": 0.0007006310692673946,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 36,
+      "feature": "IAT",
+      "median_ratio": 0.00013977339472920886,
+      "max_ratio": 0.00026605066503641975,
+      "worst_class": "DDoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 37,
+      "feature": "Weight",
+      "median_ratio": 0.00012533081564523695,
+      "max_ratio": 0.00021352137387811815,
+      "worst_class": "DDoS-SYN",
+      "classes_measured": 8
+    },
+    {
+      "rank": 38,
+      "feature": "Number",
+      "median_ratio": 0.00010918801178324028,
+      "max_ratio": 0.00018405046635733947,
+      "worst_class": "DoS-ICMP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 39,
+      "feature": "IGMP",
+      "median_ratio": 0.0001000181142492138,
+      "max_ratio": 0.0001600441149753119,
+      "worst_class": "DDoS-SYN",
+      "classes_measured": 7
+    },
+    {
+      "rank": 40,
+      "feature": "SMTP",
+      "median_ratio": 8.570494936108319e-05,
+      "max_ratio": 0.0001859749804995174,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 4
+    },
+    {
+      "rank": 41,
+      "feature": "HTTP",
+      "median_ratio": 7.82568793773537e-05,
+      "max_ratio": 0.0004489655743691487,
+      "worst_class": "DDoS-UDP",
+      "classes_measured": 8
+    },
+    {
+      "rank": 42,
+      "feature": "IRC",
+      "median_ratio": 7.329595513315635e-05,
+      "max_ratio": 0.0002728572438696268,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 4
+    },
+    {
+      "rank": 43,
+      "feature": "Telnet",
+      "median_ratio": 6.911437048569246e-05,
+      "max_ratio": 0.00019108521398552788,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 4
+    },
+    {
+      "rank": 44,
+      "feature": "SSH",
+      "median_ratio": 6.737602895980054e-05,
+      "max_ratio": 0.00022740675391592373,
+      "worst_class": "DoS-SYN",
+      "classes_measured": 4
+    }
+  ],
+  "per_class_ratios": {
+    "Header_Length": {
+      "DDoS-ICMP": 0.001735,
+      "DDoS-SYN": 0.000725,
+      "DDoS-TCP": 0.001888,
+      "DDoS-UDP": 0.001528,
+      "DoS-ICMP": 0.00403,
+      "DoS-SYN": 0.001787,
+      "DoS-TCP": 0.001342,
+      "DoS-UDP": 0.001912
+    },
+    "Protocol Type": {
+      "DDoS-ICMP": 0.01245,
+      "DDoS-SYN": 0.000655,
+      "DDoS-TCP": 0.004988,
+      "DDoS-UDP": 0.014073,
+      "DoS-ICMP": 0.014764,
+      "DoS-SYN": 0.035119,
+      "DoS-TCP": 0.068481,
+      "DoS-UDP": 0.050448
+    },
+    "Duration": {
+      "DDoS-ICMP": 0.025103,
+      "DDoS-SYN": 0.001185,
+      "DDoS-TCP": 0.000455,
+      "DDoS-UDP": 0.040982,
+      "DoS-ICMP": 0.030975,
+      "DoS-SYN": 0.002648,
+      "DoS-TCP": 0.001144,
+      "DoS-UDP": 0.071367
+    },
+    "Rate": {
+      "DDoS-ICMP": 0.023905,
+      "DDoS-SYN": 0.03195,
+      "DDoS-TCP": 0.028412,
+      "DDoS-UDP": 0.001571,
+      "DoS-ICMP": 0.018298,
+      "DoS-SYN": 0.001699,
+      "DoS-TCP": 0.031967,
+      "DoS-UDP": 0.002949
+    },
+    "Srate": {
+      "DDoS-ICMP": 0.023905,
+      "DDoS-SYN": 0.03195,
+      "DDoS-TCP": 0.028412,
+      "DDoS-UDP": 0.001571,
+      "DoS-ICMP": 0.018298,
+      "DoS-SYN": 0.001699,
+      "DoS-TCP": 0.031967,
+      "DoS-UDP": 0.002949
+    },
+    "fin_flag_number": {
+      "DDoS-ICMP": 0.000447,
+      "DDoS-SYN": 0.000585,
+      "DDoS-TCP": 0.000334,
+      "DDoS-UDP": 2.5e-05,
+      "DoS-ICMP": 0.000163,
+      "DoS-SYN": 0.000717,
+      "DoS-TCP": 0.000499,
+      "DoS-UDP": 0.000844
+    },
+    "syn_flag_number": {
+      "DDoS-ICMP": 0.000719,
+      "DDoS-SYN": 0.222339,
+      "DDoS-TCP": 0.004848,
+      "DDoS-UDP": 0.000897,
+      "DoS-ICMP": 0.000412,
+      "DoS-SYN": 0.275384,
+      "DoS-TCP": 0.001375,
+      "DoS-UDP": 0.003191
+    },
+    "rst_flag_number": {
+      "DDoS-ICMP": 0.000119,
+      "DDoS-SYN": 0.233079,
+      "DDoS-TCP": 0.005652,
+      "DDoS-UDP": 0.000148,
+      "DoS-ICMP": 0.000211,
+      "DoS-SYN": 0.290043,
+      "DoS-TCP": 0.000238,
+      "DoS-UDP": 0.000381
+    },
+    "psh_flag_number": {
+      "DDoS-ICMP": 0.000782,
+      "DDoS-SYN": 0.000599,
+      "DDoS-TCP": 0.000849,
+      "DDoS-UDP": 0.001297,
+      "DoS-ICMP": 0.001957,
+      "DoS-SYN": 0.001048,
+      "DoS-TCP": 0.00086,
+      "DoS-UDP": 0.00078
+    },
+    "ack_flag_number": {
+      "DDoS-ICMP": 0.003458,
+      "DDoS-SYN": 0.218842,
+      "DDoS-TCP": 0.005311,
+      "DDoS-UDP": 0.003115,
+      "DoS-ICMP": 0.007541,
+      "DoS-SYN": 0.424668,
+      "DoS-TCP": 0.001258,
+      "DoS-UDP": 0.003505
+    },
+    "ece_flag_number": {
+      "DDoS-ICMP": 0.000171,
+      "DDoS-SYN": 0.000165,
+      "DDoS-TCP": 0.000392,
+      "DDoS-UDP": null,
+      "DoS-ICMP": 0.0004,
+      "DoS-SYN": 0.0006,
+      "DoS-TCP": 0.0002,
+      "DoS-UDP": 7.5e-05
+    },
+    "cwr_flag_number": {
+      "DDoS-ICMP": 0.000171,
+      "DDoS-SYN": 5e-05,
+      "DDoS-TCP": 0.000261,
+      "DDoS-UDP": null,
+      "DoS-ICMP": 0.000375,
+      "DoS-SYN": 0.0006,
+      "DoS-TCP": 0.0002,
+      "DoS-UDP": 7.5e-05
+    },
+    "ack_count": {
+      "DDoS-ICMP": 0.000263,
+      "DDoS-SYN": 0.000447,
+      "DDoS-TCP": 0.000416,
+      "DDoS-UDP": 0.000113,
+      "DoS-ICMP": 0.000338,
+      "DoS-SYN": 0.000721,
+      "DoS-TCP": 0.000331,
+      "DoS-UDP": 0.000756
+    },
+    "syn_count": {
+      "DDoS-ICMP": 0.000323,
+      "DDoS-SYN": 0.039513,
+      "DDoS-TCP": 0.003595,
+      "DDoS-UDP": 0.000239,
+      "DoS-ICMP": 0.00191,
+      "DoS-SYN": 0.014729,
+      "DoS-TCP": 0.001389,
+      "DoS-UDP": 0.001685
+    },
+    "fin_count": {
+      "DDoS-ICMP": 0.000125,
+      "DDoS-SYN": 0.331131,
+      "DDoS-TCP": 0.005983,
+      "DDoS-UDP": 0.000165,
+      "DoS-ICMP": 0.00023,
+      "DoS-SYN": 0.29012,
+      "DoS-TCP": 0.000114,
+      "DoS-UDP": 6.6e-05
+    },
+    "rst_count": {
+      "DDoS-ICMP": 0.001878,
+      "DDoS-SYN": 0.000644,
+      "DDoS-TCP": 0.001934,
+      "DDoS-UDP": 0.001667,
+      "DoS-ICMP": 0.005795,
+      "DoS-SYN": 0.001637,
+      "DoS-TCP": 0.001466,
+      "DoS-UDP": 0.001744
+    },
+    "HTTP": {
+      "DDoS-ICMP": 0.000172,
+      "DDoS-SYN": 2.5e-05,
+      "DDoS-TCP": 7.5e-05,
+      "DDoS-UDP": 0.000449,
+      "DoS-ICMP": 4.8e-05,
+      "DoS-SYN": 7.2e-05,
+      "DoS-TCP": 8.1e-05,
+      "DoS-UDP": 0.000413
+    },
+    "HTTPS": {
+      "DDoS-ICMP": 0.003386,
+      "DDoS-SYN": 0.000875,
+      "DDoS-TCP": 0.0013,
+      "DDoS-UDP": 0.002407,
+      "DoS-ICMP": 0.007051,
+      "DoS-SYN": 0.004064,
+      "DoS-TCP": 0.000984,
+      "DoS-UDP": 0.004346
+    },
+    "DNS": {
+      "DDoS-ICMP": 0.000467,
+      "DDoS-SYN": 0.000804,
+      "DDoS-TCP": 0.000474,
+      "DDoS-UDP": 9.4e-05,
+      "DoS-ICMP": 0.000189,
+      "DoS-SYN": 0.004441,
+      "DoS-TCP": 0.000631,
+      "DoS-UDP": 0.002381
+    },
+    "Telnet": {
+      "DDoS-ICMP": null,
+      "DDoS-SYN": 2.1e-05,
+      "DDoS-TCP": 8.2e-05,
+      "DDoS-UDP": null,
+      "DoS-ICMP": null,
+      "DoS-SYN": 0.000191,
+      "DoS-TCP": 5.6e-05,
+      "DoS-UDP": null
+    },
+    "SMTP": {
+      "DDoS-ICMP": null,
+      "DDoS-SYN": 4.5e-05,
+      "DDoS-TCP": 0.000116,
+      "DDoS-UDP": null,
+      "DoS-ICMP": null,
+      "DoS-SYN": 0.000186,
+      "DoS-TCP": 5.6e-05,
+      "DoS-UDP": null
+    },
+    "SSH": {
+      "DDoS-ICMP": null,
+      "DDoS-SYN": 1.9e-05,
+      "DDoS-TCP": 6.7e-05,
+      "DDoS-UDP": null,
+      "DoS-ICMP": null,
+      "DoS-SYN": 0.000227,
+      "DoS-TCP": 6.8e-05,
+      "DoS-UDP": null
+    },
+    "IRC": {
+      "DDoS-ICMP": null,
+      "DDoS-SYN": 5.1e-05,
+      "DDoS-TCP": 7.8e-05,
+      "DDoS-UDP": null,
+      "DoS-ICMP": null,
+      "DoS-SYN": 0.000273,
+      "DoS-TCP": 6.9e-05,
+      "DoS-UDP": null
+    },
+    "TCP": {
+      "DDoS-ICMP": 0.003458,
+      "DDoS-SYN": 0.000721,
+      "DDoS-TCP": 0.00451,
+      "DDoS-UDP": 0.003102,
+      "DoS-ICMP": 0.007551,
+      "DoS-SYN": 0.032949,
+      "DoS-TCP": 0.058893,
+      "DoS-UDP": 0.003443
+    },
+    "UDP": {
+      "DDoS-ICMP": 0.026274,
+      "DDoS-SYN": 0.000675,
+      "DDoS-TCP": 0.004977,
+      "DDoS-UDP": 0.008107,
+      "DoS-ICMP": 0.03053,
+      "DoS-SYN": 0.034618,
+      "DoS-TCP": 0.068458,
+      "DoS-UDP": 0.032595
+    },
+    "DHCP": {
+      "DDoS-ICMP": 0.000116,
+      "DDoS-SYN": 0.0001,
+      "DDoS-TCP": 0.0001,
+      "DDoS-UDP": 0.000213,
+      "DoS-ICMP": 0.0002,
+      "DoS-SYN": 0.000701,
+      "DoS-TCP": 0.0001,
+      "DoS-UDP": 0.000214
+    },
+    "ARP": {
+      "DDoS-ICMP": 0.00075,
+      "DDoS-SYN": 0.000694,
+      "DDoS-TCP": 0.00046,
+      "DDoS-UDP": 0.001297,
+      "DoS-ICMP": 0.001203,
+      "DoS-SYN": 0.001065,
+      "DoS-TCP": 0.000471,
+      "DoS-UDP": 0.000529
+    },
+    "ICMP": {
+      "DDoS-ICMP": 0.004532,
+      "DDoS-SYN": 0.000114,
+      "DDoS-TCP": 8.8e-05,
+      "DDoS-UDP": 0.064761,
+      "DoS-ICMP": 0.007026,
+      "DoS-SYN": 0.000266,
+      "DoS-TCP": 0.000389,
+      "DoS-UDP": 0.110889
+    },
+    "IGMP": {
+      "DDoS-ICMP": null,
+      "DDoS-SYN": 0.00016,
+      "DDoS-TCP": 0.0001,
+      "DDoS-UDP": 0.000113,
+      "DoS-ICMP": 0.000159,
+      "DoS-SYN": 0.0001,
+      "DoS-TCP": 8.8e-05,
+      "DoS-UDP": 0.0001
+    },
+    "IPv": {
+      "DDoS-ICMP": 0.00075,
+      "DDoS-SYN": 0.000695,
+      "DDoS-TCP": 0.00046,
+      "DDoS-UDP": 0.001297,
+      "DoS-ICMP": 0.001203,
+      "DoS-SYN": 0.001065,
+      "DoS-TCP": 0.000471,
+      "DoS-UDP": 0.000528
+    },
+    "LLC": {
+      "DDoS-ICMP": 0.00075,
+      "DDoS-SYN": 0.000695,
+      "DDoS-TCP": 0.00046,
+      "DDoS-UDP": 0.001297,
+      "DoS-ICMP": 0.001203,
+      "DoS-SYN": 0.001065,
+      "DoS-TCP": 0.000471,
+      "DoS-UDP": 0.000528
+    },
+    "Tot sum": {
+      "DDoS-ICMP": 0.002495,
+      "DDoS-SYN": 0.000372,
+      "DDoS-TCP": 0.001379,
+      "DDoS-UDP": 0.002596,
+      "DoS-ICMP": 0.003156,
+      "DoS-SYN": 0.001598,
+      "DoS-TCP": 0.0004,
+      "DoS-UDP": 0.002909
+    },
+    "Min": {
+      "DDoS-ICMP": 0.001645,
+      "DDoS-SYN": 0.000449,
+      "DDoS-TCP": 0.001249,
+      "DDoS-UDP": 0.001893,
+      "DoS-ICMP": 0.002856,
+      "DoS-SYN": 0.000931,
+      "DoS-TCP": 0.000721,
+      "DoS-UDP": 0.001507
+    },
+    "Max": {
+      "DDoS-ICMP": 0.00571,
+      "DDoS-SYN": 0.00032,
+      "DDoS-TCP": 0.002322,
+      "DDoS-UDP": 0.005423,
+      "DoS-ICMP": 0.006506,
+      "DoS-SYN": 0.00652,
+      "DoS-TCP": 0.001318,
+      "DoS-UDP": 0.008402
+    },
+    "AVG": {
+      "DDoS-ICMP": 0.00248,
+      "DDoS-SYN": 0.000366,
+      "DDoS-TCP": 0.001393,
+      "DDoS-UDP": 0.002564,
+      "DoS-ICMP": 0.003094,
+      "DoS-SYN": 0.001594,
+      "DoS-TCP": 0.000396,
+      "DoS-UDP": 0.002856
+    },
+    "Std": {
+      "DDoS-ICMP": 0.005527,
+      "DDoS-SYN": 0.000464,
+      "DDoS-TCP": 0.001631,
+      "DDoS-UDP": 0.005756,
+      "DoS-ICMP": 0.00654,
+      "DoS-SYN": 0.007976,
+      "DoS-TCP": 0.001173,
+      "DoS-UDP": 0.008943
+    },
+    "Tot size": {
+      "DDoS-ICMP": 0.002563,
+      "DDoS-SYN": 0.000381,
+      "DDoS-TCP": 0.001378,
+      "DDoS-UDP": 0.002613,
+      "DoS-ICMP": 0.003225,
+      "DoS-SYN": 0.001588,
+      "DoS-TCP": 0.000385,
+      "DoS-UDP": 0.002866
+    },
+    "IAT": {
+      "DDoS-ICMP": 0.000158,
+      "DDoS-SYN": 0.000266,
+      "DDoS-TCP": 0.000125,
+      "DDoS-UDP": 0.000143,
+      "DoS-ICMP": 0.000219,
+      "DoS-SYN": 0.000137,
+      "DoS-TCP": 7.9e-05,
+      "DoS-UDP": 4.4e-05
+    },
+    "Number": {
+      "DDoS-ICMP": 0.000109,
+      "DDoS-SYN": 0.000184,
+      "DDoS-TCP": 0.000109,
+      "DDoS-UDP": 0.000131,
+      "DoS-ICMP": 0.000184,
+      "DoS-SYN": 8.7e-05,
+      "DoS-TCP": 9.9e-05,
+      "DoS-UDP": 8.7e-05
+    },
+    "Magnitue": {
+      "DDoS-ICMP": 0.003134,
+      "DDoS-SYN": 0.000823,
+      "DDoS-TCP": 0.001603,
+      "DDoS-UDP": 0.003037,
+      "DoS-ICMP": 0.003829,
+      "DoS-SYN": 0.002114,
+      "DoS-TCP": 0.000447,
+      "DoS-UDP": 0.004443
+    },
+    "Radius": {
+      "DDoS-ICMP": 0.005525,
+      "DDoS-SYN": 0.000464,
+      "DDoS-TCP": 0.001627,
+      "DDoS-UDP": 0.005753,
+      "DoS-ICMP": 0.006531,
+      "DoS-SYN": 0.007967,
+      "DoS-TCP": 0.00117,
+      "DoS-UDP": 0.008933
+    },
+    "Covariance": {
+      "DDoS-ICMP": 0.00248,
+      "DDoS-SYN": 0.000625,
+      "DDoS-TCP": 0.00046,
+      "DDoS-UDP": 0.002997,
+      "DoS-ICMP": 0.001628,
+      "DoS-SYN": 0.003465,
+      "DoS-TCP": 0.000236,
+      "DoS-UDP": 0.003949
+    },
+    "Variance": {
+      "DDoS-ICMP": 0.033188,
+      "DDoS-SYN": 0.152326,
+      "DDoS-TCP": 0.018211,
+      "DDoS-UDP": 0.030535,
+      "DoS-ICMP": 0.049788,
+      "DoS-SYN": 0.370952,
+      "DoS-TCP": 0.026502,
+      "DoS-UDP": 0.141479
+    },
+    "Weight": {
+      "DDoS-ICMP": 0.000122,
+      "DDoS-SYN": 0.000214,
+      "DDoS-TCP": 9.5e-05,
+      "DDoS-UDP": 0.000148,
+      "DoS-ICMP": 0.000196,
+      "DoS-SYN": 0.000105,
+      "DoS-TCP": 0.000129,
+      "DoS-UDP": 7.3e-05
+    }
+  },
+  "features_at_or_above_one_within_class": [],
+  "largest_rank_changes": [
+    {
+      "feature": "fin_count",
+      "rank_across": 7,
+      "rank_within_class": 34,
+      "rank_change": -27
+    },
+    {
+      "feature": "rst_flag_number",
+      "rank_across": 9,
+      "rank_within_class": 31,
+      "rank_change": -22
+    },
+    {
+      "feature": "IRC",
+      "rank_across": 27,
+      "rank_within_class": 42,
+      "rank_change": -15
+    },
+    {
+      "feature": "syn_count",
+      "rank_across": 6,
+      "rank_within_class": 20,
+      "rank_change": -14
+    },
+    {
+      "feature": "Telnet",
+      "rank_across": 29,
+      "rank_within_class": 43,
+      "rank_change": -14
+    },
+    {
+      "feature": "Radius",
+      "rank_across": 22,
+      "rank_within_class": 8,
+      "rank_change": 14
+    },
+    {
+      "feature": "Std",
+      "rank_across": 21,
+      "rank_within_class": 7,
+      "rank_change": 14
+    },
+    {
+      "feature": "SSH",
+      "rank_across": 30,
+      "rank_within_class": 44,
+      "rank_change": -14
+    },
+    {
+      "feature": "SMTP",
+      "rank_across": 28,
+      "rank_within_class": 40,
+      "rank_change": -12
+    },
+    {
+      "feature": "Max",
+      "rank_across": 20,
+      "rank_within_class": 9,
+      "rank_change": 11
+    }
+  ]
+}

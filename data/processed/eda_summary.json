@@ -1,0 +1,2192 @@
+{
+  "generated_by": "AG_PRAXIS_NB02_exploratory_analysis.ipynb",
+  "generated_on": "2026-08-03",
+  "git_sha": "e5de0b6",
+  "git_dirty": false,
+  "seed": 42,
+  "mode": "full",
+  "is_fast_pass": false,
+  "enterable_in_ledger": true,
+  "source_inventory": "/content/repo/data/processed/dataset_inventory.json",
+  "rows_read": 8775013,
+  "rows_in_dataset": 8775013,
+  "sampled": false,
+  "sample_rows": 646640,
+  "sample_rows_per_file_cap": 10000,
+  "sample_rows_per_class": {
+    "DDoS-ICMP": 100000,
+    "DDoS-UDP": 100000,
+    "DDoS-SYN": 50000,
+    "DoS-TCP": 50000,
+    "DDoS-TCP": 50000,
+    "DoS-ICMP": 50000,
+    "DoS-SYN": 50000,
+    "DoS-UDP": 50000,
+    "Benign": 20000,
+    "MQTT-DDoS-Connect_Flood": 20000,
+    "Recon-Port_Scan": 20000,
+    "MQTT-DoS-Publish_Flood": 18505,
+    "MQTT-DDoS-Publish_Flood": 18416,
+    "Recon-OS_Scan": 13834,
+    "MQTT-DoS-Connect_Flood": 13131,
+    "Spoofing": 11744,
+    "MQTT-Malformed_Data": 6877,
+    "Recon-VulScan": 3207,
+    "Recon-Ping_Sweep": 926
+  },
+  "rows_per_class_read": {
+    "Benign": 230339,
+    "DDoS-ICMP": 1887175,
+    "DDoS-SYN": 974359,
+    "DDoS-TCP": 987063,
+    "DDoS-UDP": 1998026,
+    "DoS-ICMP": 514724,
+    "DoS-SYN": 540498,
+    "DoS-TCP": 462480,
+    "DoS-UDP": 704503,
+    "MQTT-DDoS-Connect_Flood": 214952,
+    "MQTT-DDoS-Publish_Flood": 36039,
+    "MQTT-DoS-Connect_Flood": 15904,
+    "MQTT-DoS-Publish_Flood": 52881,
+    "MQTT-Malformed_Data": 6877,
+    "Recon-OS_Scan": 20666,
+    "Recon-Ping_Sweep": 926,
+    "Recon-Port_Scan": 106603,
+    "Recon-VulScan": 3207,
+    "Spoofing": 17791
+  },
+  "n_features": 44,
+  "features": [
+    "Header_Length",
+    "Protocol Type",
+    "Duration",
+    "Rate",
+    "Srate",
+    "fin_flag_number",
+    "syn_flag_number",
+    "rst_flag_number",
+    "psh_flag_number",
+    "ack_flag_number",
+    "ece_flag_number",
+    "cwr_flag_number",
+    "ack_count",
+    "syn_count",
+    "fin_count",
+    "rst_count",
+    "HTTP",
+    "HTTPS",
+    "DNS",
+    "Telnet",
+    "SMTP",
+    "SSH",
+    "IRC",
+    "TCP",
+    "UDP",
+    "DHCP",
+    "ARP",
+    "ICMP",
+    "IGMP",
+    "IPv",
+    "LLC",
+    "Tot sum",
+    "Min",
+    "Max",
+    "AVG",
+    "Std",
+    "Tot size",
+    "IAT",
+    "Number",
+    "Magnitue",
+    "Radius",
+    "Covariance",
+    "Variance",
+    "Weight"
+  ],
+  "dropped_columns": [
+    "Drate"
+  ],
+  "dropped_because": {
+    "Drate": "constant across the whole dataset in the NB01 full-scale scan"
+  },
+  "n_classes": 19,
+  "classes": [
+    "Benign",
+    "DDoS-ICMP",
+    "DDoS-SYN",
+    "DDoS-TCP",
+    "DDoS-UDP",
+    "DoS-ICMP",
+    "DoS-SYN",
+    "DoS-TCP",
+    "DoS-UDP",
+    "MQTT-DDoS-Connect_Flood",
+    "MQTT-DDoS-Publish_Flood",
+    "MQTT-DoS-Connect_Flood",
+    "MQTT-DoS-Publish_Flood",
+    "MQTT-Malformed_Data",
+    "Recon-OS_Scan",
+    "Recon-Ping_Sweep",
+    "Recon-Port_Scan",
+    "Recon-VulScan",
+    "Spoofing"
+  ],
+  "bins_per_feature": {
+    "Header_Length": 147,
+    "Protocol Type": 20,
+    "Duration": 25,
+    "Rate": 250,
+    "Srate": 250,
+    "fin_flag_number": 17,
+    "syn_flag_number": 41,
+    "rst_flag_number": 39,
+    "psh_flag_number": 35,
+    "ack_flag_number": 47,
+    "ece_flag_number": 2,
+    "cwr_flag_number": 2,
+    "ack_count": 20,
+    "syn_count": 48,
+    "fin_count": 41,
+    "rst_count": 66,
+    "HTTP": 2,
+    "HTTPS": 10,
+    "DNS": 2,
+    "Telnet": 2,
+    "SMTP": 2,
+    "SSH": 2,
+    "IRC": 2,
+    "TCP": 14,
+    "UDP": 12,
+    "DHCP": 2,
+    "ARP": 4,
+    "ICMP": 10,
+    "IGMP": 2,
+    "IPv": 4,
+    "LLC": 4,
+    "Tot sum": 95,
+    "Min": 62,
+    "Max": 89,
+    "AVG": 92,
+    "Std": 87,
+    "Tot size": 92,
+    "IAT": 190,
+    "Number": 4,
+    "Magnitue": 92,
+    "Radius": 86,
+    "Covariance": 86,
+    "Variance": 59,
+    "Weight": 4
+  },
+  "thresholds": {
+    "zero_share": 0.9,
+    "correlation": 0.95,
+    "auc": 0.9
+  },
+  "feature_summary": [
+    {
+      "feature": "Header_Length",
+      "rows": 8775013,
+      "mean": 29962.471659271527,
+      "std": 282363.37778161134,
+      "min": 0.0,
+      "median": 108.76000213623047,
+      "max": 9896704.0,
+      "skew": 20.912835247216076,
+      "zero_share": 0.24907917515335876,
+      "bins": 147
+    },
+    {
+      "feature": "Protocol Type",
+      "rows": 8775013,
+      "mean": 8.04720326664667,
+      "std": 6.304831821968033,
+      "min": 0.0,
+      "median": 6.110000133514404,
+      "max": 17.0,
+      "skew": 0.47932398961007794,
+      "zero_share": 9.253547544601929e-05,
+      "bins": 20
+    },
+    {
+      "feature": "Duration",
+      "rows": 8775013,
+      "mean": 64.6369087778946,
+      "std": 7.853065110876349,
+      "min": 0.0,
+      "median": 64.58999633789062,
+      "max": 255.0,
+      "skew": 16.29980815680603,
+      "zero_share": 9.253547544601929e-05,
+      "bins": 25
+    },
+    {
+      "feature": "Rate",
+      "rows": 8775013,
+      "mean": 15744.489461043875,
+      "std": 40008.54401809687,
+      "min": 0.0,
+      "median": 135.84184622764587,
+      "max": 2097152.0,
+      "skew": 9.08300795278417,
+      "zero_share": 0.038292592842882396,
+      "bins": 250
+    },
+    {
+      "feature": "Srate",
+      "rows": 8775013,
+      "mean": 15744.489461043875,
+      "std": 40008.54401809687,
+      "min": 0.0,
+      "median": 135.84184622764587,
+      "max": 2097152.0,
+      "skew": 9.08300795278417,
+      "zero_share": 0.038292592842882396,
+      "bins": 250
+    },
+    {
+      "feature": "fin_flag_number",
+      "rows": 8775013,
+      "mean": 0.005123298142018016,
+      "std": 0.03415861509642378,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 8.060554493712756,
+      "zero_share": 0.971039017264134,
+      "bins": 17
+    },
+    {
+      "feature": "syn_flag_number",
+      "rows": 8775013,
+      "mean": 0.157211530535068,
+      "std": 0.33687884571010246,
+      "min": 0.0,
+      "median": 0.019999999552965164,
+      "max": 1.0,
+      "skew": 1.84689924757603,
+      "zero_share": 0.7896695993498813,
+      "bins": 41
+    },
+    {
+      "feature": "rst_flag_number",
+      "rows": 8775013,
+      "mean": 0.0395183770129937,
+      "std": 0.13929946068802246,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 4.428903212579842,
+      "zero_share": 0.8817999471909614,
+      "bins": 39
+    },
+    {
+      "feature": "psh_flag_number",
+      "rows": 8775013,
+      "mean": 0.02217887279437259,
+      "std": 0.09653539913912658,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 5.090443356667789,
+      "zero_share": 0.9253964638001106,
+      "bins": 35
+    },
+    {
+      "feature": "ack_flag_number",
+      "rows": 8775013,
+      "mean": 0.09566386738719938,
+      "std": 0.2521415110070268,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 2.6538052170768207,
+      "zero_share": 0.8201763347814983,
+      "bins": 47
+    },
+    {
+      "feature": "ece_flag_number",
+      "rows": 8775013,
+      "mean": 2.9086919328563416e-06,
+      "std": 0.0005036040315269986,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.2,
+      "skew": 202.10986127186524,
+      "zero_share": 0.9999304844334703,
+      "bins": 2
+    },
+    {
+      "feature": "cwr_flag_number",
+      "rows": 8775013,
+      "mean": 1.9206592085743395e-06,
+      "std": 0.000379658363321917,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.2,
+      "skew": 262.09474739819626,
+      "zero_share": 0.9999313961130314,
+      "bins": 2
+    },
+    {
+      "feature": "ack_count",
+      "rows": 8775013,
+      "mean": 0.02797713093472856,
+      "std": 0.17825564234452457,
+      "min": 0.0,
+      "median": 0.05999999865889549,
+      "max": 11.2,
+      "skew": 7.237964433252015,
+      "zero_share": 0.9686761717617968,
+      "bins": 20
+    },
+    {
+      "feature": "syn_count",
+      "rows": 8775013,
+      "mean": 0.29387919707452215,
+      "std": 0.6036414093952766,
+      "min": 0.0,
+      "median": 0.019999999552965164,
+      "max": 10.7,
+      "skew": 1.874808852882454,
+      "zero_share": 0.7819778728532938,
+      "bins": 48
+    },
+    {
+      "feature": "fin_count",
+      "rows": 8775013,
+      "mean": 0.08557530837003607,
+      "std": 0.5612390495959384,
+      "min": 0.0,
+      "median": 0.019999999552965164,
+      "max": 151.74,
+      "skew": 27.682220581729638,
+      "zero_share": 0.8670517069319441,
+      "bins": 41
+    },
+    {
+      "feature": "rst_count",
+      "rows": 8775013,
+      "mean": 65.87126717956123,
+      "std": 498.2811826295845,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 9576.5,
+      "skew": 9.790067220279996,
+      "zero_share": 0.7998033735106718,
+      "bins": 66
+    },
+    {
+      "feature": "HTTP",
+      "rows": 8775013,
+      "mean": 0.0008676667107691652,
+      "std": 0.028421501525945844,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 1.0,
+      "skew": 34.27238277813782,
+      "zero_share": 0.9981490625711894,
+      "bins": 2
+    },
+    {
+      "feature": "HTTPS",
+      "rows": 8775013,
+      "mean": 0.005590280114219401,
+      "std": 0.060340205381741244,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 14.376498450871662,
+      "zero_share": 0.9707585618391676,
+      "bins": 10
+    },
+    {
+      "feature": "DNS",
+      "rows": 8775013,
+      "mean": 0.00015155850551406901,
+      "std": 0.0052478028125492295,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 1.0,
+      "skew": 58.723279286262525,
+      "zero_share": 0.9974109440065787,
+      "bins": 2
+    },
+    {
+      "feature": "Telnet",
+      "rows": 8775013,
+      "mean": 1.2544984173081439e-05,
+      "std": 0.0008916875723046957,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.1,
+      "skew": 105.64143584852603,
+      "zero_share": 0.9994156134013704,
+      "bins": 2
+    },
+    {
+      "feature": "SMTP",
+      "rows": 8775013,
+      "mean": 1.2544739973199018e-05,
+      "std": 0.0008917079521893744,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.1,
+      "skew": 105.63574974750722,
+      "zero_share": 0.9994158413212607,
+      "bins": 2
+    },
+    {
+      "feature": "SSH",
+      "rows": 8775013,
+      "mean": 2.611065846370284e-05,
+      "std": 0.0027190315600487437,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 1.0,
+      "skew": 191.4025425657184,
+      "zero_share": 0.9993772088998615,
+      "bins": 2
+    },
+    {
+      "feature": "IRC",
+      "rows": 8775013,
+      "mean": 1.2532575201278334e-05,
+      "std": 0.0008923358329759759,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.1111111111111111,
+      "skew": 105.62782572487771,
+      "zero_share": 0.9994180065602182,
+      "bins": 2
+    },
+    {
+      "feature": "TCP",
+      "rows": 8775013,
+      "mean": 0.41487102096111783,
+      "std": 0.48990274795493943,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 0.3443278869928592,
+      "zero_share": 0.5667649723140011,
+      "bins": 14
+    },
+    {
+      "feature": "UDP",
+      "rows": 8775013,
+      "mean": 0.31084898042869474,
+      "std": 0.4595664119615065,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 0.8182456267172226,
+      "zero_share": 0.6423702164315882,
+      "bins": 12
+    },
+    {
+      "feature": "DHCP",
+      "rows": 8775013,
+      "mean": 3.2592544307341763e-06,
+      "std": 0.0009865935599824118,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.6,
+      "skew": 411.9043050911494,
+      "zero_share": 0.9999390314293551,
+      "bins": 2
+    },
+    {
+      "feature": "ARP",
+      "rows": 8775013,
+      "mean": 0.0007607489122892594,
+      "std": 0.019283885697020258,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 35.393114765414005,
+      "zero_share": 0.9943932846595213,
+      "bins": 4
+    },
+    {
+      "feature": "ICMP",
+      "rows": 8775013,
+      "mean": 0.2735134787662767,
+      "std": 0.4440486816749594,
+      "min": 0.0,
+      "median": 0.009999999776482582,
+      "max": 1.0,
+      "skew": 1.016466280063297,
+      "zero_share": 0.7114799715966232,
+      "bins": 10
+    },
+    {
+      "feature": "IGMP",
+      "rows": 8775013,
+      "mean": 4.4740674458260075e-06,
+      "std": 0.0012064973874199882,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.7,
+      "skew": 338.1368686822272,
+      "zero_share": 0.999965925976406,
+      "bins": 2
+    },
+    {
+      "feature": "IPv",
+      "rows": 8775013,
+      "mean": 0.9992392510877107,
+      "std": 0.019283885697020248,
+      "min": 0.0,
+      "median": 1.0,
+      "max": 1.0,
+      "skew": -35.39311476541407,
+      "zero_share": 9.253547544601929e-05,
+      "bins": 4
+    },
+    {
+      "feature": "LLC",
+      "rows": 8775013,
+      "mean": 0.9992392510877107,
+      "std": 0.019283885697020248,
+      "min": 0.0,
+      "median": 1.0,
+      "max": 1.0,
+      "skew": -35.39311476541407,
+      "zero_share": 9.253547544601929e-05,
+      "bins": 4
+    },
+    {
+      "feature": "Tot sum",
+      "rows": 8775013,
+      "mean": 636.0113796850248,
+      "std": 991.6090431572552,
+      "min": 42.0,
+      "median": 525.6400146484375,
+      "max": 23467.0,
+      "skew": 15.396279423037866,
+      "zero_share": 0.0,
+      "bins": 95
+    },
+    {
+      "feature": "Min",
+      "rows": 8775013,
+      "mean": 55.12016135536588,
+      "std": 69.09937258903174,
+      "min": 42.0,
+      "median": 51.20000076293945,
+      "max": 1514.0,
+      "skew": 18.532083796212408,
+      "zero_share": 0.0,
+      "bins": 62
+    },
+    {
+      "feature": "Max",
+      "rows": 8775013,
+      "mean": 72.33250733118848,
+      "std": 133.60903904736347,
+      "min": 42.0,
+      "median": 50.95894457399845,
+      "max": 1514.0,
+      "skew": 7.985328866353919,
+      "zero_share": 0.0,
+      "bins": 89
+    },
+    {
+      "feature": "AVG",
+      "rows": 8775013,
+      "mean": 60.58651321842842,
+      "std": 88.07201688056998,
+      "min": 42.0,
+      "median": 50.04472351074219,
+      "max": 1514.0,
+      "skew": 12.362725223773017,
+      "zero_share": 0.0,
+      "bins": 92
+    },
+    {
+      "feature": "Std",
+      "rows": 8775013,
+      "mean": 6.0605369439616155,
+      "std": 38.05785477477198,
+      "min": 0.0,
+      "median": 0.020931875333189964,
+      "max": 721.1508702338549,
+      "skew": 9.396687017611951,
+      "zero_share": 0.7665538501196523,
+      "bins": 87
+    },
+    {
+      "feature": "Tot size",
+      "rows": 8775013,
+      "mean": 60.58909344318591,
+      "std": 87.87687476702742,
+      "min": 42.0,
+      "median": 50.15999984741211,
+      "max": 1514.0,
+      "skew": 12.395748092814047,
+      "zero_share": 0.0,
+      "bins": 92
+    },
+    {
+      "feature": "IAT",
+      "rows": 8775013,
+      "mean": 84683677.94567505,
+      "std": 17819168.53826277,
+      "min": -1.2820612907409668,
+      "median": 84696424.0,
+      "max": 169470846.2390086,
+      "skew": -0.008680158508614907,
+      "zero_share": 0.001263473911662581,
+      "bins": 190
+    },
+    {
+      "feature": "Number",
+      "rows": 8775013,
+      "mean": 9.499086088123843,
+      "std": 0.8415773342478231,
+      "min": 1.0,
+      "median": 13.5,
+      "max": 15.0,
+      "skew": -0.0362204362180641,
+      "zero_share": 0.0,
+      "bins": 4
+    },
+    {
+      "feature": "Magnitue",
+      "rows": 8775013,
+      "mean": 10.438245138977932,
+      "std": 3.1580730512709954,
+      "min": 9.165151389911676,
+      "median": 10.002094268798828,
+      "max": 55.02726596879042,
+      "skew": 9.60874725219447,
+      "zero_share": 0.0,
+      "bins": 92
+    },
+    {
+      "feature": "Radius",
+      "rows": 8775013,
+      "mean": 8.56000977341981,
+      "std": 53.80450037251973,
+      "min": 0.0,
+      "median": 0.04767856001853943,
+      "max": 1020.2320312913092,
+      "skew": 9.403099397597122,
+      "zero_share": 0.7706297415171921,
+      "bins": 86
+    },
+    {
+      "feature": "Covariance",
+      "rows": 8775013,
+      "mean": 2370.5447475754345,
+      "std": 19758.814371223718,
+      "min": 0.0,
+      "median": 0.038533564656972885,
+      "max": 520437.8874683046,
+      "skew": 11.857360649982507,
+      "zero_share": 0.7706297415171921,
+      "bins": 86
+    },
+    {
+      "feature": "Variance",
+      "rows": 8775013,
+      "mean": 0.09074361520264036,
+      "std": 0.23297908293982392,
+      "min": 0.0,
+      "median": 0.019999999552965164,
+      "max": 1.0,
+      "skew": 2.900206461099595,
+      "zero_share": 0.7706297415171921,
+      "bins": 59
+    },
+    {
+      "feature": "Weight",
+      "rows": 8775013,
+      "mean": 141.52734218686027,
+      "std": 21.661885261137815,
+      "min": 1.0,
+      "median": 141.5500030517578,
+      "max": 244.6,
+      "skew": -0.01568246387011028,
+      "zero_share": 0.0,
+      "bins": 4
+    }
+  ],
+  "mostly_zero_features": [
+    "IGMP",
+    "DHCP",
+    "cwr_flag_number",
+    "ece_flag_number",
+    "IRC",
+    "SMTP",
+    "Telnet",
+    "SSH",
+    "HTTP",
+    "DNS",
+    "ARP",
+    "fin_flag_number",
+    "HTTPS",
+    "ack_count",
+    "psh_flag_number"
+  ],
+  "n_mostly_zero": 15,
+  "correlation": {
+    "threshold": 0.95,
+    "computed_on": "the reference sample, identically in both passes",
+    "n_pairs_above_threshold": 14,
+    "pairs_above_threshold": [
+      {
+        "feature_a": "Rate",
+        "feature_b": "Srate",
+        "r": 1.0
+      },
+      {
+        "feature_a": "IPv",
+        "feature_b": "LLC",
+        "r": 1.0
+      },
+      {
+        "feature_a": "ARP",
+        "feature_b": "IPv",
+        "r": -0.9999999999998906
+      },
+      {
+        "feature_a": "ARP",
+        "feature_b": "LLC",
+        "r": -0.9999999999998906
+      },
+      {
+        "feature_a": "Std",
+        "feature_b": "Radius",
+        "r": 0.9999823346649569
+      },
+      {
+        "feature_a": "Number",
+        "feature_b": "Weight",
+        "r": 0.9999103890822892
+      },
+      {
+        "feature_a": "IAT",
+        "feature_b": "Weight",
+        "r": 0.9990070810089107
+      },
+      {
+        "feature_a": "IAT",
+        "feature_b": "Number",
+        "r": 0.9986932098261299
+      },
+      {
+        "feature_a": "AVG",
+        "feature_b": "Magnitue",
+        "r": 0.9787626260701101
+      },
+      {
+        "feature_a": "AVG",
+        "feature_b": "Tot size",
+        "r": 0.9716534301781007
+      },
+      {
+        "feature_a": "Radius",
+        "feature_b": "Covariance",
+        "r": 0.9682148021942198
+      },
+      {
+        "feature_a": "Std",
+        "feature_b": "Covariance",
+        "r": 0.9681524760569764
+      },
+      {
+        "feature_a": "Tot size",
+        "feature_b": "Magnitue",
+        "r": 0.9541554711593188
+      },
+      {
+        "feature_a": "Max",
+        "feature_b": "Magnitue",
+        "r": 0.9538966273306683
+      }
+    ],
+    "clustered_order": [
+      "IGMP",
+      "DHCP",
+      "IAT",
+      "Number",
+      "Weight",
+      "Duration",
+      "ARP",
+      "IPv",
+      "LLC",
+      "Rate",
+      "Srate",
+      "syn_flag_number",
+      "syn_count",
+      "Protocol Type",
+      "UDP",
+      "TCP",
+      "ICMP",
+      "rst_flag_number",
+      "fin_count",
+      "Covariance",
+      "Std",
+      "Radius",
+      "Min",
+      "Tot sum",
+      "Max",
+      "Tot size",
+      "AVG",
+      "Magnitue",
+      "rst_count",
+      "Header_Length",
+      "HTTPS",
+      "fin_flag_number",
+      "ack_count",
+      "psh_flag_number",
+      "ack_flag_number",
+      "Variance",
+      "SSH",
+      "ece_flag_number",
+      "cwr_flag_number",
+      "IRC",
+      "Telnet",
+      "SMTP",
+      "HTTP",
+      "DNS"
+    ],
+    "undefined_for": []
+  },
+  "distribution_summary": [
+    {
+      "feature": "Duration",
+      "group6": "Benign",
+      "median": 64.0,
+      "p05": 57.0,
+      "p95": 86.5999984741211,
+      "zero_share": 0.00125,
+      "binary": false
+    },
+    {
+      "feature": "Duration",
+      "group6": "DDoS",
+      "median": 64.0,
+      "p05": 64.0,
+      "p95": 64.0,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Duration",
+      "group6": "DoS",
+      "median": 64.0,
+      "p05": 64.0,
+      "p95": 64.0,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Duration",
+      "group6": "MQTT",
+      "median": 64.0,
+      "p05": 64.0,
+      "p95": 64.58999633789062,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Duration",
+      "group6": "Recon",
+      "median": 63.29999923706055,
+      "p05": 45.099998474121094,
+      "p95": 128.0,
+      "zero_share": 0.010509126346564122,
+      "binary": false
+    },
+    {
+      "feature": "Duration",
+      "group6": "Spoofing",
+      "median": 64.0,
+      "p05": 57.599998474121094,
+      "p95": 248.0,
+      "zero_share": 0.017711171662125342,
+      "binary": false
+    },
+    {
+      "feature": "Rate",
+      "group6": "Benign",
+      "median": 1.6544992923736572,
+      "p05": 0.5336715072393418,
+      "p95": 53.68984260559082,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Rate",
+      "group6": "DDoS",
+      "median": 299.521484375,
+      "p05": 0.0,
+      "p95": 91180.5234375,
+      "zero_share": 0.05045,
+      "binary": false
+    },
+    {
+      "feature": "Rate",
+      "group6": "DoS",
+      "median": 17.538103103637695,
+      "p05": 0.1895410016179085,
+      "p95": 32053.086035156233,
+      "zero_share": 0.02458,
+      "binary": false
+    },
+    {
+      "feature": "Rate",
+      "group6": "MQTT",
+      "median": 62.05379104614258,
+      "p05": 8.438455390930176,
+      "p95": 765.5217041015612,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Rate",
+      "group6": "Recon",
+      "median": 6.842621326446533,
+      "p05": 1.0991810321807867,
+      "p95": 69.9786376953125,
+      "zero_share": 0.003055284852635183,
+      "binary": false
+    },
+    {
+      "feature": "Rate",
+      "group6": "Spoofing",
+      "median": 109.90918731689453,
+      "p05": 0.5206591337919235,
+      "p95": 197.34588928222655,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Srate",
+      "group6": "Benign",
+      "median": 1.6544992923736572,
+      "p05": 0.5336715072393418,
+      "p95": 53.68984260559082,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Srate",
+      "group6": "DDoS",
+      "median": 299.521484375,
+      "p05": 0.0,
+      "p95": 91180.5234375,
+      "zero_share": 0.05045,
+      "binary": false
+    },
+    {
+      "feature": "Srate",
+      "group6": "DoS",
+      "median": 17.538103103637695,
+      "p05": 0.1895410016179085,
+      "p95": 32053.086035156233,
+      "zero_share": 0.02458,
+      "binary": false
+    },
+    {
+      "feature": "Srate",
+      "group6": "MQTT",
+      "median": 62.05379104614258,
+      "p05": 8.438455390930176,
+      "p95": 765.5217041015612,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Srate",
+      "group6": "Recon",
+      "median": 6.842621326446533,
+      "p05": 1.0991810321807867,
+      "p95": 69.9786376953125,
+      "zero_share": 0.003055284852635183,
+      "binary": false
+    },
+    {
+      "feature": "Srate",
+      "group6": "Spoofing",
+      "median": 109.90918731689453,
+      "p05": 0.5206591337919235,
+      "p95": 197.34588928222655,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "IAT",
+      "group6": "Benign",
+      "median": 169461872.0,
+      "p05": 6.348132810671814e-05,
+      "p95": 169470752.0,
+      "zero_share": 0.00015,
+      "binary": false
+    },
+    {
+      "feature": "IAT",
+      "group6": "DDoS",
+      "median": 84696744.0,
+      "p05": 84696008.0,
+      "p95": 84697184.0,
+      "zero_share": 3.3333333333333333e-06,
+      "binary": false
+    },
+    {
+      "feature": "IAT",
+      "group6": "DoS",
+      "median": 84675072.0,
+      "p05": 84670752.0,
+      "p95": 84679552.0,
+      "zero_share": 1.5e-05,
+      "binary": false
+    },
+    {
+      "feature": "IAT",
+      "group6": "MQTT",
+      "median": 84666960.0,
+      "p05": 84662360.0,
+      "p95": 84667048.0,
+      "zero_share": 0.0003769709732350609,
+      "binary": false
+    },
+    {
+      "feature": "IAT",
+      "group6": "Recon",
+      "median": 169410256.0,
+      "p05": 0.0,
+      "p95": 169410544.0,
+      "zero_share": 0.0904469671030105,
+      "binary": false
+    },
+    {
+      "feature": "IAT",
+      "group6": "Spoofing",
+      "median": 169402128.0,
+      "p05": 0.00011270046525169164,
+      "p95": 169402752.0,
+      "zero_share": 0.0017881471389645776,
+      "binary": false
+    },
+    {
+      "feature": "Header_Length",
+      "group6": "Benign",
+      "median": 162767.34375,
+      "p05": 7047.260083007813,
+      "p95": 870588.0781249987,
+      "zero_share": 0.00125,
+      "binary": false
+    },
+    {
+      "feature": "Header_Length",
+      "group6": "DDoS",
+      "median": 54.0,
+      "p05": 0.0,
+      "p95": 35275.0,
+      "zero_share": 0.31134333333333336,
+      "binary": false
+    },
+    {
+      "feature": "Header_Length",
+      "group6": "DoS",
+      "median": 108.0,
+      "p05": 0.0,
+      "p95": 40302.58593749998,
+      "zero_share": 0.201385,
+      "binary": false
+    },
+    {
+      "feature": "Header_Length",
+      "group6": "MQTT",
+      "median": 7048.2998046875,
+      "p05": 273.25400390625,
+      "p95": 338532.72499998676,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Header_Length",
+      "group6": "Recon",
+      "median": 106.19999694824219,
+      "p05": 54.0,
+      "p95": 37275.540624999885,
+      "zero_share": 0.013380040561540286,
+      "binary": false
+    },
+    {
+      "feature": "Header_Length",
+      "group6": "Spoofing",
+      "median": 1382128.0,
+      "p05": 2215.454943847656,
+      "p95": 6750129.225,
+      "zero_share": 0.017711171662125342,
+      "binary": false
+    },
+    {
+      "feature": "TCP",
+      "group6": "Benign",
+      "median": 1.0,
+      "p05": 0.0,
+      "p95": 1.0,
+      "zero_share": 0.0905,
+      "binary": false
+    },
+    {
+      "feature": "TCP",
+      "group6": "DDoS",
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 1.0,
+      "zero_share": 0.65085,
+      "binary": false
+    },
+    {
+      "feature": "TCP",
+      "group6": "DoS",
+      "median": 0.9399999976158142,
+      "p05": 0.0,
+      "p95": 1.0,
+      "zero_share": 0.473995,
+      "binary": false
+    },
+    {
+      "feature": "TCP",
+      "group6": "MQTT",
+      "median": 1.0,
+      "p05": 1.0,
+      "p95": 1.0,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "TCP",
+      "group6": "Recon",
+      "median": 1.0,
+      "p05": 0.699999988079071,
+      "p95": 1.0,
+      "zero_share": 0.0244949561461269,
+      "binary": false
+    },
+    {
+      "feature": "TCP",
+      "group6": "Spoofing",
+      "median": 0.800000011920929,
+      "p05": 0.0,
+      "p95": 1.0,
+      "zero_share": 0.32595367847411444,
+      "binary": false
+    },
+    {
+      "feature": "AVG",
+      "group6": "Benign",
+      "median": 83.52409744262695,
+      "p05": 67.2329174041748,
+      "p95": 247.55897293090814,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "AVG",
+      "group6": "DDoS",
+      "median": 50.0,
+      "p05": 42.0,
+      "p95": 55.599998474121094,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "AVG",
+      "group6": "DoS",
+      "median": 54.0,
+      "p05": 42.0,
+      "p95": 56.78760318756102,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "AVG",
+      "group6": "MQTT",
+      "median": 106.33412170410156,
+      "p05": 65.05208282470703,
+      "p95": 913.8100463867183,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "AVG",
+      "group6": "Recon",
+      "median": 58.0,
+      "p05": 54.0,
+      "p95": 115.73143005371094,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "AVG",
+      "group6": "Spoofing",
+      "median": 270.83221435546875,
+      "p05": 66.0,
+      "p95": 1494.0,
+      "zero_share": 0.0,
+      "binary": false
+    },
+    {
+      "feature": "Variance",
+      "group6": "Benign",
+      "median": 0.8999999761581421,
+      "p05": 0.800000011920929,
+      "p95": 1.0,
+      "zero_share": 0.01865,
+      "binary": false
+    },
+    {
+      "feature": "Variance",
+      "group6": "DDoS",
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.18000000715255737,
+      "zero_share": 0.85667,
+      "binary": false
+    },
+    {
+      "feature": "Variance",
+      "group6": "DoS",
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.3799999952316284,
+      "zero_share": 0.73689,
+      "binary": false
+    },
+    {
+      "feature": "Variance",
+      "group6": "MQTT",
+      "median": 0.8700000047683716,
+      "p05": 0.23000000417232513,
+      "p95": 0.949999988079071,
+      "zero_share": 0.029546724902182533,
+      "binary": false
+    },
+    {
+      "feature": "Variance",
+      "group6": "Recon",
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 1.0,
+      "zero_share": 0.624147285800827,
+      "binary": false
+    },
+    {
+      "feature": "Variance",
+      "group6": "Spoofing",
+      "median": 0.8999999761581421,
+      "p05": 0.0,
+      "p95": 1.0,
+      "zero_share": 0.24250681198910082,
+      "binary": false
+    }
+  ],
+  "mutual_information": {
+    "units": "nats",
+    "estimator": "exact on the binned feature, up to 256 quantile bins",
+    "ceiling_19_class": 2.1939978266352047,
+    "ceiling_weakest_4": 1.1776717329605408,
+    "weakest_4_classes": [
+      "Recon-VulScan",
+      "Recon-OS_Scan",
+      "MQTT-DDoS-Publish_Flood",
+      "Spoofing"
+    ],
+    "weakest_4_rows": {
+      "Recon-VulScan": 3207,
+      "Recon-OS_Scan": 20666,
+      "MQTT-DDoS-Publish_Flood": 36039,
+      "Spoofing": 17791
+    },
+    "ranking_19_class": [
+      {
+        "feature": "IAT",
+        "mi_19": 2.149991201017078,
+        "rank_19": 1
+      },
+      {
+        "feature": "Tot sum",
+        "mi_19": 1.3280812155535233,
+        "rank_19": 2
+      },
+      {
+        "feature": "Tot size",
+        "mi_19": 1.3221989774974143,
+        "rank_19": 3
+      },
+      {
+        "feature": "Min",
+        "mi_19": 1.3190290509680003,
+        "rank_19": 4
+      },
+      {
+        "feature": "Magnitue",
+        "mi_19": 1.3092157973453367,
+        "rank_19": 5
+      },
+      {
+        "feature": "AVG",
+        "mi_19": 1.3057936224897015,
+        "rank_19": 6
+      },
+      {
+        "feature": "Header_Length",
+        "mi_19": 1.2639031223076798,
+        "rank_19": 7
+      },
+      {
+        "feature": "Max",
+        "mi_19": 1.225066165494394,
+        "rank_19": 8
+      },
+      {
+        "feature": "Protocol Type",
+        "mi_19": 1.0997709430017004,
+        "rank_19": 9
+      },
+      {
+        "feature": "Rate",
+        "mi_19": 0.920647632463184,
+        "rank_19": 10
+      },
+      {
+        "feature": "Srate",
+        "mi_19": 0.920647632463184,
+        "rank_19": 10
+      },
+      {
+        "feature": "TCP",
+        "mi_19": 0.7009542106415232,
+        "rank_19": 12
+      },
+      {
+        "feature": "UDP",
+        "mi_19": 0.641761637619316,
+        "rank_19": 13
+      },
+      {
+        "feature": "ICMP",
+        "mi_19": 0.5990312651578934,
+        "rank_19": 14
+      },
+      {
+        "feature": "syn_flag_number",
+        "mi_19": 0.5566755592220681,
+        "rank_19": 15
+      },
+      {
+        "feature": "syn_count",
+        "mi_19": 0.5520559267915639,
+        "rank_19": 16
+      },
+      {
+        "feature": "rst_count",
+        "mi_19": 0.4845729681076791,
+        "rank_19": 17
+      },
+      {
+        "feature": "ack_flag_number",
+        "mi_19": 0.35541895710851096,
+        "rank_19": 18
+      },
+      {
+        "feature": "Variance",
+        "mi_19": 0.3258966777239237,
+        "rank_19": 19
+      },
+      {
+        "feature": "Covariance",
+        "mi_19": 0.3135713774389211,
+        "rank_19": 20
+      },
+      {
+        "feature": "Radius",
+        "mi_19": 0.3086708472220856,
+        "rank_19": 21
+      },
+      {
+        "feature": "fin_count",
+        "mi_19": 0.3065552978614207,
+        "rank_19": 22
+      },
+      {
+        "feature": "Std",
+        "mi_19": 0.30575719299566745,
+        "rank_19": 23
+      },
+      {
+        "feature": "psh_flag_number",
+        "mi_19": 0.24928803563413768,
+        "rank_19": 24
+      },
+      {
+        "feature": "rst_flag_number",
+        "mi_19": 0.239960171200595,
+        "rank_19": 25
+      },
+      {
+        "feature": "Number",
+        "mi_19": 0.17780589322273554,
+        "rank_19": 26
+      },
+      {
+        "feature": "ack_count",
+        "mi_19": 0.1326269784074842,
+        "rank_19": 27
+      },
+      {
+        "feature": "fin_flag_number",
+        "mi_19": 0.12890854554816758,
+        "rank_19": 28
+      },
+      {
+        "feature": "Weight",
+        "mi_19": 0.07526257467347677,
+        "rank_19": 29
+      },
+      {
+        "feature": "Duration",
+        "mi_19": 0.0725224758121217,
+        "rank_19": 30
+      },
+      {
+        "feature": "HTTPS",
+        "mi_19": 0.020817705564749503,
+        "rank_19": 31
+      },
+      {
+        "feature": "IPv",
+        "mi_19": 0.005343480368801905,
+        "rank_19": 32
+      },
+      {
+        "feature": "LLC",
+        "mi_19": 0.005343480368801905,
+        "rank_19": 32
+      },
+      {
+        "feature": "ARP",
+        "mi_19": 0.005343480368801905,
+        "rank_19": 32
+      },
+      {
+        "feature": "cwr_flag_number",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "ece_flag_number",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "DHCP",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "SMTP",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "SSH",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "IRC",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "DNS",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "HTTP",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "Telnet",
+        "mi_19": 0.0,
+        "rank_19": 35
+      },
+      {
+        "feature": "IGMP",
+        "mi_19": 0.0,
+        "rank_19": 35
+      }
+    ],
+    "ranking_weakest_4": [
+      {
+        "feature": "IAT",
+        "mi_weak4": 0.9702819870885181,
+        "rank_weak4": 1
+      },
+      {
+        "feature": "Srate",
+        "mi_weak4": 0.6845739905047226,
+        "rank_weak4": 2
+      },
+      {
+        "feature": "Rate",
+        "mi_weak4": 0.6845739905047226,
+        "rank_weak4": 2
+      },
+      {
+        "feature": "Header_Length",
+        "mi_weak4": 0.6816113944730755,
+        "rank_weak4": 4
+      },
+      {
+        "feature": "Number",
+        "mi_weak4": 0.6784826790803062,
+        "rank_weak4": 5
+      },
+      {
+        "feature": "fin_count",
+        "mi_weak4": 0.6737435483112009,
+        "rank_weak4": 6
+      },
+      {
+        "feature": "rst_count",
+        "mi_weak4": 0.6321202397957276,
+        "rank_weak4": 7
+      },
+      {
+        "feature": "Min",
+        "mi_weak4": 0.6128840296009644,
+        "rank_weak4": 8
+      },
+      {
+        "feature": "Tot size",
+        "mi_weak4": 0.5902212616980904,
+        "rank_weak4": 9
+      },
+      {
+        "feature": "Variance",
+        "mi_weak4": 0.5851195062237788,
+        "rank_weak4": 10
+      },
+      {
+        "feature": "AVG",
+        "mi_weak4": 0.5718217028810434,
+        "rank_weak4": 11
+      },
+      {
+        "feature": "Magnitue",
+        "mi_weak4": 0.5538176605204073,
+        "rank_weak4": 12
+      },
+      {
+        "feature": "Max",
+        "mi_weak4": 0.5481370111103976,
+        "rank_weak4": 13
+      },
+      {
+        "feature": "psh_flag_number",
+        "mi_weak4": 0.5224804071517649,
+        "rank_weak4": 14
+      },
+      {
+        "feature": "Tot sum",
+        "mi_weak4": 0.5158922865096578,
+        "rank_weak4": 15
+      },
+      {
+        "feature": "Covariance",
+        "mi_weak4": 0.4823934756349238,
+        "rank_weak4": 16
+      },
+      {
+        "feature": "Radius",
+        "mi_weak4": 0.4463561278027914,
+        "rank_weak4": 17
+      },
+      {
+        "feature": "Std",
+        "mi_weak4": 0.4462098495209994,
+        "rank_weak4": 18
+      },
+      {
+        "feature": "rst_flag_number",
+        "mi_weak4": 0.44395330418426815,
+        "rank_weak4": 19
+      },
+      {
+        "feature": "ack_flag_number",
+        "mi_weak4": 0.38210054584002817,
+        "rank_weak4": 20
+      },
+      {
+        "feature": "syn_count",
+        "mi_weak4": 0.3705332137659227,
+        "rank_weak4": 21
+      },
+      {
+        "feature": "syn_flag_number",
+        "mi_weak4": 0.36977796383359207,
+        "rank_weak4": 22
+      },
+      {
+        "feature": "ack_count",
+        "mi_weak4": 0.32463187561876616,
+        "rank_weak4": 23
+      },
+      {
+        "feature": "Duration",
+        "mi_weak4": 0.2792735435220236,
+        "rank_weak4": 24
+      },
+      {
+        "feature": "TCP",
+        "mi_weak4": 0.2444423388575537,
+        "rank_weak4": 25
+      },
+      {
+        "feature": "Protocol Type",
+        "mi_weak4": 0.24166295033956023,
+        "rank_weak4": 26
+      },
+      {
+        "feature": "UDP",
+        "mi_weak4": 0.23183603269352368,
+        "rank_weak4": 27
+      },
+      {
+        "feature": "Weight",
+        "mi_weak4": 0.20971767301024113,
+        "rank_weak4": 28
+      },
+      {
+        "feature": "fin_flag_number",
+        "mi_weak4": 0.14175210423581644,
+        "rank_weak4": 29
+      },
+      {
+        "feature": "HTTPS",
+        "mi_weak4": 0.12123555922286192,
+        "rank_weak4": 30
+      },
+      {
+        "feature": "LLC",
+        "mi_weak4": 0.012171503412727176,
+        "rank_weak4": 31
+      },
+      {
+        "feature": "IPv",
+        "mi_weak4": 0.012171503412727176,
+        "rank_weak4": 31
+      },
+      {
+        "feature": "ARP",
+        "mi_weak4": 0.012171503412727176,
+        "rank_weak4": 31
+      },
+      {
+        "feature": "ICMP",
+        "mi_weak4": 0.006197973529225158,
+        "rank_weak4": 34
+      },
+      {
+        "feature": "cwr_flag_number",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "ece_flag_number",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "DHCP",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "SMTP",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "SSH",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "IRC",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "DNS",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "HTTP",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "Telnet",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      },
+      {
+        "feature": "IGMP",
+        "mi_weak4": 0.0,
+        "rank_weak4": 35
+      }
+    ],
+    "largest_rank_changes": [
+      {
+        "feature": "Number",
+        "rank_19": 26,
+        "rank_weak4": 5,
+        "rank_change": 21
+      },
+      {
+        "feature": "ICMP",
+        "rank_19": 14,
+        "rank_weak4": 34,
+        "rank_change": -20
+      },
+      {
+        "feature": "Protocol Type",
+        "rank_19": 9,
+        "rank_weak4": 26,
+        "rank_change": -17
+      },
+      {
+        "feature": "fin_count",
+        "rank_19": 22,
+        "rank_weak4": 6,
+        "rank_change": 16
+      },
+      {
+        "feature": "UDP",
+        "rank_19": 13,
+        "rank_weak4": 27,
+        "rank_change": -14
+      },
+      {
+        "feature": "Tot sum",
+        "rank_19": 2,
+        "rank_weak4": 15,
+        "rank_change": -13
+      },
+      {
+        "feature": "TCP",
+        "rank_19": 12,
+        "rank_weak4": 25,
+        "rank_change": -13
+      },
+      {
+        "feature": "rst_count",
+        "rank_19": 17,
+        "rank_weak4": 7,
+        "rank_change": 10
+      },
+      {
+        "feature": "psh_flag_number",
+        "rank_19": 24,
+        "rank_weak4": 14,
+        "rank_change": 10
+      },
+      {
+        "feature": "Variance",
+        "rank_19": 19,
+        "rank_weak4": 10,
+        "rank_change": 9
+      }
+    ]
+  },
+  "recording_shift": {
+    "statistic": "sqrt(between-recording variance / within-recording variance), computed within a class",
+    "features": [
+      "IAT",
+      "Tot sum",
+      "Tot size",
+      "Min",
+      "Magnitue",
+      "AVG",
+      "Header_Length",
+      "Max",
+      "Protocol Type",
+      "Rate"
+    ],
+    "classes_with_many_recordings": [
+      "DDoS-ICMP",
+      "DDoS-SYN",
+      "DDoS-TCP",
+      "DDoS-UDP",
+      "DoS-ICMP",
+      "DoS-SYN",
+      "DoS-TCP",
+      "DoS-UDP"
+    ],
+    "classes_with_one_recording": [
+      "Benign",
+      "MQTT-DDoS-Connect_Flood",
+      "MQTT-DDoS-Publish_Flood",
+      "MQTT-DoS-Connect_Flood",
+      "MQTT-DoS-Publish_Flood",
+      "MQTT-Malformed_Data",
+      "Recon-OS_Scan",
+      "Recon-Ping_Sweep",
+      "Recon-Port_Scan",
+      "Recon-VulScan",
+      "Spoofing"
+    ],
+    "per_feature": [
+      {
+        "feature": "Protocol Type",
+        "classes_measured": 8,
+        "median_ratio": 0.12256899838290841,
+        "max_ratio": 0.2302031730638446,
+        "worst_class": "DoS-UDP",
+        "per_class": {
+          "DDoS-ICMP": 0.1208,
+          "DDoS-SYN": 0.0225,
+          "DDoS-TCP": 0.0875,
+          "DDoS-UDP": 0.1236,
+          "DoS-ICMP": 0.1215,
+          "DoS-SYN": 0.1795,
+          "DoS-TCP": 0.1837,
+          "DoS-UDP": 0.2302
+        }
+      },
+      {
+        "feature": "Rate",
+        "classes_measured": 8,
+        "median_ratio": 0.1359509400114804,
+        "max_ratio": 0.1652526804087097,
+        "worst_class": "DoS-TCP",
+        "per_class": {
+          "DDoS-ICMP": 0.1511,
+          "DDoS-SYN": 0.1622,
+          "DDoS-TCP": 0.1581,
+          "DDoS-UDP": 0.0269,
+          "DoS-ICMP": 0.1208,
+          "DoS-SYN": 0.0544,
+          "DoS-TCP": 0.1653,
+          "DoS-UDP": 0.0574
+        }
+      },
+      {
+        "feature": "Max",
+        "classes_measured": 8,
+        "median_ratio": 0.0703027440557867,
+        "max_ratio": 0.09107958450082371,
+        "worst_class": "DoS-UDP",
+        "per_class": {
+          "DDoS-ICMP": 0.0779,
+          "DDoS-SYN": 0.0187,
+          "DDoS-TCP": 0.0502,
+          "DDoS-UDP": 0.066,
+          "DoS-ICMP": 0.085,
+          "DoS-SYN": 0.0746,
+          "DoS-TCP": 0.0354,
+          "DoS-UDP": 0.0911
+        }
+      },
+      {
+        "feature": "Header_Length",
+        "classes_measured": 8,
+        "median_ratio": 0.03870480651092473,
+        "max_ratio": 0.07516606372042638,
+        "worst_class": "DoS-ICMP",
+        "per_class": {
+          "DDoS-ICMP": 0.0399,
+          "DDoS-SYN": 0.0285,
+          "DDoS-TCP": 0.0375,
+          "DDoS-UDP": 0.0356,
+          "DoS-ICMP": 0.0752,
+          "DoS-SYN": 0.045,
+          "DoS-TCP": 0.033,
+          "DoS-UDP": 0.0416
+        }
+      },
+      {
+        "feature": "Magnitue",
+        "classes_measured": 8,
+        "median_ratio": 0.04587819721476437,
+        "max_ratio": 0.06818040590155913,
+        "worst_class": "DoS-ICMP",
+        "per_class": {
+          "DDoS-ICMP": 0.056,
+          "DDoS-SYN": 0.0236,
+          "DDoS-TCP": 0.039,
+          "DDoS-UDP": 0.0461,
+          "DoS-ICMP": 0.0682,
+          "DoS-SYN": 0.0456,
+          "DoS-TCP": 0.0212,
+          "DoS-UDP": 0.0671
+        }
+      },
+      {
+        "feature": "Tot size",
+        "classes_measured": 8,
+        "median_ratio": 0.042177228862980864,
+        "max_ratio": 0.06310453566571231,
+        "worst_class": "DoS-ICMP",
+        "per_class": {
+          "DDoS-ICMP": 0.0486,
+          "DDoS-SYN": 0.0202,
+          "DDoS-TCP": 0.036,
+          "DDoS-UDP": 0.0425,
+          "DoS-ICMP": 0.0631,
+          "DoS-SYN": 0.0418,
+          "DoS-TCP": 0.0202,
+          "DoS-UDP": 0.0565
+        }
+      },
+      {
+        "feature": "Tot sum",
+        "classes_measured": 8,
+        "median_ratio": 0.041980948394560826,
+        "max_ratio": 0.06261839840108199,
+        "worst_class": "DoS-ICMP",
+        "per_class": {
+          "DDoS-ICMP": 0.0482,
+          "DDoS-SYN": 0.02,
+          "DDoS-TCP": 0.0358,
+          "DDoS-UDP": 0.0424,
+          "DoS-ICMP": 0.0626,
+          "DoS-SYN": 0.0416,
+          "DoS-TCP": 0.0198,
+          "DoS-UDP": 0.0563
+        }
+      },
+      {
+        "feature": "AVG",
+        "classes_measured": 8,
+        "median_ratio": 0.04175715270764531,
+        "max_ratio": 0.062321803123674455,
+        "worst_class": "DoS-ICMP",
+        "per_class": {
+          "DDoS-ICMP": 0.0479,
+          "DDoS-SYN": 0.0199,
+          "DDoS-TCP": 0.0356,
+          "DDoS-UDP": 0.0422,
+          "DoS-ICMP": 0.0623,
+          "DoS-SYN": 0.0414,
+          "DoS-TCP": 0.0194,
+          "DoS-UDP": 0.056
+        }
+      },
+      {
+        "feature": "Min",
+        "classes_measured": 8,
+        "median_ratio": 0.03531182648675311,
+        "max_ratio": 0.05909725035030799,
+        "worst_class": "DoS-ICMP",
+        "per_class": {
+          "DDoS-ICMP": 0.0384,
+          "DDoS-SYN": 0.0152,
+          "DDoS-TCP": 0.0333,
+          "DDoS-UDP": 0.0372,
+          "DoS-ICMP": 0.0591,
+          "DoS-SYN": 0.0334,
+          "DoS-TCP": 0.0195,
+          "DoS-UDP": 0.041
+        }
+      },
+      {
+        "feature": "IAT",
+        "classes_measured": 8,
+        "median_ratio": 0.0026908327756815275,
+        "max_ratio": 0.00505910646372389,
+        "worst_class": "DoS-SYN",
+        "per_class": {
+          "DDoS-ICMP": 0.0023,
+          "DDoS-SYN": 0.0024,
+          "DDoS-TCP": 0.0026,
+          "DDoS-UDP": 0.0037,
+          "DoS-ICMP": 0.0032,
+          "DoS-SYN": 0.0051,
+          "DoS-TCP": 0.0028,
+          "DoS-UDP": 0.0015
+        }
+      }
+    ]
+  },
+  "pairwise_separability": {
+    "n_pairs": 171,
+    "threshold": 0.9,
+    "n_above_threshold": 160,
+    "n_below_threshold": 11,
+    "median_best_auc": 0.9984744305018646,
+    "least_separable_pair": {
+      "class_a": "Recon-OS_Scan",
+      "class_b": "Recon-Port_Scan",
+      "best_feature": "Rate",
+      "best_auc": 0.6850470547706489
+    },
+    "pairs_below_threshold": [
+      {
+        "class_a": "Recon-OS_Scan",
+        "class_b": "Recon-Port_Scan",
+        "group_a": "Recon",
+        "group_b": "Recon",
+        "same_family": true,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "Rate",
+        "best_auc": 0.6850470547706489,
+        "runner_up_feature": "Srate",
+        "runner_up_auc": 0.6850470547706489
+      },
+      {
+        "class_a": "Recon-Port_Scan",
+        "class_b": "Recon-VulScan",
+        "group_a": "Recon",
+        "group_b": "Recon",
+        "same_family": true,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "Duration",
+        "best_auc": 0.7368364842625124,
+        "runner_up_feature": "Radius",
+        "runner_up_auc": 0.7326442808015955
+      },
+      {
+        "class_a": "Recon-OS_Scan",
+        "class_b": "Recon-VulScan",
+        "group_a": "Recon",
+        "group_b": "Recon",
+        "same_family": true,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "Radius",
+        "best_auc": 0.744208623042881,
+        "runner_up_feature": "Std",
+        "runner_up_auc": 0.744114569192627
+      },
+      {
+        "class_a": "MQTT-Malformed_Data",
+        "class_b": "Spoofing",
+        "group_a": "MQTT",
+        "group_b": "Spoofing",
+        "same_family": false,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "TCP",
+        "best_auc": 0.7846938423305119,
+        "runner_up_feature": "UDP",
+        "runner_up_auc": 0.7735510233058696
+      },
+      {
+        "class_a": "Benign",
+        "class_b": "Spoofing",
+        "group_a": "Benign",
+        "group_b": "Spoofing",
+        "same_family": false,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "Rate",
+        "best_auc": 0.8010225043985648,
+        "runner_up_feature": "Srate",
+        "runner_up_auc": 0.8010225043985648
+      },
+      {
+        "class_a": "MQTT-DoS-Publish_Flood",
+        "class_b": "MQTT-Malformed_Data",
+        "group_a": "MQTT",
+        "group_b": "MQTT",
+        "same_family": true,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "psh_flag_number",
+        "best_auc": 0.8513784659159253,
+        "runner_up_feature": "HTTPS",
+        "runner_up_auc": 0.8206624921987793
+      },
+      {
+        "class_a": "Benign",
+        "class_b": "MQTT-Malformed_Data",
+        "group_a": "Benign",
+        "group_b": "MQTT",
+        "same_family": false,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "Rate",
+        "best_auc": 0.8663793869521343,
+        "runner_up_feature": "Srate",
+        "runner_up_auc": 0.8663793869521343
+      },
+      {
+        "class_a": "Recon-VulScan",
+        "class_b": "Spoofing",
+        "group_a": "Recon",
+        "group_b": "Spoofing",
+        "same_family": false,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "Header_Length",
+        "best_auc": 0.8671243524555646,
+        "runner_up_feature": "Min",
+        "runner_up_auc": 0.8064897400238648
+      },
+      {
+        "class_a": "MQTT-DoS-Publish_Flood",
+        "class_b": "Spoofing",
+        "group_a": "MQTT",
+        "group_b": "Spoofing",
+        "same_family": false,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "psh_flag_number",
+        "best_auc": 0.8732781271089666,
+        "runner_up_feature": "ack_flag_number",
+        "runner_up_auc": 0.8054742012765352
+      },
+      {
+        "class_a": "MQTT-DDoS-Publish_Flood",
+        "class_b": "MQTT-Malformed_Data",
+        "group_a": "MQTT",
+        "group_b": "MQTT",
+        "same_family": true,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "fin_count",
+        "best_auc": 0.8752588800131026,
+        "runner_up_feature": "rst_count",
+        "runner_up_auc": 0.8245994980886939
+      },
+      {
+        "class_a": "MQTT-DDoS-Publish_Flood",
+        "class_b": "Spoofing",
+        "group_a": "MQTT",
+        "group_b": "Spoofing",
+        "same_family": false,
+        "tier_a": "B",
+        "tier_b": "B",
+        "best_feature": "fin_count",
+        "best_auc": 0.8930222699851252,
+        "runner_up_feature": "rst_flag_number",
+        "runner_up_auc": 0.8754175744156054
+      }
+    ],
+    "full_table": "pairwise_auc.csv"
+  },
+  "figures": [
+    "NB02_zero_share.png",
+    "NB02_correlation_heatmap.png",
+    "NB02_distributions_timing.png",
+    "NB02_distributions_contrast.png",
+    "NB02_mutual_information.png",
+    "NB02_recording_shift.png",
+    "NB02_pairwise_auc.png"
+  ]
+}

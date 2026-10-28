@@ -1,0 +1,242 @@
+# AG_PRAXIS — feature families (REVIEWED)
+#
+# Written by NB01 from column names alone, then checked by hand against the
+# dataset documentation and the NB01 value ranges. The columns under
+# `ambiguous` matched more than one name rule; `rationale` below records how
+# each was resolved and what is still open.
+
+status: reviewed
+review_required: false
+generated_by: AG_PRAXIS_NB01_dataset_inventory.ipynb
+generated_from: ARP_Spoofing_train.pcap.csv
+git_sha: 6a331e4
+generated_on: '2026-08-03'
+reviewed_on: '2026-08-04'
+label_columns: []
+families:
+  timing:
+  - Duration
+  - Rate
+  - Srate
+  - Drate
+  - IAT
+  protocol:
+  - Header_Length
+  - Protocol Type
+  - fin_flag_number
+  - syn_flag_number
+  - rst_flag_number
+  - psh_flag_number
+  - ack_flag_number
+  - ece_flag_number
+  - cwr_flag_number
+  - ack_count
+  - syn_count
+  - fin_count
+  - rst_count
+  - HTTP
+  - HTTPS
+  - DNS
+  - Telnet
+  - SMTP
+  - SSH
+  - IRC
+  - TCP
+  - UDP
+  - DHCP
+  - ARP
+  - ICMP
+  - IGMP
+  - IPv
+  - LLC
+  statistical:
+  - Tot sum
+  - Min
+  - Max
+  - AVG
+  - Std
+  - Tot size
+  - Number
+  - Magnitue
+  - Radius
+  - Covariance
+  - Variance
+  - Weight
+  other: []
+ambiguous:
+  Header_Length:
+  - protocol
+  - statistical
+  fin_flag_number:
+  - protocol
+  - statistical
+  syn_flag_number:
+  - protocol
+  - statistical
+  rst_flag_number:
+  - protocol
+  - statistical
+  psh_flag_number:
+  - protocol
+  - statistical
+  ack_flag_number:
+  - protocol
+  - statistical
+  ece_flag_number:
+  - protocol
+  - statistical
+  cwr_flag_number:
+  - protocol
+  - statistical
+  ack_count:
+  - protocol
+  - statistical
+  syn_count:
+  - protocol
+  - statistical
+  fin_count:
+  - protocol
+  - statistical
+  rst_count:
+  - protocol
+  - statistical
+rationale:
+  columns_in_question: >-
+    Twelve columns matched both the protocol and the statistical name rule and
+    were assigned to protocol: Header_Length, the six flag_number columns (fin,
+    syn, rst, psh, ack, ece, cwr), and the count columns ack_count, syn_count,
+    fin_count, rst_count.
+  evidence: >-
+    The dataset documentation describes Header_Length as the mean transport
+    layer header length, and the flag_number columns as the proportion of
+    packets carrying each flag. Both are therefore statistical operations
+    applied to protocol attributes. The NB01 value ranges agree: the
+    flag_number columns fall between 0 and 1, the count columns are non-integer
+    averages, and Header_Length reaches 9.58e6 across 15,786 distinct values in
+    a single file.
+  decision: >-
+    The families are separated by what is measured rather than how it is
+    summarised. The statistical family holds summaries of packet size and
+    volume. The protocol family holds protocol identity and flag behaviour,
+    including how often flags appear. On that basis the twelve belong to
+    protocol.
+  open_points: >-
+    The count columns are not covered by the documentation quoted above. Their
+    assignment rests on their value ranges alone.
+  effect_on_downstream: >-
+    The assignment does not affect the timing family, which is unambiguous —
+    Duration, Rate, Srate, IAT, of which Duration is the TTL header field, kept
+    in this family by deliberate decision under duration_family_placement below —
+    and is the only family excluded downstream, in NB09a, which trains the
+    timing-excluded models the explanation stage reads. NB03 measured protocol
+    at 0.1802 and statistical at 0.1198 for capture identification against
+    timing at 0.9301, so neither of the two families in question carries the
+    provenance signal wherever these columns sit.
+  timing_family_size: >-
+    The timing family lists five columns. Drate is dropped before modelling as
+    constant across the whole dataset (NB01, full scan, all 8,775,013 rows), so
+    four reach any downstream stage: Duration, Rate, Srate, IAT. Notebooks
+    excluding the timing family should intersect the family list with the live
+    column list rather than assuming five.
+table5_reconciliation:
+  resolved_on: '2026-08-07'
+  matched: >-
+    Dadkhah et al. (2024) Table 5 lists 39 extracted features. All 39 are present
+    in the released 45-column CICIoMT2024 CSVs. Thirty-eight match by name once
+    names are normalised: "fin flag number" against fin_flag_number, "Tot Sum"
+    against "Tot sum", and "Tot Size (Avg.)" against "Tot size", the last pairing
+    1:1 with a second, separately listed Table 5 feature rather than duplicating
+    the first. The thirty-ninth, Time-To-Live, is the column named Duration, for
+    the reasons under missing_from_data below.
+  missing_from_data: >-
+    Nothing is missing. Until 2026-08-07 this entry recorded Time-To-Live as a
+    Table 5 feature with no column in the released data, and called it a genuine
+    paper-against-data gap. That was wrong. Neto et al. (2023) Table 4, the
+    CICIoT2023 feature list Dadkhah et al. cite, gives feature 5 as the name
+    "Duration" with the description "Time-to-Live (ttl)", so the source itself
+    equates the two: Table 5 uses the descriptive name and the CSV keeps
+    CICIoT2023's column name. Three things agree on this. The definitions match,
+    by that description. The absences are complementary, Table 5 listing
+    Time-To-Live and no Duration while the CSVs carry Duration and no
+    Time-To-Live. And the values fit a header field rather than a time: our
+    Duration runs 0 to 250 across 590 distinct values in the reference file,
+    under the 255 ceiling of an eight-bit TTL, while CICIoT2023's own statistics
+    give their Duration a median of 64, the common default TTL, and a maximum of
+    exactly 255. CICIoT2023 carries flow duration as a separate column reaching
+    394,357, so there is no question of Duration being that instead.
+  external_corroboration: >-
+    Confirmed by a published primary source on 2026-08-15. Doménech, J., León,
+    O., Siddiqui, M. S. and Pegueroles, J. (2025), "Evaluating and enhancing
+    intrusion detection systems in IoMT: The importance of domain-specific
+    datasets", Internet of Things 32:101631, DOI 10.1016/j.iot.2025.101631, map
+    the attributes of CICIoT2023 and CICIoMT2024 in their Appendix Table A.9 and
+    give the description of the CICIoMT2024 Duration feature as TTL outright.
+    The reading recorded above was reached here from Neto et al.'s Table 4 and
+    from the values themselves, a full scan of 8,775,013 rows putting the global
+    maximum at exactly 255 with 93.57% of values at 64. It now also rests on a
+    published source stating the equivalence directly, so the TTL reading can be
+    written up as a documented property of the feature rather than only as an
+    inference from the observed distribution. Nothing about the family placement
+    or the modelling set changes; see duration_family_placement below.
+  extra_in_data: >-
+    Six released columns are not in Table 5: Srate, Drate, Magnitue, Radius,
+    Covariance, Weight. Duration was counted as a seventh until 2026-08-07 and
+    has moved into the matched set. All six are engineered features rather than
+    label or metadata columns, which is why label_columns above is empty and
+    stays empty.
+  provenance_of_extras: >-
+    Verified, and no longer an open item. All six appear in Neto et al. (2023)
+    Table 4, read from the source on 2026-08-07: Srate as feature 7, "Rate of
+    outbound packets transmission in a flow"; Drate as 8, "Rate of inbound
+    packets transmission in a flow"; Magnitude as 43 and Radius as 44, each the
+    square root of a sum of incoming and outgoing packet-length statistics;
+    Covariance as 45, "Covariance of the lengths of incoming and outgoing
+    packets"; and Weight as 47, "Number of incoming packets multiplied by number
+    of outgoing packets". The route to that table was the caption of Dadkhah et
+    al.'s Table 5, "Features extracted from PCAP files [28]", where [28] is Neto
+    et al. Until this check the six rested on that citation alone; they now rest
+    on the cited table itself. The whole of the released schema is accounted for
+    by CICIoT2023: our 45 columns are Neto et al.'s 47 less ts, flow duration and
+    urg count, plus IGMP, which CICIoMT2024 adds and CICIoT2023 does not list.
+  magnitue_spelling: >-
+    "Magnitue" is a misspelling of "Magnitude", and CICIoMT2024 inherited it
+    rather than introducing it. Neto et al. spell it correctly in Table 4, the
+    descriptive feature list, and incorrectly as "Magnitue" in Table 5, which
+    reports the statistics under the released column names and uses CSV spellings
+    throughout, flow_duration and fin_flag_number with underscores where Table 4
+    has spaces. The misspelling is therefore already in the CICIoT2023 release
+    and is carried forward. The statistical family above uses the column as the
+    CSV header has it, and the name rules in src/inventory.py match both
+    spellings, so a corrected header would land in the same family.
+  duration_family_placement: >-
+    Resolved on 2026-08-07. Duration stays in the timing family and stays among
+    the 44 modelling features, and nothing changes. The reason is comparability.
+    NB03, NB05 and NB06 have all been executed with Duration where it is, and
+    moving a family boundary or altering the feature set mid-stream would break
+    those banked results against anything run afterwards, which is what the
+    one-change-per-run rule exists to prevent. The choice is deliberate and made
+    on evidence rather than left standing by oversight. Duration is confirmed as
+    the Time-To-Live header field by a full scan of all 72 files and 8,775,013
+    rows, recorded in DECISIONS.md under this date, and it is knowingly kept in
+    the timing family despite being a header field, and knowingly kept in the
+    modelling set despite being 93.57% constant. One inaccuracy travels with the
+    decision and has to be stated wherever the family is used: the timing family
+    contains one header field, Duration, and NB03's 0.9301 capture-identification
+    figure for that family was measured with it included. The column takes its
+    modal value of 64 in 93.57% of rows, so 6.4% of them vary. Its contribution
+    is measured, not reasoned. NB03b
+    (notebooks/AG_PRAXIS_NB03b_timing_ablation.ipynb, run 2026-08-10 at 8beebb7)
+    ran the NB03 protocol again with Duration removed and nothing else changed.
+    Removing it takes the timing family from 0.9301 to 0.8935 and all features
+    from 0.8010 to 0.7495 on the fifty-way task. Duration alone reaches 0.0299
+    against a chance rate of 0.0200. With the attack class held fixed the mean
+    rises to 0.8504 from 0.8280, up on five of the eight classes and down on
+    three, one of them by 0.0001. Single runs at seed 42, no seed replicates.
+    Figures in data/processed/NB03b/duration_ablation.json and results/NB03b/.
+  effect_on_downstream: >-
+    None on the working set. Drate is the only column constant across the whole
+    dataset (NB01 full scan, all 8,775,013 rows) and is the one dropped, leaving
+    44 modelling features. That is the set already in use. What this entry
+    records is how it relates to Table 5's 39, and the relation is now complete:
+    all 39 are present, and the six columns beyond them are CICIoT2023's. The one
+    thing this raises for downstream work is duration_family_placement above.
